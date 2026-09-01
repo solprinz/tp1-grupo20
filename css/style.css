@@ -1,0 +1,124 @@
+/* PALETA DE COLORES */
+:root {
+  --primary: #740001;
+  --secondary: #d3a625;
+  --gray: #6c757d;
+  --white: #ffffff;
+  --black: #000000;
+  --lightgray: #e0e0e0;
+}
+
+/* HEADER */
+.header-bg {
+  background-color: var(--primary) !important;
+  border-bottom: 3px solid var(--secondary) !important;
+}
+
+.nav-links-custom {
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.nav-links-custom a {
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.nav-links-custom a:hover,
+.nav-links-custom a.active {
+  color: var(--secondary) !important;
+  border-bottom: 3px solid var(--secondary) !important;
+  border-top: 3px solid var(--secondary) !important;
+}
+
+/* HERO */
+.hero {
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+.title {
+  color: var(--primary);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* CARDS INTEGRANTES */
+.member-card {
+  background-color: var(--white);
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  min-height: 400px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px var(--lightgray);
+}
+
+.member-img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid var(--secondary);
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.member-btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.member-btn:hover {
+  background-color: var(--secondary);
+  color: var(--black);
+}
+
+/* FOOTER */
+.footer-bg {
+  background-color: var(--primary) !important;
+  border-top: 3px solid var(--secondary) !important;
+  color: var(--white);
+}
