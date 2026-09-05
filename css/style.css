@@ -1,38 +1,294 @@
 /* PALETA DE COLORES */
 :root {
-  --primary: #740001;
-  --secondary: #d3a625;
+  --primary: #0d0d53;
+  --secondary: #e1b258;
+  --acento: #f4d081;
   --gray: #6c757d;
   --white: #ffffff;
   --black: #000000;
   --lightgray: #e0e0e0;
+  --shadow: #e1b2584d;
+  --gryffindor1: #740001;
+  --gryffindor2: #d3a625;
+  --slytherin1: #1a472a;
+  --slytherin2: #aaaaaa;
+  --ravenclaw1: #0e1a40;
+  --ravenclaw2: #946b2d;
+  --hufflepuff1: #ecb939;
+  --hufflepuff2: #372e29;
 }
 
-/* HEADER */
-.header-bg {
-  background-color: var(--primary) !important;
-  border-bottom: 3px solid var(--secondary) !important;
+body.gryffindor {
+  --primary: var(--gryffindor1);
+  --secondary: var(--gryffindor2);
 }
 
-.nav-links-custom {
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
+body.slytherin {
+  --primary: var(--slytherin1);
+  --secondary: var(--slytherin2);
 }
-.nav-links-custom a {
-  color: var(--white);
-  font-weight: 500;
-  transition: color 0.3s ease;
+
+body.ravenclaw {
+  --primary: var(--ravenclaw1);
+  --secondary: var(--ravenclaw2);
+}
+
+body.hufflepuff {
+  --primary: var(--hufflepuff1);
+  --secondary: var(--hufflepuff2);
+}
+
+@font-face {
+  font-family: "Lumos";
+  src: url("./fonts/LUMOS.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--lightgray);
+  color: var(--black);
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+}
+
+h1,
+.brand-title,
+.font-lumos {
+  font-family: "Lumos", serif !important;
+}
+
+.top-banner {
+  background-color: var(--primary);
+  border-bottom: 2px solid var(--secondary);
+}
+
+.brand-title {
+  color: var(--secondary);
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--shadow);
+}
+
+.navbar-custom {
+  background-color: var(--secondary);
+}
+
+.navbar-custom .nav-link {
+  color: var(--primary) !important;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+  position: relative;
   text-decoration: none;
-  padding: 0.5rem;
-  font-size: 1.1rem;
 }
 
-.nav-links-custom a:hover,
-.nav-links-custom a.active {
-  color: var(--secondary) !important;
-  border-bottom: 3px solid var(--secondary) !important;
-  border-top: 3px solid var(--secondary) !important;
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  background-color: transparent !important;
+  color: var(--primary) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.titulo-principal {
+  color: var(--primary);
+}
+
+.subtitulo-principal {
+  color: var(--gray);
+}
+
+/* CARDS INTEGRANTES */
+
+/* Card Base */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 8px 16px var(--shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24pxvar (--lightgray);
+}
+
+.card .img-wrapper {
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 4px;
+  background-color: var(--lightgray);
+
+  overflow: hidden;
+}
+
+.card .img-wrapper img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .nombre-integrante {
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .rol-integrante {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.card .btn-ver-mas {
+  font-weight: 700;
+  border-radius: 6px;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+/* CARDS ESPECÍFICAS POR CASA */
+.card-gryffindor {
+  background-color: var(--gryffindor1);
+  border: 3px solid var(--gryffindor2);
+  color: var(--white);
+}
+.card-gryffindor .img-wrapper {
+  border-color: var(--gryffindor2);
+}
+.card-gryffindor .btn-ver-mas {
+  background-color: var(--gryffindor2);
+  color: var(--gryffindor1);
+  border-color: var(--white);
+}
+
+.card-slytherin {
+  background-color: var(--slytherin1);
+  border: 3px solid var(--slytherin2);
+  color: var(--white);
+}
+.card-slytherin .img-wrapper {
+  border-color: var(--slytherin2);
+}
+.card-slytherin .btn-ver-mas {
+  background-color: var(--slytherin2);
+  color: var(--slytherin1);
+  border-color: var(--white);
+}
+
+.card-ravenclaw {
+  background-color: var(--ravenclaw1);
+  border: 3px solid var(--ravenclaw2);
+  color: var(--white);
+}
+.card-ravenclaw .img-wrapper {
+  border-color: var(--ravenclaw2);
+}
+.card-ravenclaw .btn-ver-mas {
+  background-color: var(--ravenclaw2);
+  color: var(--ravenclaw1);
+  border-color: var(--white);
+}
+
+.card-hufflepuff {
+  background-color: var(--hufflepuff1);
+  border: 3px solid var(--hufflepuff2);
+  color: var(--hufflepuff2);
+}
+.card-hufflepuff .img-wrapper {
+  border-color: var(--hufflepuff2);
+}
+.card-hufflepuff .btn-ver-mas {
+  background-color: var(--hufflepuff2);
+  color: var(--hufflepuff1);
+  border-color: var(--hufflepuff2);
+}
+
+.nota-hechizo {
+  background-color: rgba(13, 13, 83, 0.05);
+  border: 1px dashed var(--gray);
+}
+/* MEDIA QUERIES (400px, 900px y 1200px) */
+@media (max-width: 399.98px) {
+  .brand-title {
+    font-size: 1.4rem;
+  }
+  .navbar-custom .nav-link {
+    font-size: 0.9rem;
+  }
+  .col-tp {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 899.98px) {
+  .brand-title {
+    font-size: 2rem;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: block;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-expand-custom .navbar-collapse.show {
+    display: block !important;
+    background-color: var(--secondary);
+    padding: 1rem;
+  }
+  .col-tp {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199.98px) {
+  .brand-title {
+    font-size: 2.4rem;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+  }
+  .col-tp {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .brand-title {
+    font-size: 2.8rem;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+  }
+  .col-tp {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
 
 /* HERO */
@@ -53,72 +309,68 @@
   line-height: 1.6;
 }
 
-/* CARDS INTEGRANTES */
-.member-card {
-  background-color: var(--white);
-  border: 1px solid var(--lightgray);
-  border-radius: 12px;
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  min-height: 400px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.member-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 4px 12px var(--lightgray);
-}
-
-.member-img {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 2px solid var(--secondary);
-}
-
-.member-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--black);
-  margin-bottom: 0.5rem;
-}
-
-.member-role {
-  font-size: 1rem;
-  color: var(--gray);
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-.member-btn {
-  display: inline-block;
+/* ESTILOS DEL FOOTER */
+.footer-custom {
   background-color: var(--primary);
   color: var(--white);
-  text-decoration: none;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-top: 2px solid var(--secondary) !important;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.95rem;
+}
+
+.footer-link {
+  color: var(--secondary);
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    transform 0.2s ease;
+  display: inline-block;
 }
 
-.member-btn:hover {
-  background-color: var(--secondary);
-  color: var(--black);
+.footer-link:hover {
+  color: var(--acento);
+  transform: translateY(-2px);
 }
 
-/* FOOTER */
-.footer-bg {
-  background-color: var(--primary) !important;
-  border-top: 3px solid var(--secondary) !important;
-  color: var(--white);
+/* página de Sol */
+/* Estilos básicos para el contenedor */
+.hechizo-container {
+  text-align: center;
+  margin: 20px auto;
+  position: relative;
+  max-width: 300px;
+}
+
+.btn-magico {
+  background-color: var(--gryffindor1);
+  color: var(--gryffindor2);
+  border: 2px solid var(--gryffindor2);
+  padding: 10px 20px;
+  font-family: "Lumos";
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-magico:hover {
+  background-color: var(--gryffindor1);
+}
+
+.patronus-oculto {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1s ease-out; /* Duración de la animación */
+  margin-top: 20px;
+  position: relative;
+}
+
+.patronus-oculto.activo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.patronus-img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(100, 200, 255, 0.8)); /* Brillo azulado */
 }

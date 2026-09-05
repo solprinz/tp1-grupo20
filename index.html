@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Proyecto Grupo 20" />
+    <meta name="description" content="Front End Wizards" />
     <meta name="keywords" content="" />
-    <title>PROYECTO GRUPO 20</title>
+    <title>FRONT END WIZARDS</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -37,43 +37,57 @@
   </head>
 
   <body>
-    <header class="sticky-top border-bottom shadow-sm header-bg">
-      <nav class="navbar navbar-expand-md container py-3">
-        <a
-          class="navbar-brand fw-bold d-flex align-items-center gap-2"
-          href="#"
-        >
-          <img src="" alt="Logo" />
-          <span>GRUPO 20</span>
-        </a>
+    <header class="sticky-top shadow-sm">
+      <!-- BANNER SUPERIOR -->
+      <div class="top-banner text-center py-3">
+        <h1 class="brand-title m-0">FRONT END WIZARDS</h1>
+      </div>
 
-        <!-- BOTÓN HAMBURGUESA (MOBILE) -->
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- NAVBAR DE NAVEGACIÓN -->
+      <nav class="navbar navbar-expand-md navbar-custom py-2">
+        <div class="container">
+          <!-- BOTÓN HAMBURGUESA (MOBILE) -->
+          <button
+            class="navbar-toggler border-0 ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars icono-hamburguesa fs-3"></i>
+          </button>
 
-        <!-- LINKS A SECCIONES -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav nav-links-custom">
-            <li><a href="./index.html" class="active">Inicio</a></li>
-            <li><a href="./alejandro.html">Alejandro</a></li>
-            <li><a href="./daniela.html">Daniela</a></li>
-            <li><a href="./juanpablo.html">Juan Pablo</a></li>
-            <li><a href="./lucas.html">Lucas</a></li>
-            <li><a href="./sol.html">Sol</a></li>
-            <li><a href="./bitacora.html">Bitácora</a></li>
-          </ul>
+          <!-- LINKS DE NAVEGACIÓN -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-2 gap-lg-4 text-center">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./alejandro.html" class="nav-link">Alejandro</a>
+              </li>
+              <li class="nav-item">
+                <a href="./daniela.html" class="nav-link">Daniela</a>
+              </li>
+              <li class="nav-item">
+                <a href="./juanpablo.html" class="nav-link">Juan Pablo</a>
+              </li>
+              <li class="nav-item">
+                <a href="./lucas.html" class="nav-link">Lucas</a>
+              </li>
+              <li class="nav-item">
+                <a href="./sol.html" class="nav-link">Sol</a>
+              </li>
+              <li class="nav-item">
+                <a href="./bitacora.html" class="nav-link">Bitácora</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -82,105 +96,149 @@
       <section id="hero" class="container hero">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-8">
-            <h1 class="title">Proyecto Grupo 20</h1>
-            <p class="subtitle">Descripción del proyecto</p>
+            <h1 class="title">BIENVENIDOS A HOGWARTS!</h1>
+            <p class="subtitle">
+              Provenientes de distintas casas y unados por el arte del
+              maquetado, combinamos antiguos encantos de HTML, pociones
+              avanzadas de CSS y poderosos conjuros en JavaScript para dar vida
+              a experiencias web verdaderamente mágicas. Explorá nuestros
+              perfiles, conocé las habilidades de cada integrante y adentrate en
+              nuestra bitácora de hechizos. ¡Que la magia del código te
+              acompañe!
+            </p>
           </div>
         </div>
       </section>
 
       <!-- 2. CARDS INTEGRANTES -->
       <section class="container my-5" id="integrantes">
-        <div class="row text-center mb-5">
-          <div class="col-12">
-            <h2 class="title">Integrantes:</h2>
+        <div class="row g-4 justify-content-center mb-4">
+          <!-- CARD 1 - ALEJANDRO-->
+          <div class="col-12 col-md-4">
+            <div class="card card-gryffindor h-100 d-flex flex-column">
+              <div class="img-wrapper">
+                <img src="img/alejandro.jpg" alt="Alejandro" />
+              </div>
+              <div class="nombre-integrante">ALEJANDRO</div>
+              <div class="rol-integrante">
+                Especialista en Posiciones y Maquetación
+              </div>
+              <div class="card-body-custom mt-auto">
+                <a href="./alejandro.html" class="btn btn-ver-mas">REVELIO</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 - DANIELA (Slytherin) -->
+          <div class="col-12 col-md-4">
+            <div class="card card-slytherin h-100 d-flex flex-column">
+              <div class="img-wrapper">
+                <img src="img/daniela.jpg" alt="Daniela" />
+              </div>
+              <div class="nombre-integrante">DANIELA</div>
+              <div class="rol-integrante">
+                Maestra de Transformaciones Front-end
+              </div>
+              <div class="card-body-custom mt-auto">
+                <a href="./daniela.html" class="btn btn-ver-mas">REVELIO</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 5 - JUAN PABLO (Ravenclaw) -->
+          <div class="col-12 col-md-4">
+            <div class="card card-ravenclaw h-100 d-flex flex-column">
+              <div class="img-wrapper">
+                <img src="img/juanpablo.jpg" alt="Juan Pablo" />
+              </div>
+              <div class="nombre-integrante">JUAN PABLO</div>
+              <div class="rol-integrante">
+                Erudito de Aritmancia y Lógica de JavaScript
+              </div>
+              <div class="card-body-custom mt-auto">
+                <a href="./juanpablo.html" class="btn btn-ver-mas">REVELIO</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div
-          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center"
-        >
-          <!-- CARD 1 -->
-          <div class="col">
-            <article class="member-card">
-              <img
-                src="./img/alejandro.jpg"
-                alt="Foto de Alejandro"
-                class="member-img"
-              />
-              <h3 class="member-name">Alejandro</h3>
-              <p class="member-role">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since 1966, when designers at Letraset and James
-                Mosley, the librarian at St Bride Printing Library in London,
-                took a 1914 Cicero translation and scrambled it to make dummy
-                text for Letraset's Body Type sheets.
+        <!-- SEGUNDA FILA: 2 CARDS -->
+        <div class="row g-4 justify-content-center">
+          <!-- CARD 4 - LUCAS (Hufflepuff) -->
+          <div class="col-12 col-md-4">
+            <div class="card card-hufflepuff h-100 d-flex flex-column">
+              <div class="img-wrapper">
+                <img src="img/lucas.jpg" alt="Lucas" />
+              </div>
+              <div class="nombre-integrante">LUCAS</div>
+              <div class="rol-integrante">
+                Experto en Herbología y Accesibilidad Web
+              </div>
+              <div class="card-body-custom mt-auto">
+                <a href="./lucas.html" class="btn btn-ver-mas">REVELIO</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 - SOL (Gryffindor) -->
+          <div class="col-12 col-md-4">
+            <div class="card card-gryffindor h-100 d-flex flex-column">
+              <div class="img-wrapper">
+                <img src="img/sol.jpg" alt="Sol" />
+              </div>
+              <div class="nombre-integrante">SOL</div>
+              <div class="rol-integrante">
+                Diseñadora UI/UX, Cazadora de Quidditch y Guardiana de Criaturas
+                Mágicas
+              </div>
+              <div class="card-body-custom mt-auto">
+                <a href="./sol.html" class="btn btn-ver-mas">REVELIO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-12 col-md-8">
+            <div class="nota-hechizo text-center p-3 rounded">
+              <p class="m-0 text-muted fst-italic">
+                <strong>¿Qué significa Revelio?</strong> Es un encantamiento
+                mágico de revelación utilizado para descubrir objetos ocultos,
+                pasadizos invisibles o la verdadera identidad y secretos detrás
+                de algo. Haz clic para revelar el perfil completo de cada mago.
               </p>
-              <a href="./alejandro.html" class="member-btn">Ver más</a>
-            </article>
-          </div>
-
-          <!-- CARD 2 -->
-          <div class="col">
-            <article class="member-card">
-              <img
-                src="./img/daniela.jpg"
-                alt="Foto de Daniela"
-                class="member-img"
-              />
-              <h3 class="member-name">Daniela</h3>
-              <p class="member-role">Subtítulo</p>
-              <a href="./daniela.html" class="member-btn">Ver más</a>
-            </article>
-          </div>
-
-          <!-- CARD 3 -->
-          <div class="col">
-            <article class="member-card">
-              <img
-                src="./img/juanpablo.jpg"
-                alt="Foto de Juan Pablo"
-                class="member-img"
-              />
-              <h3 class="member-name">Juan Pablo</h3>
-              <p class="member-role">Subtítulo</p>
-              <a href="./juanpablo.html" class="member-btn">Ver más</a>
-            </article>
-          </div>
-
-          <!-- CARD 4 -->
-          <div class="col">
-            <article class="member-card">
-              <img
-                src="./img/lucas.jpg"
-                alt="Foto de Lucas"
-                class="member-img"
-              />
-              <h3 class="member-name">Lucas</h3>
-              <p class="member-role">Subtítulo</p>
-              <a href="./lucas.html" class="member-btn">Ver más</a>
-            </article>
-          </div>
-
-          <!-- CARD 5 -->
-          <div class="col">
-            <article class="member-card">
-              <img src="./img/sol.jpg" alt="Foto de Sol" class="member-img" />
-              <h3 class="member-name">Sol</h3>
-              <p class="member-role">Subtítulo</p>
-              <a href="./sol.html" class="member-btn">Ver más</a>
-            </article>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer-bg">
+    <footer class="footer-custom py-4 border-top">
       <div
         class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
       >
-        <p>©Todos los derechos reservados.</p>
+        <div class="d-flex align-items-center gap-2">
+          <span class="brand-title fs-5 m-0">Front End Wizards</span>
+        </div>
+
+        <p class="m-0 text-center opacity-75">
+          © 2026 Todos los derechos reservados. Desarrollado con magia y código.
+        </p>
+
+        <div class="d-flex gap-3">
+          <a
+            href="https://github.com/solprinz/tp1-grupo20/"
+            target="_blank"
+            class="footer-link"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github fs-4"></i>
+          </a>
+          <a href="#top" class="footer-link" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up fs-4"></i>
+          </a>
+        </div>
       </div>
     </footer>
 

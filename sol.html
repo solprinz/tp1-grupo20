@@ -1,1 +1,159 @@
-<h1>Sol</h1>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto Grupo 20" />
+    <meta name="keywords" content="" />
+    <title>PÁGINA SOL PRINZEN</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="" />
+  </head>
+
+  <body class="gryffindor">
+    <header class="sticky-top shadow-sm">
+      <!-- BANNER SUPERIOR -->
+      <div class="top-banner text-center py-3">
+        <h1 class="brand-title m-0">FRONT END WIZARDS</h1>
+      </div>
+
+      <!-- NAVBAR DE NAVEGACIÓN -->
+      <nav class="navbar navbar-expand-md navbar-custom py-2">
+        <div class="container">
+          <!-- BOTÓN HAMBURGUESA (MOBILE) -->
+          <button
+            class="navbar-toggler border-0 ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars icono-hamburguesa fs-3"></i>
+          </button>
+
+          <!-- LINKS DE NAVEGACIÓN -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-2 gap-lg-4 text-center">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./alejandro.html" class="nav-link">Alejandro</a>
+              </li>
+              <li class="nav-item">
+                <a href="./daniela.html" class="nav-link">Daniela</a>
+              </li>
+              <li class="nav-item">
+                <a href="./juanpablo.html" class="nav-link">Juan Pablo</a>
+              </li>
+              <li class="nav-item">
+                <a href="./lucas.html" class="nav-link">Lucas</a>
+              </li>
+              <li class="nav-item">
+                <a href="./sol.html" class="nav-link active">Sol</a>
+              </li>
+              <li class="nav-item">
+                <a href="./bitacora.html" class="nav-link">Bitácora</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="container hero">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <h1 class="title">SOL PRINZEN</h1>
+            <p class="subtitle">Descripción Soli</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="hechizo-container">
+        <!-- Botón que activa el hechizo -->
+        <button id="btn-patronum" class="btn-magico">¡Expecto Patronum!</button>
+
+        <div id="patronus-display" class="patronus-oculto">
+          <!-- Reemplaza 'img/tu-patronus.png' por la ruta real de tu imagen -->
+          <img
+            src="img/patronus-sol.png"
+            alt="Mi Patronus"
+            class="patronus-img"
+          />
+          <div class="resplandor"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom py-4 border-top">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <div class="d-flex align-items-center gap-2">
+          <span class="brand-title fs-5 m-0">Front End Wizards</span>
+        </div>
+
+        <p class="m-0 text-center opacity-75">
+          © 2026 Todos los derechos reservados. Desarrollado con magia y código.
+        </p>
+
+        <div class="d-flex gap-3">
+          <a
+            href="https://github.com/solprinz/tp1-grupo20/"
+            target="_blank"
+            class="footer-link"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github fs-4"></i>
+          </a>
+          <a href="#top" class="footer-link" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up fs-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS DE BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS PROPIO -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
