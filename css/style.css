@@ -10,32 +10,40 @@
   --shadow: #e1b2584d;
   --gryffindor1: #740001;
   --gryffindor2: #d3a625;
+  --gryffindor3: #000000;
   --slytherin1: #1a472a;
   --slytherin2: #aaaaaa;
+  --slytherin3: #000000;
   --ravenclaw1: #0e1a40;
   --ravenclaw2: #946b2d;
+  --ravenclaw3: #5D5D5D;
   --hufflepuff1: #ecb939;
   --hufflepuff2: #372e29;
+  --hufflepuff3: #726255;
 }
 
 body.gryffindor {
   --primary: var(--gryffindor1);
   --secondary: var(--gryffindor2);
+  --accent: var(--gryffindor3);
 }
 
 body.slytherin {
   --primary: var(--slytherin1);
   --secondary: var(--slytherin2);
+  --accent: var(--slytherin3);
 }
 
 body.ravenclaw {
   --primary: var(--ravenclaw1);
   --secondary: var(--ravenclaw2);
+  --accent: var(--ravenclaw3);
 }
 
 body.hufflepuff {
   --primary: var(--hufflepuff1);
   --secondary: var(--hufflepuff2);
+  --accent: var(--hufflepuff3);
 }
 
 @font-face {
@@ -98,6 +106,95 @@ h1,
 
 .subtitulo-principal {
   color: var(--gray);
+}
+
+/* CURSOR */
+
+* {
+    cursor: none !important;
+}
+
+#cursor-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    pointer-events: none; /* Crucial para poder hacer clic en lo que hay debajo */
+    z-index: 9999;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+#cursor-falso {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/varita.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: top right;
+    transition: transform 0.05s linear;
+    
+    /* Agregamos relative para contener la luz de la punta */
+    position: relative; 
+}
+
+/* Creamos la esfera de luz blanca en la punta */
+#cursor-falso::after {
+    content: '';
+    position: absolute;
+    /* Centramos la luz exactamente en la esquina superior derecha */
+    top: -6px;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    
+    /* Estado inicial: invisible y encogida */
+    opacity: 0;
+    transform: scale(0);
+    box-shadow: 0 0 10px white, 0 0 20px rgba(255, 255, 255, 0.8);
+    
+    /* Transición suave de entrada/salida */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+/* Cuando el cursor toca un enlace, disparamos dos animaciones concatenadas */
+#cursor-falso.hover-punta::after {
+    opacity: 1;
+    /* 
+      1. 'entradaBrillo': dura 0.3s y retiene su último frame (forwards).
+      2. 'latidoConstante': dura 0.8s, es infinito, alterno, PERO arranca con 0.3s de retraso. 
+    */
+    animation: 
+        entradaBrillo 0.3s ease-out forwards,
+        latidoConstante 0.8s ease-in-out 0.3s infinite alternate;
+}
+
+/* Animación 1: El chispazo inicial de 0% a 100% (usamos 1.5 de escala como el 100% del tamaño) */
+@keyframes entradaBrillo {
+    0% {
+        transform: scale(0);
+        box-shadow: 0 0 0 white, 0 0 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(1.5);
+        box-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, 1);
+    }
+}
+
+/* Animación 2: El latido que se queda respirando entre 100% (1.5) y 70% (1.05) */
+@keyframes latidoConstante {
+    0% {
+        transform: scale(1.5); /* 100% del tamaño */
+        box-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, 1);
+    }
+    100% {
+        transform: scale(1.05); /* 70% del tamaño máximo */
+        box-shadow: 0 0 8px white, 0 0 15px rgba(255, 255, 255, 0.7);
+    }
 }
 
 /* CARDS INTEGRANTES */
@@ -373,4 +470,32 @@ h1,
   max-width: 100%;
   height: auto;
   filter: drop-shadow(0 0 10px rgba(100, 200, 255, 0.8)); /* Brillo azulado */
+}
+
+/* Botón para Expelliarmus */
+#btn-hechizo {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #d4af37; 
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-family: serif;
+    font-weight: bold;
+    cursor: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+#btn-hechizo:active {
+    transform: scale(0.95);
+}
+
+/* Clases dinámicas para el hechizo Expelliarmus */
+.caida {
+    transition: top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53), left 0.8s linear !important;
+}
+
+.caida-rotacion {
+    transition: transform 0.8s ease-in !important;
+    transform-origin: bottom left !important; 
 }
