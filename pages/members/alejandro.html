@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Front End Wizards" />
+    <meta name="keywords" content="" />
+    <title>FRONT END WIZARDS</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="" />
+  </head>
+
+  <body>
+    <header class="sticky-top shadow-sm">
+      <!-- BANNER SUPERIOR -->
+      <div class="top-banner text-center py-3">
+        <h1 class="brand-title m-0">FRONT END WIZARDS</h1>
+      </div>
+
+      <!-- NAVBAR DE NAVEGACIÓN -->
+      <nav class="navbar navbar-expand-md navbar-custom py-2">
+        <div class="container">
+          <!-- BOTÓN HAMBURGUESA (MOBILE) -->
+          <button
+            class="navbar-toggler border-0 ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars icono-hamburguesa fs-3"></i>
+          </button>
+
+          <!-- LINKS DE NAVEGACIÓN -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-2 gap-lg-4 text-center">
+              <li class="nav-item">
+                <a href="../../index.html" class="nav-link active">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./alejandro.html" class="nav-link">Alejandro</a>
+              </li>
+              <li class="nav-item">
+                <a href="./daniela.html" class="nav-link">Daniela</a>
+              </li>
+              <li class="nav-item">
+                <a href="./juanpablo.html" class="nav-link">Juan Pablo</a>
+              </li>
+              <li class="nav-item">
+                <a href="./lucas.html" class="nav-link">Lucas</a>
+              </li>
+              <li class="nav-item">
+                <a href="./sol.html" class="nav-link">Sol</a>
+              </li>
+              <li class="nav-item">
+                <a href="./bitacora.html" class="nav-link">Bitácora</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="perfil-alejandro">
+
+      <section
+        id="perfil"
+        class="perfil-seccion container-fluid perfil-editorial"
+        aria-labelledby="perfil-alejandro"
+      >
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-12 col-md-5 text-center">
+              <img
+                src="../../img/alejandro.jpg"
+                alt="Foto de Alejandro"
+                class="perfil-foto"
+              />
+            </div>
+
+            <div class="col-12 col-md-7">
+              <p class="perfil-intro mb-2">Perfil personal</p>
+              <h1 id="perfil-alejandro" class="title">Alejandro</h1>
+              <p class="subtitle">Especialista en posiciones y maquetación.</p>
+
+              <dl class="perfil-datos row mt-4 mb-0 py-3 ps-3">
+                <dt class="col-sm-3">Ciudad</dt>
+                <dd class="col-sm-9">Por definir</dd>
+                <dt class="col-sm-3">Edad</dt>
+                <dd class="col-sm-9">Por definir</dd>
+              </dl>
+
+              <article class="perfil-sobre mt-4">
+                <h2 class="h3">Sobre mí</h2>
+                <p class="mb-0">
+                  Espacio para contar quién soy, qué me interesa aprender y qué
+                  me motiva a crear experiencias web.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="perfil-seccion container-fluid reliquias" aria-labelledby="titulo-proyectos">
+        <div class="container">
+          <header class="reliquias-encabezado">
+            <p class="reliquias-capitulo">El relato de las tres creaciones</p>
+            <h2 id="titulo-proyectos">Proyectos destacados</h2>
+            <p>Toda creación tiene una historia.</p>
+          </header>
+          <div class="reliquias-tarjetas">
+            <article class="reliquias-tarjeta" data-reliquia="varita">
+              <svg class="reliquias-ilustracion" viewBox="0 0 320 240" role="img" aria-labelledby="imagen-varita">
+                <title id="imagen-varita">Silueta de la varita</title>
+                <circle cx="160" cy="123" r="88" fill="none" stroke="currentColor" opacity=".3"/>
+                <path d="M20 216q65-28 140 0t140 0" fill="none" stroke="currentColor" opacity=".35"/>
+                <path d="M147 204 177 44 185 38 184 50 159 207Z"/><path d="m165 102 20 4m-24 18 21 4m-27 20 23 4" fill="none" stroke="#c5a567" stroke-width="3"/>
+              </svg>
+              <div class="reliquias-cuerpo">
+                <p class="reliquias-capitulo">I · La varita</p>
+                <h3>Proyecto 1</h3>
+                <p class="reliquias-subtitulo">La ambición de crear</p>
+                <p>Un desafío, una idea y el poder de construirla.</p>
+                <button type="button" class="reliquias-boton" aria-expanded="true" aria-controls="historia-varita" hidden>Revelar historia</button>
+              </div>
+            </article>
+            <article class="reliquias-tarjeta" data-reliquia="piedra">
+              <svg class="reliquias-ilustracion" viewBox="0 0 320 240" role="img" aria-labelledby="imagen-piedra">
+                <title id="imagen-piedra">Silueta de la piedra</title>
+                <circle cx="160" cy="123" r="88" fill="none" stroke="currentColor" opacity=".3"/>
+                <path d="M20 216q65-28 140 0t140 0" fill="none" stroke="currentColor" opacity=".35"/>
+                <path d="m160 56 55 65-55 77-55-77Z"/><path d="m160 56 20 65-20 77-20-77Zm-55 65h110" fill="none" stroke="#c5a567" stroke-width="2"/>
+              </svg>
+              <div class="reliquias-cuerpo">
+                <p class="reliquias-capitulo">II · La piedra</p>
+                <h3>Proyecto 2</h3>
+                <p class="reliquias-subtitulo">Una idea que renace</p>
+                <p>Volver sobre lo aprendido para darle una nueva forma.</p>
+                <button type="button" class="reliquias-boton" aria-expanded="true" aria-controls="historia-piedra" hidden>Revelar historia</button>
+              </div>
+            </article>
+            <article class="reliquias-tarjeta" data-reliquia="capa">
+              <svg class="reliquias-ilustracion" viewBox="0 0 320 240" role="img" aria-labelledby="imagen-capa">
+                <title id="imagen-capa">Silueta de la capa</title>
+                <circle cx="160" cy="123" r="88" fill="none" stroke="currentColor" opacity=".3"/>
+                <path d="M20 216q65-28 140 0t140 0" fill="none" stroke="currentColor" opacity=".35"/>
+                <path d="M160 48c-25 0-32 29-33 50l-51 110q84-28 168 0L193 98c-1-21-8-50-33-50Z"/><path d="M160 62q-19 4-19 37l19 14 19-14q0-33-19-37Zm-19 53-30 70m68-70 30 70" fill="none" stroke="#c5a567" stroke-width="2"/>
+              </svg>
+              <div class="reliquias-cuerpo">
+                <p class="reliquias-capitulo">III · La capa</p>
+                <h3>Proyecto 3</h3>
+                <p class="reliquias-subtitulo">El valor de los detalles</p>
+                <p>La mejor experiencia también está en lo que no se ve.</p>
+                <button type="button" class="reliquias-boton" aria-expanded="true" aria-controls="historia-capa" hidden>Revelar historia</button>
+              </div>
+            </article>
+          </div>
+          <div class="reliquias-historias">
+            <article id="historia-varita" class="reliquias-historia" aria-labelledby="titulo-historia-varita" data-historia="varita">
+              <p class="reliquias-capitulo">La varita · Proyecto 1</p>
+              <h3 id="titulo-historia-varita" tabindex="-1">Desafío y solución</h3>
+              <p>Contá qué problema resolviste, cuál fue el mayor desafío y cómo llegaste a la solución.</p>
+              <dl>
+                <dt>Tecnologías</dt><dd>Por completar.</dd>
+                <dt>Mi aporte</dt><dd>Por completar.</dd>
+                <dt>Demo y repositorio</dt><dd>Enlaces disponibles cuando se publique el proyecto.</dd>
+              </dl>
+              <button type="button" class="reliquias-boton" data-cerrar hidden>Cerrar historia</button>
+            </article>
+            <article id="historia-piedra" class="reliquias-historia" aria-labelledby="titulo-historia-piedra" data-historia="piedra">
+              <p class="reliquias-capitulo">La piedra · Proyecto 2</p>
+              <h3 id="titulo-historia-piedra" tabindex="-1">Aprendizaje y transformación</h3>
+              <p>Contá cómo evolucionó la idea y qué aprendiste durante el desarrollo.</p>
+              <dl>
+                <dt>Tecnologías</dt><dd>Por completar.</dd>
+                <dt>Mi aporte</dt><dd>Por completar.</dd>
+                <dt>Demo y repositorio</dt><dd>Enlaces disponibles cuando se publique el proyecto.</dd>
+              </dl>
+              <button type="button" class="reliquias-boton" data-cerrar hidden>Cerrar historia</button>
+            </article>
+            <article id="historia-capa" class="reliquias-historia" aria-labelledby="titulo-historia-capa" data-historia="capa">
+              <p class="reliquias-capitulo">La capa · Proyecto 3</p>
+              <h3 id="titulo-historia-capa" tabindex="-1">Detalles y experiencia</h3>
+              <p>Contá qué decisiones mejoraron la accesibilidad, el diseño y la experiencia de uso.</p>
+              <dl>
+                <dt>Tecnologías</dt><dd>Por completar.</dd>
+                <dt>Mi aporte</dt><dd>Por completar.</dd>
+                <dt>Demo y repositorio</dt><dd>Enlaces disponibles cuando se publique el proyecto.</dd>
+              </dl>
+              <button type="button" class="reliquias-boton" data-cerrar hidden>Cerrar historia</button>
+            </article>
+          </div>
+          <p class="reliquias-progreso" role="status" aria-live="polite" hidden>0 de 3 historias exploradas.</p>
+          <div class="reliquias-final" hidden>
+            <svg viewBox="0 0 120 120" width="96" height="96" aria-hidden="true">
+              <path d="M60 8 8 108h104Z M60 8v100" />
+              <circle cx="60" cy="76" r="31" />
+            </svg>
+            <p>La verdadera magia está en lo que creamos.</p>
+          </div>
+        </div>
+        <script src="../../js/proyectos-reliquias.js" defer></script>
+      </section>
+
+      <section
+        id="habilidades"
+        class="perfil-seccion container-fluid perfil-editorial"
+        aria-labelledby="titulo-habilidades"
+      >
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="perfil-intro mb-2">Mi caja de herramientas</p>
+            <h2 id="titulo-habilidades" class="title">Habilidades</h2>
+          </div>
+          <div class="habilidades-composicion">
+          <img
+            src="../../img/perfil-habilidades.png"
+            alt="Símbolos mágicos que representan habilidades de desarrollo web"
+            class="perfil-imagen-seccion"
+            loading="lazy"
+          />
+          <ul class="habilidades-lista">
+            <li class="perfil-habilidad"><span class="habilidad-numero" aria-hidden="true">01</span><h3>Maquetación con HTML</h3></li>
+            <li class="perfil-habilidad"><span class="habilidad-numero" aria-hidden="true">02</span><h3>Diseño responsive</h3></li>
+            <li class="perfil-habilidad"><span class="habilidad-numero" aria-hidden="true">03</span><h3>Posicionamiento con CSS</h3></li>
+            <li class="perfil-habilidad"><span class="habilidad-numero" aria-hidden="true">04</span><h3>Trabajo en equipo</h3></li>
+          </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="peliculas" class="perfil-seccion container-fluid mapa-favoritos" aria-labelledby="titulo-peliculas">
+        <div class="container">
+          <header class="mapa-cabecera">
+            <p class="mapa-leyenda">Cartografía de mis favoritos</p>
+            <h2 id="titulo-peliculas">Películas favoritas</h2>
+            <p class="mapa-subtitulo">El callejón de las historias</p>
+            <button type="button" class="mapa-boton" data-abrir-mapa aria-controls="plano-peliculas" aria-expanded="false" hidden>Juro solemnemente…</button>
+          </header>
+          <div class="mapa-distribucion">
+            <div class="mapa-plano" id="plano-peliculas">
+              <span class="mapa-brujula" aria-hidden="true">N<br>✧</span>
+              <div class="mapa-camino" aria-hidden="true"></div>
+              <article class="mapa-lugar" data-lugar="1">
+                <svg class="mapa-edificio" viewBox="0 0 160 64" aria-hidden="true">
+                  <path d="M20 60V25L80 4l60 21v35ZM35 25h90M40 32v22m25-22v22m30-22v22m25-22v22"/>
+                </svg>
+                <p class="mapa-leyenda">El cine</p>
+                <img src="../../img/perfil-peliculas.png" alt="Ilustración provisional de cine" class="mapa-portada" loading="lazy" width="320" height="220" />
+                <h3>Película favorita 1</h3>
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-peliculas-1" hidden>Explorar el cine</button>
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
+              </article>
+              <article class="mapa-lugar" data-lugar="2">
+                <svg class="mapa-edificio" viewBox="0 0 160 64" aria-hidden="true">
+                  <path d="M48 60V20L80 2l32 18v40ZM58 20h44M70 60V42h20v18M72 26h16v8H72Z"/>
+                </svg>
+                <p class="mapa-leyenda">La torre</p>
+                <img src="../../img/perfil-peliculas.png" alt="Ilustración provisional de cine" class="mapa-portada" loading="lazy" width="320" height="220" />
+                <h3>Película favorita 2</h3>
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-peliculas-2" hidden>Explorar la torre</button>
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
+              </article>
+              <article class="mapa-lugar" data-lugar="3">
+                <svg class="mapa-edificio" viewBox="0 0 160 64" aria-hidden="true">
+                  <path d="M15 60V22h130v38ZM10 22 80 2l70 20M30 32h20v18H30Zm40 28V32h20v28m20-28h20v18h-20Z"/>
+                </svg>
+                <p class="mapa-leyenda">La biblioteca</p>
+                <img src="../../img/perfil-peliculas.png" alt="Ilustración provisional de cine" class="mapa-portada" loading="lazy" width="320" height="220" />
+                <h3>Película favorita 3</h3>
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-peliculas-3" hidden>Explorar la biblioteca</button>
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
+              </article>
+            </div>
+            <div class="mapa-fichas">
+              <p class="mapa-invitacion" hidden>Elegí un lugar del mapa para descubrir su historia.</p>
+              <article class="mapa-ficha" id="ficha-peliculas-1">
+                <p class="mapa-leyenda">El cine · Archivo 01</p>
+                <h3 tabindex="-1">Película favorita 1</h3>
+                <dl>
+                  <dt>Director</dt><dd>Por completar.</dd>
+                  <dt>Año</dt><dd>Por completar.</dd>
+                  <dt>Género</dt><dd>Por completar.</dd>
+                  <dt>Por qué me gusta</dt><dd>Por completar.</dd>
+                </dl>
+                <button type="button" class="mapa-boton" data-cerrar-ficha hidden>Cerrar ficha</button>
+              </article>
+              <article class="mapa-ficha" id="ficha-peliculas-2">
+                <p class="mapa-leyenda">La torre · Archivo 02</p>
+                <h3 tabindex="-1">Película favorita 2</h3>
+                <dl>
+                  <dt>Director</dt><dd>Por completar.</dd>
+                  <dt>Año</dt><dd>Por completar.</dd>
+                  <dt>Género</dt><dd>Por completar.</dd>
+                  <dt>Por qué me gusta</dt><dd>Por completar.</dd>
+                </dl>
+                <button type="button" class="mapa-boton" data-cerrar-ficha hidden>Cerrar ficha</button>
+              </article>
+              <article class="mapa-ficha" id="ficha-peliculas-3">
+                <p class="mapa-leyenda">La biblioteca · Archivo 03</p>
+                <h3 tabindex="-1">Película favorita 3</h3>
+                <dl>
+                  <dt>Director</dt><dd>Por completar.</dd>
+                  <dt>Año</dt><dd>Por completar.</dd>
+                  <dt>Género</dt><dd>Por completar.</dd>
+                  <dt>Por qué me gusta</dt><dd>Por completar.</dd>
+                </dl>
+                <button type="button" class="mapa-boton" data-cerrar-ficha hidden>Cerrar ficha</button>
+              </article>
+            </div>
+          </div>
+          <footer class="mapa-pie">
+            <p role="status" class="mapa-estado" hidden>El mapa espera tu primer recorrido.</p>
+            <button type="button" class="mapa-boton" data-cerrar-mapa hidden>Travesura realizada</button>
+          </footer>
+        </div>
+      </section>
+
+      <section id="discos" class="perfil-seccion container-fluid mapa-favoritos" aria-labelledby="titulo-discos">
+        <div class="container">
+          <header class="mapa-cabecera">
+            <p class="mapa-leyenda">Cartografía de mis favoritos</p>
+            <h2 id="titulo-discos">Discos favoritos</h2>
+            <p class="mapa-subtitulo">El pasaje de las melodías</p>
+            <button type="button" class="mapa-boton" data-abrir-mapa aria-controls="plano-discos" aria-expanded="false" hidden>Juro solemnemente…</button>
+          </header>
+          <div class="mapa-distribucion">
+            <div class="mapa-plano" id="plano-discos">
+              <span class="mapa-brujula" aria-hidden="true">N<br>✧</span>
+              <div class="mapa-camino" aria-hidden="true"></div>
+              <article class="mapa-lugar" data-lugar="1">
+                <svg class="mapa-edificio" viewBox="0 0 160 64" aria-hidden="true">
+                  <path d="M20 60V25L80 4l60 21v35ZM35 25h90M40 32v22m25-22v22m30-22v22m25-22v22"/>
+                </svg>
+                <p class="mapa-leyenda">El salón</p>
+                <img src="../../img/perfil-discos.png" alt="Ilustración provisional de música" class="mapa-portada" loading="lazy" width="320" height="220" />
+                <h3>Disco favorito 1</h3>
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-discos-1" hidden>Explorar el salón</button>
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
+              </article>
+              <article class="mapa-lugar" data-lugar="2">
+                <svg class="mapa-edificio" viewBox="0 0 160 64" aria-hidden="true">
+                  <path d="M48 60V20L80 2l32 18v40ZM58 20h44M70 60V42h20v18M72 26h16v8H72Z"/>
+                </svg>
+                <p class="mapa-leyenda">La tienda de vinilos</p>
+                <img src="../../img/perfil-discos.png" alt="Ilustración provisional de música" class="mapa-portada" loading="lazy" width="320" height="220" />
+                <h3>Disco favorito 2</h3>
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-discos-2" hidden>Explorar la tienda de vinilos</button>
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
+              </article>
+              <article class="mapa-lugar" data-lugar="3">
+                <svg class="mapa-edificio" viewBox="0 0 160 64" aria-hidden="true">
+                  <path d="M15 60V22h130v38ZM10 22 80 2l70 20M30 32h20v18H30Zm40 28V32h20v28m20-28h20v18h-20Z"/>
+                </svg>
+                <p class="mapa-leyenda">El escenario</p>
+                <img src="../../img/perfil-discos.png" alt="Ilustración provisional de música" class="mapa-portada" loading="lazy" width="320" height="220" />
+                <h3>Disco favorito 3</h3>
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-discos-3" hidden>Explorar el escenario</button>
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
+              </article>
+            </div>
+            <div class="mapa-fichas">
+              <p class="mapa-invitacion" hidden>Elegí un lugar del mapa para descubrir su historia.</p>
+              <article class="mapa-ficha" id="ficha-discos-1">
+                <p class="mapa-leyenda">El salón · Archivo 01</p>
+                <h3 tabindex="-1">Disco favorito 1</h3>
+                <dl>
+                  <dt>Artista</dt><dd>Por completar.</dd>
+                  <dt>Año</dt><dd>Por completar.</dd>
+                  <dt>Género</dt><dd>Por completar.</dd>
+                  <dt>Canción destacada</dt><dd>Por completar.</dd>
+                </dl>
+                <button type="button" class="mapa-boton" data-cerrar-ficha hidden>Cerrar ficha</button>
+              </article>
+              <article class="mapa-ficha" id="ficha-discos-2">
+                <p class="mapa-leyenda">La tienda de vinilos · Archivo 02</p>
+                <h3 tabindex="-1">Disco favorito 2</h3>
+                <dl>
+                  <dt>Artista</dt><dd>Por completar.</dd>
+                  <dt>Año</dt><dd>Por completar.</dd>
+                  <dt>Género</dt><dd>Por completar.</dd>
+                  <dt>Canción destacada</dt><dd>Por completar.</dd>
+                </dl>
+                <button type="button" class="mapa-boton" data-cerrar-ficha hidden>Cerrar ficha</button>
+              </article>
+              <article class="mapa-ficha" id="ficha-discos-3">
+                <p class="mapa-leyenda">El escenario · Archivo 03</p>
+                <h3 tabindex="-1">Disco favorito 3</h3>
+                <dl>
+                  <dt>Artista</dt><dd>Por completar.</dd>
+                  <dt>Año</dt><dd>Por completar.</dd>
+                  <dt>Género</dt><dd>Por completar.</dd>
+                  <dt>Canción destacada</dt><dd>Por completar.</dd>
+                </dl>
+                <button type="button" class="mapa-boton" data-cerrar-ficha hidden>Cerrar ficha</button>
+              </article>
+            </div>
+          </div>
+          <footer class="mapa-pie">
+            <p role="status" class="mapa-estado" hidden>El mapa espera tu primer recorrido.</p>
+            <button type="button" class="mapa-boton" data-cerrar-mapa hidden>Travesura realizada</button>
+          </footer>
+        </div>
+      </section>
+      <script src="../../js/mapa-favoritos.js" defer></script>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom py-4 border-top">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <div class="d-flex align-items-center gap-2">
+          <span class="brand-title fs-5 m-0">Front End Wizards</span>
+        </div>
+
+        <p class="m-0 text-center opacity-75">
+          © 2026 Todos los derechos reservados. Desarrollado con magia y código.
+        </p>
+
+        <div class="d-flex gap-3">
+          <a
+            href="https://github.com/solprinz/tp1-grupo20/"
+            target="_blank"
+            class="footer-link"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github fs-4"></i>
+          </a>
+          <a href="#top" class="footer-link" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up fs-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS DE BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS PROPIO -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/cursor.js"></script>
+  </body>
+</html>
