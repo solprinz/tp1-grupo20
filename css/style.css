@@ -25,30 +25,30 @@
 body.gryffindor {
   --primary: var(--gryffindor1);
   --secondary: var(--gryffindor2);
-  --accent: var(--gryffindor3);
+  --acento: var(--gryffindor3);
 }
 
 body.slytherin {
   --primary: var(--slytherin1);
   --secondary: var(--slytherin2);
-  --accent: var(--slytherin3);
+  --acento: var(--slytherin3);
 }
 
 body.ravenclaw {
   --primary: var(--ravenclaw1);
   --secondary: var(--ravenclaw2);
-  --accent: var(--ravenclaw3);
+  --acento: var(--ravenclaw3);
 }
 
 body.hufflepuff {
   --primary: var(--hufflepuff1);
   --secondary: var(--hufflepuff2);
-  --accent: var(--hufflepuff3);
+  --acento: var(--hufflepuff3);
 }
 
 @font-face {
   font-family: "Lumos";
-  src: url("./fonts/LUMOS.TTF") format("truetype");
+  src: url("../fonts/LUMOS.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -120,7 +120,7 @@ h1,
     left: 0;
     width: 45px;
     height: 45px;
-    pointer-events: none; /* Crucial para poder hacer clic en lo que hay debajo */
+    pointer-events: none;
     z-index: 9999;
     opacity: 0; 
     transition: opacity 0.3s ease;
@@ -134,46 +134,32 @@ h1,
     background-repeat: no-repeat;
     transform-origin: top right;
     transition: transform 0.05s linear;
-    
-    /* Agregamos relative para contener la luz de la punta */
     position: relative; 
 }
 
-/* Creamos la esfera de luz blanca en la punta */
 #cursor-falso::after {
     content: '';
     position: absolute;
-    /* Centramos la luz exactamente en la esquina superior derecha */
     top: -6px;
     right: -6px;
     width: 12px;
     height: 12px;
     background-color: white;
     border-radius: 50%;
-    
-    /* Estado inicial: invisible y encogida */
     opacity: 0;
     transform: scale(0);
     box-shadow: 0 0 10px white, 0 0 20px rgba(255, 255, 255, 0.8);
-    
-    /* Transición suave de entrada/salida */
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
 }
 
-/* Cuando el cursor toca un enlace, disparamos dos animaciones concatenadas */
 #cursor-falso.hover-punta::after {
     opacity: 1;
-    /* 
-      1. 'entradaBrillo': dura 0.3s y retiene su último frame (forwards).
-      2. 'latidoConstante': dura 0.8s, es infinito, alterno, PERO arranca con 0.3s de retraso. 
-    */
     animation: 
         entradaBrillo 0.3s ease-out forwards,
         latidoConstante 0.8s ease-in-out 0.3s infinite alternate;
 }
 
-/* Animación 1: El chispazo inicial de 0% a 100% (usamos 1.5 de escala como el 100% del tamaño) */
 @keyframes entradaBrillo {
     0% {
         transform: scale(0);
@@ -185,21 +171,19 @@ h1,
     }
 }
 
-/* Animación 2: El latido que se queda respirando entre 100% (1.5) y 70% (1.05) */
 @keyframes latidoConstante {
     0% {
-        transform: scale(1.5); /* 100% del tamaño */
+        transform: scale(1.5);
         box-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, 1);
     }
     100% {
-        transform: scale(1.05); /* 70% del tamaño máximo */
+        transform: scale(1.05);
         box-shadow: 0 0 8px white, 0 0 15px rgba(255, 255, 255, 0.7);
     }
 }
 
 /* CARDS INTEGRANTES */
 
-/* Card Base */
 .card {
   display: flex;
   flex-direction: column;
@@ -216,7 +200,7 @@ h1,
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24pxvar (--lightgray);
+  box-shadow: 0 12px 24px var(--lightgray);
 }
 
 .card .img-wrapper {
@@ -224,7 +208,6 @@ h1,
   border-radius: 8px;
   padding: 4px;
   background-color: var(--lightgray);
-
   overflow: hidden;
 }
 
@@ -260,7 +243,6 @@ h1,
   transition: all 0.2s ease;
 }
 
-/* CARDS ESPECÍFICAS POR CASA */
 .card-gryffindor {
   background-color: var(--gryffindor1);
   border: 3px solid var(--gryffindor2);
@@ -321,7 +303,8 @@ h1,
   background-color: rgba(13, 13, 83, 0.05);
   border: 1px dashed var(--gray);
 }
-/* MEDIA QUERIES (400px, 900px y 1200px) */
+
+/* MEDIA QUERIES */
 @media (max-width: 399.98px) {
   .brand-title {
     font-size: 1.4rem;
@@ -406,7 +389,7 @@ h1,
   line-height: 1.6;
 }
 
-/* ESTILOS DEL FOOTER */
+/* FOOTER */
 .footer-custom {
   background-color: var(--primary);
   color: var(--white);
@@ -429,7 +412,6 @@ h1,
 }
 
 /* página de Sol */
-/* Estilos básicos para el contenedor */
 .hechizo-container {
   text-align: center;
   margin: 20px auto;
@@ -456,7 +438,7 @@ h1,
 .patronus-oculto {
   opacity: 0;
   transform: scale(0.5);
-  transition: all 1s ease-out; /* Duración de la animación */
+  transition: all 1s ease-out;
   margin-top: 20px;
   position: relative;
 }
@@ -469,10 +451,9 @@ h1,
 .patronus-img {
   max-width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 10px rgba(100, 200, 255, 0.8)); /* Brillo azulado */
+  filter: drop-shadow(0 0 10px rgba(100, 200, 255, 0.8));
 }
 
-/* Botón para Expelliarmus */
 #btn-hechizo {
     padding: 15px 30px;
     font-size: 1.5rem;
@@ -490,7 +471,6 @@ h1,
     transform: scale(0.95);
 }
 
-/* Clases dinámicas para el hechizo Expelliarmus */
 .caida {
     transition: top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53), left 0.8s linear !important;
 }
@@ -500,8 +480,19 @@ h1,
     transform-origin: bottom left !important; 
 }
 
-/* Proyectos: relato de las tres reliquias. Alcance exclusivo de esta sección. */
-.perfil-alejandro #proyectos.reliquias {
+/* =========================================================
+   ESTILOS DE PERFIL
+   Se aplican a CUALQUIER <main> que tenga una de estas clases:
+   .perfil-alejandro, .perfil-daniela, .perfil-sol,
+   .perfil-lucas, .perfil-juanpablo, .perfil-bitacora
+   ========================================================= */
+
+/* ---------- PROYECTOS: relato de las tres reliquias ---------- */
+.perfil-alejandro #proyectos.reliquias,
+.perfil-daniela #proyectos.reliquias,
+.perfil-sol #proyectos.reliquias,
+.perfil-lucas #proyectos.reliquias,
+.perfil-juanpablo #proyectos.reliquias {
   --rel-tinta: #29231d;
   --rel-oro: #886326;
   color: var(--rel-tinta);
@@ -511,25 +502,64 @@ h1,
     #e9dab9;
 }
 
-.perfil-alejandro #proyectos [hidden] { display: none !important; }
-.perfil-alejandro #proyectos,
-.perfil-alejandro #proyectos * { cursor: auto !important; }
-.perfil-alejandro #proyectos .reliquias-boton { cursor: pointer !important; }
+.perfil-alejandro #proyectos [hidden],
+.perfil-daniela #proyectos [hidden],
+.perfil-sol #proyectos [hidden],
+.perfil-lucas #proyectos [hidden],
+.perfil-juanpablo #proyectos [hidden] { display: none !important; }
 
-.perfil-alejandro #proyectos .reliquias-encabezado {
+.perfil-alejandro #proyectos,
+.perfil-alejandro #proyectos *,
+.perfil-daniela #proyectos,
+.perfil-daniela #proyectos *,
+.perfil-sol #proyectos,
+.perfil-sol #proyectos *,
+.perfil-lucas #proyectos,
+.perfil-lucas #proyectos *,
+.perfil-juanpablo #proyectos,
+.perfil-juanpablo #proyectos * { cursor: auto !important; }
+
+.perfil-alejandro #proyectos .reliquias-boton,
+.perfil-daniela #proyectos .reliquias-boton,
+.perfil-sol #proyectos .reliquias-boton,
+.perfil-lucas #proyectos .reliquias-boton,
+.perfil-juanpablo #proyectos .reliquias-boton { cursor: pointer !important; }
+
+.perfil-alejandro #proyectos .reliquias-encabezado,
+.perfil-daniela #proyectos .reliquias-encabezado,
+.perfil-sol #proyectos .reliquias-encabezado,
+.perfil-lucas #proyectos .reliquias-encabezado,
+.perfil-juanpablo #proyectos .reliquias-encabezado {
   max-width: 680px;
   margin: 0 auto 3rem;
   text-align: center;
 }
 
 .perfil-alejandro #proyectos h2,
-.perfil-alejandro #proyectos h3 {
+.perfil-alejandro #proyectos h3,
+.perfil-daniela #proyectos h2,
+.perfil-daniela #proyectos h3,
+.perfil-sol #proyectos h2,
+.perfil-sol #proyectos h3,
+.perfil-lucas #proyectos h2,
+.perfil-lucas #proyectos h3,
+.perfil-juanpablo #proyectos h2,
+.perfil-juanpablo #proyectos h3 {
   color: var(--rel-tinta);
   font-family: "Cinzel", serif;
 }
 
-.perfil-alejandro #proyectos h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
-.perfil-alejandro #proyectos .reliquias-capitulo {
+.perfil-alejandro #proyectos h2,
+.perfil-daniela #proyectos h2,
+.perfil-sol #proyectos h2,
+.perfil-lucas #proyectos h2,
+.perfil-juanpablo #proyectos h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+
+.perfil-alejandro #proyectos .reliquias-capitulo,
+.perfil-daniela #proyectos .reliquias-capitulo,
+.perfil-sol #proyectos .reliquias-capitulo,
+.perfil-lucas #proyectos .reliquias-capitulo,
+.perfil-juanpablo #proyectos .reliquias-capitulo {
   color: var(--rel-oro);
   font-size: .75rem;
   font-weight: 700;
@@ -537,13 +567,21 @@ h1,
   text-transform: uppercase;
 }
 
-.perfil-alejandro #proyectos .reliquias-tarjetas {
+.perfil-alejandro #proyectos .reliquias-tarjetas,
+.perfil-daniela #proyectos .reliquias-tarjetas,
+.perfil-sol #proyectos .reliquias-tarjetas,
+.perfil-lucas #proyectos .reliquias-tarjetas,
+.perfil-juanpablo #proyectos .reliquias-tarjetas {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
-.perfil-alejandro #proyectos .reliquias-tarjeta {
+.perfil-alejandro #proyectos .reliquias-tarjeta,
+.perfil-daniela #proyectos .reliquias-tarjeta,
+.perfil-sol #proyectos .reliquias-tarjeta,
+.perfil-lucas #proyectos .reliquias-tarjeta,
+.perfil-juanpablo #proyectos .reliquias-tarjeta {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -552,7 +590,11 @@ h1,
   box-shadow: 0 12px 24px #29231d12;
 }
 
-.perfil-alejandro #proyectos .reliquias-ilustracion {
+.perfil-alejandro #proyectos .reliquias-ilustracion,
+.perfil-daniela #proyectos .reliquias-ilustracion,
+.perfil-sol #proyectos .reliquias-ilustracion,
+.perfil-lucas #proyectos .reliquias-ilustracion,
+.perfil-juanpablo #proyectos .reliquias-ilustracion {
   display: block;
   width: 100%;
   fill: var(--rel-tinta);
@@ -561,15 +603,28 @@ h1,
   border-bottom: 1px solid #88632670;
 }
 
-.perfil-alejandro #proyectos .reliquias-cuerpo {
+.perfil-alejandro #proyectos .reliquias-cuerpo,
+.perfil-daniela #proyectos .reliquias-cuerpo,
+.perfil-sol #proyectos .reliquias-cuerpo,
+.perfil-lucas #proyectos .reliquias-cuerpo,
+.perfil-juanpablo #proyectos .reliquias-cuerpo {
   display: flex;
   flex: 1;
   flex-direction: column;
   padding: 1.5rem;
 }
 
-.perfil-alejandro #proyectos .reliquias-subtitulo { font-style: italic; }
-.perfil-alejandro #proyectos .reliquias-boton {
+.perfil-alejandro #proyectos .reliquias-subtitulo,
+.perfil-daniela #proyectos .reliquias-subtitulo,
+.perfil-sol #proyectos .reliquias-subtitulo,
+.perfil-lucas #proyectos .reliquias-subtitulo,
+.perfil-juanpablo #proyectos .reliquias-subtitulo { font-style: italic; }
+
+.perfil-alejandro #proyectos .reliquias-boton,
+.perfil-daniela #proyectos .reliquias-boton,
+.perfil-sol #proyectos .reliquias-boton,
+.perfil-lucas #proyectos .reliquias-boton,
+.perfil-juanpablo #proyectos .reliquias-boton {
   align-self: flex-start;
   margin-top: auto;
   padding: .7rem 1rem;
@@ -579,22 +634,43 @@ h1,
   font-weight: 600;
 }
 
-.perfil-alejandro #proyectos .reliquias-boton:hover { background: #51412e; }
-.perfil-alejandro #proyectos :focus-visible {
+.perfil-alejandro #proyectos .reliquias-boton:hover,
+.perfil-daniela #proyectos .reliquias-boton:hover,
+.perfil-sol #proyectos .reliquias-boton:hover,
+.perfil-lucas #proyectos .reliquias-boton:hover,
+.perfil-juanpablo #proyectos .reliquias-boton:hover { background: #51412e; }
+
+.perfil-alejandro #proyectos :focus-visible,
+.perfil-daniela #proyectos :focus-visible,
+.perfil-sol #proyectos :focus-visible,
+.perfil-lucas #proyectos :focus-visible,
+.perfil-juanpablo #proyectos :focus-visible {
   outline: 3px solid var(--rel-oro);
   outline-offset: 5px;
 }
 
-.perfil-alejandro #proyectos .reliquia-activa {
+.perfil-alejandro #proyectos .reliquia-activa,
+.perfil-daniela #proyectos .reliquia-activa,
+.perfil-sol #proyectos .reliquia-activa,
+.perfil-lucas #proyectos .reliquia-activa,
+.perfil-juanpablo #proyectos .reliquia-activa {
   border-color: var(--rel-oro);
   box-shadow: 0 0 0 2px var(--rel-oro), 0 12px 24px #29231d20;
 }
 
-.perfil-alejandro #proyectos [data-explorada] .reliquias-capitulo::after {
+.perfil-alejandro #proyectos [data-explorada] .reliquias-capitulo::after,
+.perfil-daniela #proyectos [data-explorada] .reliquias-capitulo::after,
+.perfil-sol #proyectos [data-explorada] .reliquias-capitulo::after,
+.perfil-lucas #proyectos [data-explorada] .reliquias-capitulo::after,
+.perfil-juanpablo #proyectos [data-explorada] .reliquias-capitulo::after {
   content: " · Explorada";
 }
 
-.perfil-alejandro #proyectos .reliquias-historia {
+.perfil-alejandro #proyectos .reliquias-historia,
+.perfil-daniela #proyectos .reliquias-historia,
+.perfil-sol #proyectos .reliquias-historia,
+.perfil-lucas #proyectos .reliquias-historia,
+.perfil-juanpablo #proyectos .reliquias-historia {
   margin-top: 2rem;
   padding: clamp(1.3rem, 4vw, 3rem);
   border-block: 2px solid var(--rel-oro);
@@ -602,22 +678,49 @@ h1,
   box-shadow: 0 12px 30px #29231d18;
 }
 
-.perfil-alejandro #proyectos .reliquias-historia h3 { scroll-margin-top: 12rem; }
-.perfil-alejandro #proyectos .reliquias-historia dt { color: var(--rel-oro); }
-.perfil-alejandro #proyectos .reliquias-historia dd { margin-bottom: 1rem; }
-.perfil-alejandro #proyectos .reliquias-progreso {
+.perfil-alejandro #proyectos .reliquias-historia h3,
+.perfil-daniela #proyectos .reliquias-historia h3,
+.perfil-sol #proyectos .reliquias-historia h3,
+.perfil-lucas #proyectos .reliquias-historia h3,
+.perfil-juanpablo #proyectos .reliquias-historia h3 { scroll-margin-top: 12rem; }
+
+.perfil-alejandro #proyectos .reliquias-historia dt,
+.perfil-daniela #proyectos .reliquias-historia dt,
+.perfil-sol #proyectos .reliquias-historia dt,
+.perfil-lucas #proyectos .reliquias-historia dt,
+.perfil-juanpablo #proyectos .reliquias-historia dt { color: var(--rel-oro); }
+
+.perfil-alejandro #proyectos .reliquias-historia dd,
+.perfil-daniela #proyectos .reliquias-historia dd,
+.perfil-sol #proyectos .reliquias-historia dd,
+.perfil-lucas #proyectos .reliquias-historia dd,
+.perfil-juanpablo #proyectos .reliquias-historia dd { margin-bottom: 1rem; }
+
+.perfil-alejandro #proyectos .reliquias-progreso,
+.perfil-daniela #proyectos .reliquias-progreso,
+.perfil-sol #proyectos .reliquias-progreso,
+.perfil-lucas #proyectos .reliquias-progreso,
+.perfil-juanpablo #proyectos .reliquias-progreso {
   margin: 2rem 0 0;
   text-align: center;
   font-size: .875rem;
 }
 
-.perfil-alejandro #proyectos .reliquias-final {
+.perfil-alejandro #proyectos .reliquias-final,
+.perfil-daniela #proyectos .reliquias-final,
+.perfil-sol #proyectos .reliquias-final,
+.perfil-lucas #proyectos .reliquias-final,
+.perfil-juanpablo #proyectos .reliquias-final {
   margin-top: 2rem;
   text-align: center;
   font-family: "Cinzel", serif;
 }
 
-.perfil-alejandro #proyectos .reliquias-final svg {
+.perfil-alejandro #proyectos .reliquias-final svg,
+.perfil-daniela #proyectos .reliquias-final svg,
+.perfil-sol #proyectos .reliquias-final svg,
+.perfil-lucas #proyectos .reliquias-final svg,
+.perfil-juanpablo #proyectos .reliquias-final svg {
   fill: none;
   stroke: var(--rel-oro);
   stroke-width: 2;
@@ -625,14 +728,30 @@ h1,
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .perfil-alejandro #proyectos [data-historia="varita"]:not([hidden]) {
+  .perfil-alejandro #proyectos [data-historia="varita"]:not([hidden]),
+  .perfil-daniela #proyectos [data-historia="varita"]:not([hidden]),
+  .perfil-sol #proyectos [data-historia="varita"]:not([hidden]),
+  .perfil-lucas #proyectos [data-historia="varita"]:not([hidden]),
+  .perfil-juanpablo #proyectos [data-historia="varita"]:not([hidden]) {
     animation: reliquia-trazo .6s ease-out;
   }
-  .perfil-alejandro #proyectos [data-historia="piedra"]:not([hidden]) {
+  .perfil-alejandro #proyectos [data-historia="piedra"]:not([hidden]),
+  .perfil-daniela #proyectos [data-historia="piedra"]:not([hidden]),
+  .perfil-sol #proyectos [data-historia="piedra"]:not([hidden]),
+  .perfil-lucas #proyectos [data-historia="piedra"]:not([hidden]),
+  .perfil-juanpablo #proyectos [data-historia="piedra"]:not([hidden]) {
     animation: reliquia-ondas .7s ease-out;
   }
   .perfil-alejandro #proyectos [data-historia="capa"]:not([hidden]),
-  .perfil-alejandro #proyectos .reliquias-final:not([hidden]) {
+  .perfil-daniela #proyectos [data-historia="capa"]:not([hidden]),
+  .perfil-sol #proyectos [data-historia="capa"]:not([hidden]),
+  .perfil-lucas #proyectos [data-historia="capa"]:not([hidden]),
+  .perfil-juanpablo #proyectos [data-historia="capa"]:not([hidden]),
+  .perfil-alejandro #proyectos .reliquias-final:not([hidden]),
+  .perfil-daniela #proyectos .reliquias-final:not([hidden]),
+  .perfil-sol #proyectos .reliquias-final:not([hidden]),
+  .perfil-lucas #proyectos .reliquias-final:not([hidden]),
+  .perfil-juanpablo #proyectos .reliquias-final:not([hidden]) {
     animation: reliquia-velo .8s ease-out;
   }
 }
@@ -651,12 +770,24 @@ h1,
 }
 
 @media (max-width: 767.98px) {
-  .perfil-alejandro #proyectos .reliquias-tarjetas { grid-template-columns: 1fr; }
-  .perfil-alejandro #proyectos .reliquias-ilustracion { max-height: 240px; }
+  .perfil-alejandro #proyectos .reliquias-tarjetas,
+  .perfil-daniela #proyectos .reliquias-tarjetas,
+  .perfil-sol #proyectos .reliquias-tarjetas,
+  .perfil-lucas #proyectos .reliquias-tarjetas,
+  .perfil-juanpablo #proyectos .reliquias-tarjetas { grid-template-columns: 1fr; }
+  .perfil-alejandro #proyectos .reliquias-ilustracion,
+  .perfil-daniela #proyectos .reliquias-ilustracion,
+  .perfil-sol #proyectos .reliquias-ilustracion,
+  .perfil-lucas #proyectos .reliquias-ilustracion,
+  .perfil-juanpablo #proyectos .reliquias-ilustracion { max-height: 240px; }
 }
 
-/* Mapas de favoritos: estilos compartidos solo por películas y discos. */
-.perfil-alejandro .mapa-favoritos {
+/* ---------- MAPAS DE FAVORITOS ---------- */
+.perfil-alejandro .mapa-favoritos,
+.perfil-daniela .mapa-favoritos,
+.perfil-sol .mapa-favoritos,
+.perfil-lucas .mapa-favoritos,
+.perfil-juanpablo .mapa-favoritos {
   --mapa-tinta: #583b29;
   --mapa-papel: #ead6ae;
   color: var(--mapa-tinta);
@@ -665,33 +796,77 @@ h1,
     repeating-linear-gradient(95deg, #6c422b05 0 1px, transparent 1px 6px),
     var(--mapa-papel);
 }
-.perfil-alejandro .mapa-favoritos [hidden] { display: none !important; }
+.perfil-alejandro .mapa-favoritos [hidden],
+.perfil-daniela .mapa-favoritos [hidden],
+.perfil-sol .mapa-favoritos [hidden],
+.perfil-lucas .mapa-favoritos [hidden],
+.perfil-juanpablo .mapa-favoritos [hidden] { display: none !important; }
 .perfil-alejandro .mapa-favoritos,
-.perfil-alejandro .mapa-favoritos * { cursor: auto !important; }
+.perfil-alejandro .mapa-favoritos *,
+.perfil-daniela .mapa-favoritos,
+.perfil-daniela .mapa-favoritos *,
+.perfil-sol .mapa-favoritos,
+.perfil-sol .mapa-favoritos *,
+.perfil-lucas .mapa-favoritos,
+.perfil-lucas .mapa-favoritos *,
+.perfil-juanpablo .mapa-favoritos,
+.perfil-juanpablo .mapa-favoritos * { cursor: auto !important; }
 .perfil-alejandro .mapa-favoritos h2,
-.perfil-alejandro .mapa-favoritos h3 {
+.perfil-alejandro .mapa-favoritos h3,
+.perfil-daniela .mapa-favoritos h2,
+.perfil-daniela .mapa-favoritos h3,
+.perfil-sol .mapa-favoritos h2,
+.perfil-sol .mapa-favoritos h3,
+.perfil-lucas .mapa-favoritos h2,
+.perfil-lucas .mapa-favoritos h3,
+.perfil-juanpablo .mapa-favoritos h2,
+.perfil-juanpablo .mapa-favoritos h3 {
   color: var(--mapa-tinta);
   font-family: "Cinzel", serif;
 }
-.perfil-alejandro .mapa-favoritos h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
-.perfil-alejandro .mapa-cabecera { text-align: center; margin-bottom: 2.5rem; }
-.perfil-alejandro .mapa-leyenda {
+.perfil-alejandro .mapa-favoritos h2,
+.perfil-daniela .mapa-favoritos h2,
+.perfil-sol .mapa-favoritos h2,
+.perfil-lucas .mapa-favoritos h2,
+.perfil-juanpablo .mapa-favoritos h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+.perfil-alejandro .mapa-cabecera,
+.perfil-daniela .mapa-cabecera,
+.perfil-sol .mapa-cabecera,
+.perfil-lucas .mapa-cabecera,
+.perfil-juanpablo .mapa-cabecera { text-align: center; margin-bottom: 2.5rem; }
+.perfil-alejandro .mapa-leyenda,
+.perfil-daniela .mapa-leyenda,
+.perfil-sol .mapa-leyenda,
+.perfil-lucas .mapa-leyenda,
+.perfil-juanpablo .mapa-leyenda {
   font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .12em;
 }
-.perfil-alejandro .mapa-subtitulo {
+.perfil-alejandro .mapa-subtitulo,
+.perfil-daniela .mapa-subtitulo,
+.perfil-sol .mapa-subtitulo,
+.perfil-lucas .mapa-subtitulo,
+.perfil-juanpablo .mapa-subtitulo {
   font-family: "Caveat", cursive;
   font-size: 2rem;
 }
-.perfil-alejandro .mapa-distribucion {
+.perfil-alejandro .mapa-distribucion,
+.perfil-daniela .mapa-distribucion,
+.perfil-sol .mapa-distribucion,
+.perfil-lucas .mapa-distribucion,
+.perfil-juanpablo .mapa-distribucion {
   display: grid;
   grid-template-columns: minmax(0, 2.3fr) minmax(240px, 1fr);
   gap: 2rem;
   align-items: start;
 }
-.perfil-alejandro .mapa-plano {
+.perfil-alejandro .mapa-plano,
+.perfil-daniela .mapa-plano,
+.perfil-sol .mapa-plano,
+.perfil-lucas .mapa-plano,
+.perfil-juanpablo .mapa-plano {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -699,14 +874,22 @@ h1,
   padding: 3rem 1rem 4rem;
   border: 4px double var(--mapa-tinta);
 }
-.perfil-alejandro .mapa-brujula {
+.perfil-alejandro .mapa-brujula,
+.perfil-daniela .mapa-brujula,
+.perfil-sol .mapa-brujula,
+.perfil-lucas .mapa-brujula,
+.perfil-juanpablo .mapa-brujula {
   position: absolute;
   right: 1rem;
   top: .3rem;
   text-align: center;
   line-height: 1;
 }
-.perfil-alejandro .mapa-camino {
+.perfil-alejandro .mapa-camino,
+.perfil-daniela .mapa-camino,
+.perfil-sol .mapa-camino,
+.perfil-lucas .mapa-camino,
+.perfil-juanpablo .mapa-camino {
   position: absolute;
   inset: 2rem 9% 1rem;
   border: 2px dashed var(--mapa-tinta);
@@ -714,8 +897,16 @@ h1,
   opacity: .15;
   pointer-events: none;
 }
-.perfil-alejandro .mapa-abierto .mapa-camino { opacity: .65; }
-.perfil-alejandro .mapa-lugar {
+.perfil-alejandro .mapa-abierto .mapa-camino,
+.perfil-daniela .mapa-abierto .mapa-camino,
+.perfil-sol .mapa-abierto .mapa-camino,
+.perfil-lucas .mapa-abierto .mapa-camino,
+.perfil-juanpablo .mapa-abierto .mapa-camino { opacity: .65; }
+.perfil-alejandro .mapa-lugar,
+.perfil-daniela .mapa-lugar,
+.perfil-sol .mapa-lugar,
+.perfil-lucas .mapa-lugar,
+.perfil-juanpablo .mapa-lugar {
   position: relative;
   align-self: start;
   min-width: 0;
@@ -724,9 +915,21 @@ h1,
   background: var(--mapa-papel);
   border: 1px solid #583b2950;
 }
-.perfil-alejandro .mapa-lugar:nth-of-type(2) { margin-top: 5rem; }
-.perfil-alejandro .mapa-lugar:nth-of-type(3) { margin-top: 2rem; }
-.perfil-alejandro .mapa-edificio {
+.perfil-alejandro .mapa-lugar:nth-of-type(2),
+.perfil-daniela .mapa-lugar:nth-of-type(2),
+.perfil-sol .mapa-lugar:nth-of-type(2),
+.perfil-lucas .mapa-lugar:nth-of-type(2),
+.perfil-juanpablo .mapa-lugar:nth-of-type(2) { margin-top: 5rem; }
+.perfil-alejandro .mapa-lugar:nth-of-type(3),
+.perfil-daniela .mapa-lugar:nth-of-type(3),
+.perfil-sol .mapa-lugar:nth-of-type(3),
+.perfil-lucas .mapa-lugar:nth-of-type(3),
+.perfil-juanpablo .mapa-lugar:nth-of-type(3) { margin-top: 2rem; }
+.perfil-alejandro .mapa-edificio,
+.perfil-daniela .mapa-edificio,
+.perfil-sol .mapa-edificio,
+.perfil-lucas .mapa-edificio,
+.perfil-juanpablo .mapa-edificio {
   display: block;
   width: 100%;
   height: 64px;
@@ -734,7 +937,11 @@ h1,
   stroke: currentColor;
   stroke-width: 2;
 }
-.perfil-alejandro .mapa-portada {
+.perfil-alejandro .mapa-portada,
+.perfil-daniela .mapa-portada,
+.perfil-sol .mapa-portada,
+.perfil-lucas .mapa-portada,
+.perfil-juanpablo .mapa-portada {
   display: block;
   width: 100%;
   height: auto;
@@ -744,9 +951,21 @@ h1,
   filter: sepia(.35);
   margin-bottom: 1rem;
 }
-.perfil-alejandro #discos .mapa-portada { aspect-ratio: 1; }
-.perfil-alejandro .mapa-lugar h3 { font-size: 1rem; overflow-wrap: anywhere; }
-.perfil-alejandro .mapa-boton {
+.perfil-alejandro #discos .mapa-portada,
+.perfil-daniela #discos .mapa-portada,
+.perfil-sol #discos .mapa-portada,
+.perfil-lucas #discos .mapa-portada,
+.perfil-juanpablo #discos .mapa-portada { aspect-ratio: 1; }
+.perfil-alejandro .mapa-lugar h3,
+.perfil-daniela .mapa-lugar h3,
+.perfil-sol .mapa-lugar h3,
+.perfil-lucas .mapa-lugar h3,
+.perfil-juanpablo .mapa-lugar h3 { font-size: 1rem; overflow-wrap: anywhere; }
+.perfil-alejandro .mapa-boton,
+.perfil-daniela .mapa-boton,
+.perfil-sol .mapa-boton,
+.perfil-lucas .mapa-boton,
+.perfil-juanpablo .mapa-boton {
   padding: .65rem .85rem;
   border: 1px solid var(--mapa-tinta);
   color: var(--mapa-tinta);
@@ -754,13 +973,29 @@ h1,
   font-weight: 600;
   cursor: pointer !important;
 }
-.perfil-alejandro .mapa-boton:hover { background: #fff4d9; }
-.perfil-alejandro .mapa-favoritos :focus-visible {
+.perfil-alejandro .mapa-boton:hover,
+.perfil-daniela .mapa-boton:hover,
+.perfil-sol .mapa-boton:hover,
+.perfil-lucas .mapa-boton:hover,
+.perfil-juanpablo .mapa-boton:hover { background: #fff4d9; }
+.perfil-alejandro .mapa-favoritos :focus-visible,
+.perfil-daniela .mapa-favoritos :focus-visible,
+.perfil-sol .mapa-favoritos :focus-visible,
+.perfil-lucas .mapa-favoritos :focus-visible,
+.perfil-juanpablo .mapa-favoritos :focus-visible {
   outline: 3px solid var(--mapa-tinta);
   outline-offset: 4px;
 }
-.perfil-alejandro .mapa-seleccionado { box-shadow: 0 0 0 2px var(--mapa-tinta); }
-.perfil-alejandro .mapa-huellas {
+.perfil-alejandro .mapa-seleccionado,
+.perfil-daniela .mapa-seleccionado,
+.perfil-sol .mapa-seleccionado,
+.perfil-lucas .mapa-seleccionado,
+.perfil-juanpablo .mapa-seleccionado { box-shadow: 0 0 0 2px var(--mapa-tinta); }
+.perfil-alejandro .mapa-huellas,
+.perfil-daniela .mapa-huellas,
+.perfil-sol .mapa-huellas,
+.perfil-lucas .mapa-huellas,
+.perfil-juanpablo .mapa-huellas {
   position: absolute;
   bottom: -2.5rem;
   left: 10%;
@@ -771,26 +1006,74 @@ h1,
   opacity: 0;
   filter: grayscale(1) sepia(1);
 }
-.perfil-alejandro .mapa-seleccionado .mapa-huellas { opacity: .8; }
+.perfil-alejandro .mapa-seleccionado .mapa-huellas,
+.perfil-daniela .mapa-seleccionado .mapa-huellas,
+.perfil-sol .mapa-seleccionado .mapa-huellas,
+.perfil-lucas .mapa-seleccionado .mapa-huellas,
+.perfil-juanpablo .mapa-seleccionado .mapa-huellas { opacity: .8; }
 .perfil-alejandro .mapa-ficha,
-.perfil-alejandro .mapa-invitacion {
+.perfil-alejandro .mapa-invitacion,
+.perfil-daniela .mapa-ficha,
+.perfil-daniela .mapa-invitacion,
+.perfil-sol .mapa-ficha,
+.perfil-sol .mapa-invitacion,
+.perfil-lucas .mapa-ficha,
+.perfil-lucas .mapa-invitacion,
+.perfil-juanpablo .mapa-ficha,
+.perfil-juanpablo .mapa-invitacion {
   padding: 1.5rem;
   background: #fff1d2;
   border: 4px double #583b2980;
   box-shadow: 4px 8px 16px #583b2918;
   margin-bottom: 1rem;
 }
-.perfil-alejandro .mapa-ficha h3 { scroll-margin-top: 12rem; font-size: 1.3rem; }
-.perfil-alejandro .mapa-ficha dd { margin-bottom: .75rem; }
-.perfil-alejandro .mapa-pie { text-align: center; margin-top: 2rem; }
+.perfil-alejandro .mapa-ficha h3,
+.perfil-daniela .mapa-ficha h3,
+.perfil-sol .mapa-ficha h3,
+.perfil-lucas .mapa-ficha h3,
+.perfil-juanpablo .mapa-ficha h3 { scroll-margin-top: 12rem; font-size: 1.3rem; }
+.perfil-alejandro .mapa-ficha dd,
+.perfil-daniela .mapa-ficha dd,
+.perfil-sol .mapa-ficha dd,
+.perfil-lucas .mapa-ficha dd,
+.perfil-juanpablo .mapa-ficha dd { margin-bottom: .75rem; }
+.perfil-alejandro .mapa-pie,
+.perfil-daniela .mapa-pie,
+.perfil-sol .mapa-pie,
+.perfil-lucas .mapa-pie,
+.perfil-juanpablo .mapa-pie { text-align: center; margin-top: 2rem; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .perfil-alejandro .mapa-camino { transition: opacity .6s; }
-  .perfil-alejandro .mapa-abierto .mapa-camino { animation: mapa-desplegar .7s ease-out; }
-  .perfil-alejandro .mapa-huellas { transition: opacity .3s; }
-  .perfil-alejandro .mapa-seleccionado .mapa-huellas span { animation: mapa-paso .8s both; }
-  .perfil-alejandro .mapa-seleccionado .mapa-huellas span:nth-child(2) { animation-delay: .25s; }
-  .perfil-alejandro .mapa-seleccionado .mapa-huellas span:nth-child(3) { animation-delay: .5s; }
+  .perfil-alejandro .mapa-camino,
+  .perfil-daniela .mapa-camino,
+  .perfil-sol .mapa-camino,
+  .perfil-lucas .mapa-camino,
+  .perfil-juanpablo .mapa-camino { transition: opacity .6s; }
+  .perfil-alejandro .mapa-abierto .mapa-camino,
+  .perfil-daniela .mapa-abierto .mapa-camino,
+  .perfil-sol .mapa-abierto .mapa-camino,
+  .perfil-lucas .mapa-abierto .mapa-camino,
+  .perfil-juanpablo .mapa-abierto .mapa-camino { animation: mapa-desplegar .7s ease-out; }
+  .perfil-alejandro .mapa-huellas,
+  .perfil-daniela .mapa-huellas,
+  .perfil-sol .mapa-huellas,
+  .perfil-lucas .mapa-huellas,
+  .perfil-juanpablo .mapa-huellas { transition: opacity .3s; }
+  .perfil-alejandro .mapa-seleccionado .mapa-huellas span,
+  .perfil-daniela .mapa-seleccionado .mapa-huellas span,
+  .perfil-sol .mapa-seleccionado .mapa-huellas span,
+  .perfil-lucas .mapa-seleccionado .mapa-huellas span,
+  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span { animation: mapa-paso .8s both; }
+  .perfil-alejandro .mapa-seleccionado .mapa-huellas span:nth-child(2),
+  .perfil-daniela .mapa-seleccionado .mapa-huellas span:nth-child(2),
+  .perfil-sol .mapa-seleccionado .mapa-huellas span:nth-child(2),
+  .perfil-lucas .mapa-seleccionado .mapa-huellas span:nth-child(2),
+  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span:nth-child(2) { animation-delay: .25s; }
+  .perfil-alejandro .mapa-seleccionado .mapa-huellas span:nth-child(3),
+  .perfil-daniela .mapa-seleccionado .mapa-huellas span:nth-child(3),
+  .perfil-sol .mapa-seleccionado .mapa-huellas span:nth-child(3),
+  .perfil-lucas .mapa-seleccionado .mapa-huellas span:nth-child(3),
+  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span:nth-child(3) { animation-delay: .5s; }
 }
 @keyframes mapa-paso {
   from { opacity: 0; transform: translateX(-12px); }
@@ -801,16 +1084,36 @@ h1,
   to { clip-path: inset(0); }
 }
 @media (max-width: 991.98px) {
-  .perfil-alejandro .mapa-distribucion { grid-template-columns: 1fr; }
+  .perfil-alejandro .mapa-distribucion,
+  .perfil-daniela .mapa-distribucion,
+  .perfil-sol .mapa-distribucion,
+  .perfil-lucas .mapa-distribucion,
+  .perfil-juanpablo .mapa-distribucion { grid-template-columns: 1fr; }
 }
 @media (max-width: 575.98px) {
-  .perfil-alejandro .mapa-plano { grid-template-columns: 1fr; gap: 3rem; }
-  .perfil-alejandro .mapa-lugar:nth-of-type(n) { margin-top: 0; }
-  .perfil-alejandro .mapa-portada { max-height: 240px; object-fit: contain; }
+  .perfil-alejandro .mapa-plano,
+  .perfil-daniela .mapa-plano,
+  .perfil-sol .mapa-plano,
+  .perfil-lucas .mapa-plano,
+  .perfil-juanpablo .mapa-plano { grid-template-columns: 1fr; gap: 3rem; }
+  .perfil-alejandro .mapa-lugar:nth-of-type(n),
+  .perfil-daniela .mapa-lugar:nth-of-type(n),
+  .perfil-sol .mapa-lugar:nth-of-type(n),
+  .perfil-lucas .mapa-lugar:nth-of-type(n),
+  .perfil-juanpablo .mapa-lugar:nth-of-type(n) { margin-top: 0; }
+  .perfil-alejandro .mapa-portada,
+  .perfil-daniela .mapa-portada,
+  .perfil-sol .mapa-portada,
+  .perfil-lucas .mapa-portada,
+  .perfil-juanpablo .mapa-portada { max-height: 240px; object-fit: contain; }
 }
 
-/* Perfil y habilidades: páginas de un cuaderno personal. */
-.perfil-alejandro .perfil-editorial {
+/* ---------- PERFIL EDITORIAL ---------- */
+.perfil-alejandro .perfil-editorial,
+.perfil-daniela .perfil-editorial,
+.perfil-sol .perfil-editorial,
+.perfil-lucas .perfil-editorial,
+.perfil-juanpablo .perfil-editorial {
   --editorial-tinta: #392c22;
   --editorial-borde: #96784c;
   --editorial-papel: #fff4df;
@@ -824,63 +1127,139 @@ h1,
 .perfil-alejandro .perfil-editorial h3,
 .perfil-alejandro .perfil-editorial .perfil-datos dt,
 .perfil-alejandro .perfil-editorial .perfil-intro,
-.perfil-alejandro .perfil-editorial .subtitle {
+.perfil-alejandro .perfil-editorial .subtitle,
+.perfil-daniela .perfil-editorial .title,
+.perfil-daniela .perfil-editorial h3,
+.perfil-daniela .perfil-editorial .perfil-datos dt,
+.perfil-daniela .perfil-editorial .perfil-intro,
+.perfil-daniela .perfil-editorial .subtitle,
+.perfil-sol .perfil-editorial .title,
+.perfil-sol .perfil-editorial h3,
+.perfil-sol .perfil-editorial .perfil-datos dt,
+.perfil-sol .perfil-editorial .perfil-intro,
+.perfil-sol .perfil-editorial .subtitle,
+.perfil-lucas .perfil-editorial .title,
+.perfil-lucas .perfil-editorial h3,
+.perfil-lucas .perfil-editorial .perfil-datos dt,
+.perfil-lucas .perfil-editorial .perfil-intro,
+.perfil-lucas .perfil-editorial .subtitle,
+.perfil-juanpablo .perfil-editorial .title,
+.perfil-juanpablo .perfil-editorial h3,
+.perfil-juanpablo .perfil-editorial .perfil-datos dt,
+.perfil-juanpablo .perfil-editorial .perfil-intro,
+.perfil-juanpablo .perfil-editorial .subtitle {
   color: var(--editorial-tinta);
 }
 .perfil-alejandro .perfil-editorial .title,
 .perfil-alejandro .perfil-editorial h2,
-.perfil-alejandro .perfil-editorial h3 {
+.perfil-alejandro .perfil-editorial h3,
+.perfil-daniela .perfil-editorial .title,
+.perfil-daniela .perfil-editorial h2,
+.perfil-daniela .perfil-editorial h3,
+.perfil-sol .perfil-editorial .title,
+.perfil-sol .perfil-editorial h2,
+.perfil-sol .perfil-editorial h3,
+.perfil-lucas .perfil-editorial .title,
+.perfil-lucas .perfil-editorial h2,
+.perfil-lucas .perfil-editorial h3,
+.perfil-juanpablo .perfil-editorial .title,
+.perfil-juanpablo .perfil-editorial h2,
+.perfil-juanpablo .perfil-editorial h3 {
   font-family: "Cinzel", serif !important;
 }
-.perfil-alejandro .perfil-editorial .title {
+.perfil-alejandro .perfil-editorial .title,
+.perfil-daniela .perfil-editorial .title,
+.perfil-sol .perfil-editorial .title,
+.perfil-lucas .perfil-editorial .title,
+.perfil-juanpablo .perfil-editorial .title {
   font-size: clamp(2rem, 4vw, 3rem);
 }
-.perfil-alejandro .perfil-editorial::after {
+.perfil-alejandro .perfil-editorial::after,
+.perfil-daniela .perfil-editorial::after,
+.perfil-sol .perfil-editorial::after,
+.perfil-lucas .perfil-editorial::after,
+.perfil-juanpablo .perfil-editorial::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--editorial-borde), transparent);
 }
-.perfil-alejandro .habilidades-composicion {
+.perfil-alejandro .habilidades-composicion,
+.perfil-daniela .habilidades-composicion,
+.perfil-sol .habilidades-composicion,
+.perfil-lucas .habilidades-composicion,
+.perfil-juanpablo .habilidades-composicion {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: center;
 }
-.perfil-alejandro .habilidades-composicion .perfil-imagen-seccion {
+.perfil-alejandro .habilidades-composicion .perfil-imagen-seccion,
+.perfil-daniela .habilidades-composicion .perfil-imagen-seccion,
+.perfil-sol .habilidades-composicion .perfil-imagen-seccion,
+.perfil-lucas .habilidades-composicion .perfil-imagen-seccion,
+.perfil-juanpablo .habilidades-composicion .perfil-imagen-seccion {
   aspect-ratio: 4 / 3;
   filter: saturate(.65);
 }
-.perfil-alejandro .habilidades-lista {
+.perfil-alejandro .habilidades-lista,
+.perfil-daniela .habilidades-lista,
+.perfil-sol .habilidades-lista,
+.perfil-lucas .habilidades-lista,
+.perfil-juanpablo .habilidades-lista {
   display: grid;
   gap: 1rem;
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.perfil-alejandro .habilidades-lista .perfil-habilidad {
+.perfil-alejandro .habilidades-lista .perfil-habilidad,
+.perfil-daniela .habilidades-lista .perfil-habilidad,
+.perfil-sol .habilidades-lista .perfil-habilidad,
+.perfil-lucas .habilidades-lista .perfil-habilidad,
+.perfil-juanpablo .habilidades-lista .perfil-habilidad {
   display: flex;
   gap: 1.25rem;
   align-items: center;
 }
-.perfil-alejandro .habilidades-lista h3 {
+.perfil-alejandro .habilidades-lista h3,
+.perfil-daniela .habilidades-lista h3,
+.perfil-sol .habilidades-lista h3,
+.perfil-lucas .habilidades-lista h3,
+.perfil-juanpablo .habilidades-lista h3 {
   margin: 0;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   line-height: 1.5;
 }
-.perfil-alejandro .habilidad-numero {
+.perfil-alejandro .habilidad-numero,
+.perfil-daniela .habilidad-numero,
+.perfil-sol .habilidad-numero,
+.perfil-lucas .habilidad-numero,
+.perfil-juanpablo .habilidad-numero {
   font-family: "Cinzel", serif;
   color: #73562f;
   font-size: 1.5rem;
 }
 @media (max-width: 767.98px) {
-  .perfil-alejandro .habilidades-composicion { grid-template-columns: 1fr; gap: 1.5rem; }
+  .perfil-alejandro .habilidades-composicion,
+  .perfil-daniela .habilidades-composicion,
+  .perfil-sol .habilidades-composicion,
+  .perfil-lucas .habilidades-composicion,
+  .perfil-juanpablo .habilidades-composicion { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
-/* PERFIL DE ALEJANDRO */
-.perfil-alejandro {
+/* ---------- PERFIL: estructura general ---------- */
+.perfil-alejandro,
+.perfil-daniela,
+.perfil-sol,
+.perfil-lucas,
+.perfil-juanpablo {
   background-color: rgba(244, 208, 129, 0.22);
 }
 
-.perfil-alejandro .perfil-seccion {
+.perfil-alejandro .perfil-seccion,
+.perfil-daniela .perfil-seccion,
+.perfil-sol .perfil-seccion,
+.perfil-lucas .perfil-seccion,
+.perfil-juanpablo .perfil-seccion {
   position: relative;
   display: flex;
   align-items: center;
@@ -888,19 +1267,31 @@ h1,
   padding: 5rem 0;
 }
 
-.perfil-alejandro .perfil-seccion:first-child {
+.perfil-alejandro .perfil-seccion:first-child,
+.perfil-daniela .perfil-seccion:first-child,
+.perfil-sol .perfil-seccion:first-child,
+.perfil-lucas .perfil-seccion:first-child,
+.perfil-juanpablo .perfil-seccion:first-child {
   align-items: flex-start;
   min-height: auto;
   padding-top: 2.5rem;
   padding-bottom: clamp(4rem, 7vw, 6rem);
 }
 
-.perfil-alejandro #proyectos.reliquias {
+.perfil-alejandro #proyectos.reliquias,
+.perfil-daniela #proyectos.reliquias,
+.perfil-sol #proyectos.reliquias,
+.perfil-lucas #proyectos.reliquias,
+.perfil-juanpablo #proyectos.reliquias {
   align-items: flex-start;
   padding-top: clamp(4rem, 6vw, 5rem);
 }
 
-.perfil-alejandro .perfil-seccion::after {
+.perfil-alejandro .perfil-seccion::after,
+.perfil-daniela .perfil-seccion::after,
+.perfil-sol .perfil-seccion::after,
+.perfil-lucas .perfil-seccion::after,
+.perfil-juanpablo .perfil-seccion::after {
   position: absolute;
   right: 10%;
   bottom: 0;
@@ -915,17 +1306,37 @@ h1,
   );
 }
 
-.perfil-alejandro .perfil-seccion:last-child::after {
+.perfil-alejandro .perfil-seccion:last-child::after,
+.perfil-daniela .perfil-seccion:last-child::after,
+.perfil-sol .perfil-seccion:last-child::after,
+.perfil-lucas .perfil-seccion:last-child::after,
+.perfil-juanpablo .perfil-seccion:last-child::after {
   display: none;
 }
 
 .perfil-alejandro .title,
 .perfil-alejandro h3,
-.perfil-alejandro .perfil-datos dt {
+.perfil-alejandro .perfil-datos dt,
+.perfil-daniela .title,
+.perfil-daniela h3,
+.perfil-daniela .perfil-datos dt,
+.perfil-sol .title,
+.perfil-sol h3,
+.perfil-sol .perfil-datos dt,
+.perfil-lucas .title,
+.perfil-lucas h3,
+.perfil-lucas .perfil-datos dt,
+.perfil-juanpablo .title,
+.perfil-juanpablo h3,
+.perfil-juanpablo .perfil-datos dt {
   color: var(--gryffindor1);
 }
 
-.perfil-alejandro .perfil-intro {
+.perfil-alejandro .perfil-intro,
+.perfil-daniela .perfil-intro,
+.perfil-sol .perfil-intro,
+.perfil-lucas .perfil-intro,
+.perfil-juanpablo .perfil-intro {
   color: var(--gryffindor1);
   font-family: "Cinzel", serif;
   font-size: 0.8rem;
@@ -934,7 +1345,11 @@ h1,
   text-transform: uppercase;
 }
 
-.perfil-alejandro .perfil-foto {
+.perfil-alejandro .perfil-foto,
+.perfil-daniela .perfil-foto,
+.perfil-sol .perfil-foto,
+.perfil-lucas .perfil-foto,
+.perfil-juanpablo .perfil-foto {
   width: min(100%, 400px);
   aspect-ratio: 3 / 4;
   object-fit: cover;
@@ -950,7 +1365,11 @@ h1,
     0 22px 35px #392c2235;
 }
 
-.perfil-alejandro .perfil-imagen-seccion {
+.perfil-alejandro .perfil-imagen-seccion,
+.perfil-daniela .perfil-imagen-seccion,
+.perfil-sol .perfil-imagen-seccion,
+.perfil-lucas .perfil-imagen-seccion,
+.perfil-juanpablo .perfil-imagen-seccion {
   display: block;
   width: min(100%, 960px);
   aspect-ratio: 16 / 7;
@@ -961,15 +1380,27 @@ h1,
   box-shadow: 0 14px 28px #29231d20;
 }
 
-.perfil-alejandro .perfil-datos {
+.perfil-alejandro .perfil-datos,
+.perfil-daniela .perfil-datos,
+.perfil-sol .perfil-datos,
+.perfil-lucas .perfil-datos,
+.perfil-juanpablo .perfil-datos {
   border-left: 3px solid var(--editorial-borde);
 }
 
-.perfil-alejandro .perfil-datos dt {
+.perfil-alejandro .perfil-datos dt,
+.perfil-daniela .perfil-datos dt,
+.perfil-sol .perfil-datos dt,
+.perfil-lucas .perfil-datos dt,
+.perfil-juanpablo .perfil-datos dt {
   font-family: "Cinzel", serif;
 }
 
-.perfil-alejandro .perfil-sobre {
+.perfil-alejandro .perfil-sobre,
+.perfil-daniela .perfil-sobre,
+.perfil-sol .perfil-sobre,
+.perfil-lucas .perfil-sobre,
+.perfil-juanpablo .perfil-sobre {
   max-width: 760px;
   padding: 2rem;
   color: var(--editorial-tinta);
@@ -979,7 +1410,15 @@ h1,
 }
 
 .perfil-alejandro .perfil-proyecto,
-.perfil-alejandro .perfil-favorito {
+.perfil-alejandro .perfil-favorito,
+.perfil-daniela .perfil-proyecto,
+.perfil-daniela .perfil-favorito,
+.perfil-sol .perfil-proyecto,
+.perfil-sol .perfil-favorito,
+.perfil-lucas .perfil-proyecto,
+.perfil-lucas .perfil-favorito,
+.perfil-juanpablo .perfil-proyecto,
+.perfil-juanpablo .perfil-favorito {
   padding: 1.5rem;
   color: var(--white);
   background: var(--gryffindor1);
@@ -988,12 +1427,24 @@ h1,
 }
 
 .perfil-alejandro .perfil-proyecto h3,
-.perfil-alejandro .perfil-favorito h3 {
+.perfil-alejandro .perfil-favorito h3,
+.perfil-daniela .perfil-proyecto h3,
+.perfil-daniela .perfil-favorito h3,
+.perfil-sol .perfil-proyecto h3,
+.perfil-sol .perfil-favorito h3,
+.perfil-lucas .perfil-proyecto h3,
+.perfil-lucas .perfil-favorito h3,
+.perfil-juanpablo .perfil-proyecto h3,
+.perfil-juanpablo .perfil-favorito h3 {
   color: var(--gryffindor2);
   font-family: "Cinzel", serif;
 }
 
-.perfil-alejandro .perfil-proyecto a {
+.perfil-alejandro .perfil-proyecto a,
+.perfil-daniela .perfil-proyecto a,
+.perfil-sol .perfil-proyecto a,
+.perfil-lucas .perfil-proyecto a,
+.perfil-juanpablo .perfil-proyecto a {
   display: inline-block;
   padding: 0.45rem 0.9rem;
   color: var(--gryffindor1);
@@ -1003,7 +1454,11 @@ h1,
   border: 1px solid var(--white);
 }
 
-.perfil-alejandro .perfil-tarjeta {
+.perfil-alejandro .perfil-tarjeta,
+.perfil-daniela .perfil-tarjeta,
+.perfil-sol .perfil-tarjeta,
+.perfil-lucas .perfil-tarjeta,
+.perfil-juanpablo .perfil-tarjeta {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1015,43 +1470,75 @@ h1,
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.perfil-alejandro .perfil-tarjeta:hover {
+.perfil-alejandro .perfil-tarjeta:hover,
+.perfil-daniela .perfil-tarjeta:hover,
+.perfil-sol .perfil-tarjeta:hover,
+.perfil-lucas .perfil-tarjeta:hover,
+.perfil-juanpablo .perfil-tarjeta:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 30px rgba(116, 0, 1, 0.3);
 }
 
-.perfil-alejandro .perfil-tarjeta-imagen {
+.perfil-alejandro .perfil-tarjeta-imagen,
+.perfil-daniela .perfil-tarjeta-imagen,
+.perfil-sol .perfil-tarjeta-imagen,
+.perfil-lucas .perfil-tarjeta-imagen,
+.perfil-juanpablo .perfil-tarjeta-imagen {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-bottom: 2px solid var(--gryffindor2);
 }
 
-.perfil-alejandro .perfil-tarjeta-imagen--inicio {
+.perfil-alejandro .perfil-tarjeta-imagen--inicio,
+.perfil-daniela .perfil-tarjeta-imagen--inicio,
+.perfil-sol .perfil-tarjeta-imagen--inicio,
+.perfil-lucas .perfil-tarjeta-imagen--inicio,
+.perfil-juanpablo .perfil-tarjeta-imagen--inicio {
   object-position: left center;
 }
 
-.perfil-alejandro .perfil-tarjeta-imagen--centro {
+.perfil-alejandro .perfil-tarjeta-imagen--centro,
+.perfil-daniela .perfil-tarjeta-imagen--centro,
+.perfil-sol .perfil-tarjeta-imagen--centro,
+.perfil-lucas .perfil-tarjeta-imagen--centro,
+.perfil-juanpablo .perfil-tarjeta-imagen--centro {
   object-position: center;
 }
 
-.perfil-alejandro .perfil-tarjeta-imagen--final {
+.perfil-alejandro .perfil-tarjeta-imagen--final,
+.perfil-daniela .perfil-tarjeta-imagen--final,
+.perfil-sol .perfil-tarjeta-imagen--final,
+.perfil-lucas .perfil-tarjeta-imagen--final,
+.perfil-juanpablo .perfil-tarjeta-imagen--final {
   object-position: right center;
 }
 
-.perfil-alejandro .perfil-tarjeta-contenido {
+.perfil-alejandro .perfil-tarjeta-contenido,
+.perfil-daniela .perfil-tarjeta-contenido,
+.perfil-sol .perfil-tarjeta-contenido,
+.perfil-lucas .perfil-tarjeta-contenido,
+.perfil-juanpablo .perfil-tarjeta-contenido {
   display: flex;
   flex: 1;
   flex-direction: column;
   padding: 1.25rem;
 }
 
-.perfil-alejandro .perfil-tarjeta h3 {
+.perfil-alejandro .perfil-tarjeta h3,
+.perfil-daniela .perfil-tarjeta h3,
+.perfil-sol .perfil-tarjeta h3,
+.perfil-lucas .perfil-tarjeta h3,
+.perfil-juanpablo .perfil-tarjeta h3 {
   color: var(--gryffindor2);
   font-family: "Cinzel", serif;
 }
 
-.perfil-alejandro .perfil-tarjeta-indicador {
+.perfil-alejandro .perfil-tarjeta-indicador,
+.perfil-daniela .perfil-tarjeta-indicador,
+.perfil-sol .perfil-tarjeta-indicador,
+.perfil-lucas .perfil-tarjeta-indicador,
+.perfil-juanpablo .perfil-tarjeta-indicador {
   margin-top: auto;
   color: var(--gryffindor2);
   font-family: "Cinzel", serif;
@@ -1061,11 +1548,19 @@ h1,
   text-transform: uppercase;
 }
 
-.perfil-alejandro .perfil-tarjeta.esta-abierta {
+.perfil-alejandro .perfil-tarjeta.esta-abierta,
+.perfil-daniela .perfil-tarjeta.esta-abierta,
+.perfil-sol .perfil-tarjeta.esta-abierta,
+.perfil-lucas .perfil-tarjeta.esta-abierta,
+.perfil-juanpablo .perfil-tarjeta.esta-abierta {
   background: var(--primary);
 }
 
-.perfil-alejandro .perfil-habilidad {
+.perfil-alejandro .perfil-habilidad,
+.perfil-daniela .perfil-habilidad,
+.perfil-sol .perfil-habilidad,
+.perfil-lucas .perfil-habilidad,
+.perfil-juanpablo .perfil-habilidad {
   padding: 1rem 1.25rem;
   color: var(--editorial-tinta);
   background: var(--editorial-papel);
@@ -1073,26 +1568,46 @@ h1,
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
 }
 
-.perfil-alejandro .perfil-favorito ol {
+.perfil-alejandro .perfil-favorito ol,
+.perfil-daniela .perfil-favorito ol,
+.perfil-sol .perfil-favorito ol,
+.perfil-lucas .perfil-favorito ol,
+.perfil-juanpablo .perfil-favorito ol {
   margin-bottom: 0;
   padding-left: 1.2rem;
 }
 
-.perfil-alejandro .perfil-favorito {
+.perfil-alejandro .perfil-favorito,
+.perfil-daniela .perfil-favorito,
+.perfil-sol .perfil-favorito,
+.perfil-lucas .perfil-favorito,
+.perfil-juanpablo .perfil-favorito {
   width: min(100%, 640px);
 }
 
 @media (max-width: 767.98px) {
-  .perfil-alejandro .perfil-seccion {
+  .perfil-alejandro .perfil-seccion,
+  .perfil-daniela .perfil-seccion,
+  .perfil-sol .perfil-seccion,
+  .perfil-lucas .perfil-seccion,
+  .perfil-juanpablo .perfil-seccion {
     min-height: auto;
     padding: 4rem 0;
   }
 
-  .perfil-alejandro .perfil-seccion:first-child {
+  .perfil-alejandro .perfil-seccion:first-child,
+  .perfil-daniela .perfil-seccion:first-child,
+  .perfil-sol .perfil-seccion:first-child,
+  .perfil-lucas .perfil-seccion:first-child,
+  .perfil-juanpablo .perfil-seccion:first-child {
     padding-top: 2rem;
   }
 
-  .perfil-alejandro .perfil-datos {
+  .perfil-alejandro .perfil-datos,
+  .perfil-daniela .perfil-datos,
+  .perfil-sol .perfil-datos,
+  .perfil-lucas .perfil-datos,
+  .perfil-juanpablo .perfil-datos {
     border-top: 3px solid var(--editorial-borde);
     border-left: 0;
   }
