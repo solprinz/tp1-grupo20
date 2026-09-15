@@ -1,15 +1,13 @@
 //animación Sol
 document.addEventListener("DOMContentLoaded", () => {
-  const boton = document.getElementById("btn-patronum");
-  const contenedorPatronus = document.getElementById("patronus-display");
+  const btnRevelio = document.getElementById("btn-revelio-always");
+  const escena = document.getElementById("escena-always");
 
-  boton.addEventListener("click", () => {
-    contenedorPatronus.classList.toggle("activo");
+  if (btnRevelio && escena) {
+    btnRevelio.addEventListener("click", () => {
+      btnRevelio.classList.add("oculto");
 
-    if (contenedorPatronus.classList.contains("activo")) {
-      boton.textContent = "¡Hechizo invocado!";
-    } else {
-      boton.textContent = "¡Expecto Patronum!";
-    }
-  });
+      escena.classList.add("activo");
+    });
+  }
 });

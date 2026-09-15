@@ -16,7 +16,7 @@
   --slytherin3: #000000;
   --ravenclaw1: #0e1a40;
   --ravenclaw2: #946b2d;
-  --ravenclaw3: #5D5D5D;
+  --ravenclaw3: #5d5d5d;
   --hufflepuff1: #ecb939;
   --hufflepuff2: #372e29;
   --hufflepuff3: #726255;
@@ -111,75 +111,87 @@ h1,
 /* CURSOR */
 
 * {
-    cursor: none !important;
+  cursor: none !important;
 }
 
 #cursor-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 45px;
-    height: 45px;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0; 
-    transition: opacity 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 #cursor-falso {
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/varita.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform-origin: top right;
-    transition: transform 0.05s linear;
-    position: relative; 
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/varita.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: top right;
+  transition: transform 0.05s linear;
+  position: relative;
 }
 
 #cursor-falso::after {
-    content: '';
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    width: 12px;
-    height: 12px;
-    background-color: white;
-    border-radius: 50%;
-    opacity: 0;
-    transform: scale(0);
-    box-shadow: 0 0 10px white, 0 0 20px rgba(255, 255, 255, 0.8);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  box-shadow:
+    0 0 10px white,
+    0 0 20px rgba(255, 255, 255, 0.8);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
 }
 
 #cursor-falso.hover-punta::after {
-    opacity: 1;
-    animation: 
-        entradaBrillo 0.3s ease-out forwards,
-        latidoConstante 0.8s ease-in-out 0.3s infinite alternate;
+  opacity: 1;
+  animation:
+    entradaBrillo 0.3s ease-out forwards,
+    latidoConstante 0.8s ease-in-out 0.3s infinite alternate;
 }
 
 @keyframes entradaBrillo {
-    0% {
-        transform: scale(0);
-        box-shadow: 0 0 0 white, 0 0 0 rgba(255, 255, 255, 0);
-    }
-    100% {
-        transform: scale(1.5);
-        box-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, 1);
-    }
+  0% {
+    transform: scale(0);
+    box-shadow:
+      0 0 0 white,
+      0 0 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1.5);
+    box-shadow:
+      0 0 15px white,
+      0 0 30px rgba(255, 255, 255, 1);
+  }
 }
 
 @keyframes latidoConstante {
-    0% {
-        transform: scale(1.5);
-        box-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, 1);
-    }
-    100% {
-        transform: scale(1.05);
-        box-shadow: 0 0 8px white, 0 0 15px rgba(255, 255, 255, 0.7);
-    }
+  0% {
+    transform: scale(1.5);
+    box-shadow:
+      0 0 15px white,
+      0 0 30px rgba(255, 255, 255, 1);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 8px white,
+      0 0 15px rgba(255, 255, 255, 0.7);
+  }
 }
 
 /* CARDS INTEGRANTES */
@@ -411,73 +423,96 @@ h1,
   transform: translateY(-2px);
 }
 
-/* página de Sol */
-.hechizo-container {
-  text-align: center;
-  margin: 20px auto;
-  position: relative;
-  max-width: 300px;
+/* ==========================================
+   ANIMACIÓN ALWAYS - SOL
+   ========================================== */
+
+.text-always-pregunta {
+  font-size: 3.5rem !important;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
+button#btn-revelio-always,
 .btn-magico {
-  background-color: var(--gryffindor1);
-  color: var(--gryffindor2);
-  border: 2px solid var(--gryffindor2);
-  padding: 10px 20px;
-  font-family: "Lumos";
-  font-size: 1.2rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  padding: 10px 24px;
+  font-family: "Lumos", serif;
+  font-size: 1.3rem;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
+button#btn-revelio-always:hover,
 .btn-magico:hover {
-  background-color: var(--gryffindor1);
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--secondary);
 }
 
-.patronus-oculto {
+.btn-magico.oculto,
+button#btn-revelio-always.oculto {
+  display: none !important;
+}
+
+.escena-always-container {
+  display: none !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.escena-always-container.activo {
+  display: flex !important;
+}
+
+.patronus-animado-wrapper {
   opacity: 0;
-  transform: scale(0.5);
-  transition: all 1s ease-out;
-  margin-top: 20px;
-  position: relative;
+  transform: scale(0.4) translateY(20px);
+  filter: blur(6px) drop-shadow(0 0 0px rgba(130, 220, 255, 0));
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.patronus-oculto.activo {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.patronus-img {
-  max-width: 100%;
+.img-patronus-magico {
+  max-width: 360px;
+  width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 10px rgba(100, 200, 255, 0.8));
 }
 
-#btn-hechizo {
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    background-color: #d4af37; 
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    font-family: serif;
-    font-weight: bold;
-    cursor: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    z-index: 10;
-}
-#btn-hechizo:active {
-    transform: scale(0.95);
+.text-always-respuesta {
+  font-family: "Caveat", cursive;
+  font-size: 6.5rem;
+  color: var(--secondary);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(15px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+  text-shadow:
+    0 0 15px rgba(130, 220, 255, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.6) !important;
 }
 
-.caida {
-    transition: top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53), left 0.8s linear !important;
+.escena-always-container.activo .patronus-animado-wrapper {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0px) drop-shadow(0 0 25px rgba(130, 220, 255, 0.95));
 }
 
-.caida-rotacion {
-    transition: transform 0.8s ease-in !important;
-    transform-origin: bottom left !important; 
+.escena-always-container.activo .text-always-respuesta {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
 }
 
 /* =========================================================
@@ -506,7 +541,9 @@ h1,
 .perfil-daniela #proyectos [hidden],
 .perfil-sol #proyectos [hidden],
 .perfil-lucas #proyectos [hidden],
-.perfil-juanpablo #proyectos [hidden] { display: none !important; }
+.perfil-juanpablo #proyectos [hidden] {
+  display: none !important;
+}
 
 .perfil-alejandro #proyectos,
 .perfil-alejandro #proyectos *,
@@ -517,13 +554,17 @@ h1,
 .perfil-lucas #proyectos,
 .perfil-lucas #proyectos *,
 .perfil-juanpablo #proyectos,
-.perfil-juanpablo #proyectos * { cursor: auto !important; }
+.perfil-juanpablo #proyectos * {
+  cursor: auto !important;
+}
 
 .perfil-alejandro #proyectos .reliquias-boton,
 .perfil-daniela #proyectos .reliquias-boton,
 .perfil-sol #proyectos .reliquias-boton,
 .perfil-lucas #proyectos .reliquias-boton,
-.perfil-juanpablo #proyectos .reliquias-boton { cursor: pointer !important; }
+.perfil-juanpablo #proyectos .reliquias-boton {
+  cursor: pointer !important;
+}
 
 .perfil-alejandro #proyectos .reliquias-encabezado,
 .perfil-daniela #proyectos .reliquias-encabezado,
@@ -553,7 +594,9 @@ h1,
 .perfil-daniela #proyectos h2,
 .perfil-sol #proyectos h2,
 .perfil-lucas #proyectos h2,
-.perfil-juanpablo #proyectos h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+.perfil-juanpablo #proyectos h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
 
 .perfil-alejandro #proyectos .reliquias-capitulo,
 .perfil-daniela #proyectos .reliquias-capitulo,
@@ -561,9 +604,9 @@ h1,
 .perfil-lucas #proyectos .reliquias-capitulo,
 .perfil-juanpablo #proyectos .reliquias-capitulo {
   color: var(--rel-oro);
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: .14em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -618,7 +661,9 @@ h1,
 .perfil-daniela #proyectos .reliquias-subtitulo,
 .perfil-sol #proyectos .reliquias-subtitulo,
 .perfil-lucas #proyectos .reliquias-subtitulo,
-.perfil-juanpablo #proyectos .reliquias-subtitulo { font-style: italic; }
+.perfil-juanpablo #proyectos .reliquias-subtitulo {
+  font-style: italic;
+}
 
 .perfil-alejandro #proyectos .reliquias-boton,
 .perfil-daniela #proyectos .reliquias-boton,
@@ -627,7 +672,7 @@ h1,
 .perfil-juanpablo #proyectos .reliquias-boton {
   align-self: flex-start;
   margin-top: auto;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   border: 1px solid var(--rel-tinta);
   background: var(--rel-tinta);
   color: #faefd8;
@@ -638,7 +683,9 @@ h1,
 .perfil-daniela #proyectos .reliquias-boton:hover,
 .perfil-sol #proyectos .reliquias-boton:hover,
 .perfil-lucas #proyectos .reliquias-boton:hover,
-.perfil-juanpablo #proyectos .reliquias-boton:hover { background: #51412e; }
+.perfil-juanpablo #proyectos .reliquias-boton:hover {
+  background: #51412e;
+}
 
 .perfil-alejandro #proyectos :focus-visible,
 .perfil-daniela #proyectos :focus-visible,
@@ -655,7 +702,9 @@ h1,
 .perfil-lucas #proyectos .reliquia-activa,
 .perfil-juanpablo #proyectos .reliquia-activa {
   border-color: var(--rel-oro);
-  box-shadow: 0 0 0 2px var(--rel-oro), 0 12px 24px #29231d20;
+  box-shadow:
+    0 0 0 2px var(--rel-oro),
+    0 12px 24px #29231d20;
 }
 
 .perfil-alejandro #proyectos [data-explorada] .reliquias-capitulo::after,
@@ -682,19 +731,25 @@ h1,
 .perfil-daniela #proyectos .reliquias-historia h3,
 .perfil-sol #proyectos .reliquias-historia h3,
 .perfil-lucas #proyectos .reliquias-historia h3,
-.perfil-juanpablo #proyectos .reliquias-historia h3 { scroll-margin-top: 12rem; }
+.perfil-juanpablo #proyectos .reliquias-historia h3 {
+  scroll-margin-top: 12rem;
+}
 
 .perfil-alejandro #proyectos .reliquias-historia dt,
 .perfil-daniela #proyectos .reliquias-historia dt,
 .perfil-sol #proyectos .reliquias-historia dt,
 .perfil-lucas #proyectos .reliquias-historia dt,
-.perfil-juanpablo #proyectos .reliquias-historia dt { color: var(--rel-oro); }
+.perfil-juanpablo #proyectos .reliquias-historia dt {
+  color: var(--rel-oro);
+}
 
 .perfil-alejandro #proyectos .reliquias-historia dd,
 .perfil-daniela #proyectos .reliquias-historia dd,
 .perfil-sol #proyectos .reliquias-historia dd,
 .perfil-lucas #proyectos .reliquias-historia dd,
-.perfil-juanpablo #proyectos .reliquias-historia dd { margin-bottom: 1rem; }
+.perfil-juanpablo #proyectos .reliquias-historia dd {
+  margin-bottom: 1rem;
+}
 
 .perfil-alejandro #proyectos .reliquias-progreso,
 .perfil-daniela #proyectos .reliquias-progreso,
@@ -703,7 +758,7 @@ h1,
 .perfil-juanpablo #proyectos .reliquias-progreso {
   margin: 2rem 0 0;
   text-align: center;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 .perfil-alejandro #proyectos .reliquias-final,
@@ -733,14 +788,14 @@ h1,
   .perfil-sol #proyectos [data-historia="varita"]:not([hidden]),
   .perfil-lucas #proyectos [data-historia="varita"]:not([hidden]),
   .perfil-juanpablo #proyectos [data-historia="varita"]:not([hidden]) {
-    animation: reliquia-trazo .6s ease-out;
+    animation: reliquia-trazo 0.6s ease-out;
   }
   .perfil-alejandro #proyectos [data-historia="piedra"]:not([hidden]),
   .perfil-daniela #proyectos [data-historia="piedra"]:not([hidden]),
   .perfil-sol #proyectos [data-historia="piedra"]:not([hidden]),
   .perfil-lucas #proyectos [data-historia="piedra"]:not([hidden]),
   .perfil-juanpablo #proyectos [data-historia="piedra"]:not([hidden]) {
-    animation: reliquia-ondas .7s ease-out;
+    animation: reliquia-ondas 0.7s ease-out;
   }
   .perfil-alejandro #proyectos [data-historia="capa"]:not([hidden]),
   .perfil-daniela #proyectos [data-historia="capa"]:not([hidden]),
@@ -752,21 +807,37 @@ h1,
   .perfil-sol #proyectos .reliquias-final:not([hidden]),
   .perfil-lucas #proyectos .reliquias-final:not([hidden]),
   .perfil-juanpablo #proyectos .reliquias-final:not([hidden]) {
-    animation: reliquia-velo .8s ease-out;
+    animation: reliquia-velo 0.8s ease-out;
   }
 }
 
 @keyframes reliquia-trazo {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0); }
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
 }
 @keyframes reliquia-ondas {
-  from { box-shadow: 0 0 0 0 #88632680; opacity: .4; }
-  to { box-shadow: 0 0 0 24px #88632600; opacity: 1; }
+  from {
+    box-shadow: 0 0 0 0 #88632680;
+    opacity: 0.4;
+  }
+  to {
+    box-shadow: 0 0 0 24px #88632600;
+    opacity: 1;
+  }
 }
 @keyframes reliquia-velo {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -774,12 +845,16 @@ h1,
   .perfil-daniela #proyectos .reliquias-tarjetas,
   .perfil-sol #proyectos .reliquias-tarjetas,
   .perfil-lucas #proyectos .reliquias-tarjetas,
-  .perfil-juanpablo #proyectos .reliquias-tarjetas { grid-template-columns: 1fr; }
+  .perfil-juanpablo #proyectos .reliquias-tarjetas {
+    grid-template-columns: 1fr;
+  }
   .perfil-alejandro #proyectos .reliquias-ilustracion,
   .perfil-daniela #proyectos .reliquias-ilustracion,
   .perfil-sol #proyectos .reliquias-ilustracion,
   .perfil-lucas #proyectos .reliquias-ilustracion,
-  .perfil-juanpablo #proyectos .reliquias-ilustracion { max-height: 240px; }
+  .perfil-juanpablo #proyectos .reliquias-ilustracion {
+    max-height: 240px;
+  }
 }
 
 /* ---------- MAPAS DE FAVORITOS ---------- */
@@ -800,7 +875,9 @@ h1,
 .perfil-daniela .mapa-favoritos [hidden],
 .perfil-sol .mapa-favoritos [hidden],
 .perfil-lucas .mapa-favoritos [hidden],
-.perfil-juanpablo .mapa-favoritos [hidden] { display: none !important; }
+.perfil-juanpablo .mapa-favoritos [hidden] {
+  display: none !important;
+}
 .perfil-alejandro .mapa-favoritos,
 .perfil-alejandro .mapa-favoritos *,
 .perfil-daniela .mapa-favoritos,
@@ -810,7 +887,9 @@ h1,
 .perfil-lucas .mapa-favoritos,
 .perfil-lucas .mapa-favoritos *,
 .perfil-juanpablo .mapa-favoritos,
-.perfil-juanpablo .mapa-favoritos * { cursor: auto !important; }
+.perfil-juanpablo .mapa-favoritos * {
+  cursor: auto !important;
+}
 .perfil-alejandro .mapa-favoritos h2,
 .perfil-alejandro .mapa-favoritos h3,
 .perfil-daniela .mapa-favoritos h2,
@@ -828,21 +907,26 @@ h1,
 .perfil-daniela .mapa-favoritos h2,
 .perfil-sol .mapa-favoritos h2,
 .perfil-lucas .mapa-favoritos h2,
-.perfil-juanpablo .mapa-favoritos h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+.perfil-juanpablo .mapa-favoritos h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
 .perfil-alejandro .mapa-cabecera,
 .perfil-daniela .mapa-cabecera,
 .perfil-sol .mapa-cabecera,
 .perfil-lucas .mapa-cabecera,
-.perfil-juanpablo .mapa-cabecera { text-align: center; margin-bottom: 2.5rem; }
+.perfil-juanpablo .mapa-cabecera {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
 .perfil-alejandro .mapa-leyenda,
 .perfil-daniela .mapa-leyenda,
 .perfil-sol .mapa-leyenda,
 .perfil-lucas .mapa-leyenda,
 .perfil-juanpablo .mapa-leyenda {
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 .perfil-alejandro .mapa-subtitulo,
 .perfil-daniela .mapa-subtitulo,
@@ -881,7 +965,7 @@ h1,
 .perfil-juanpablo .mapa-brujula {
   position: absolute;
   right: 1rem;
-  top: .3rem;
+  top: 0.3rem;
   text-align: center;
   line-height: 1;
 }
@@ -894,14 +978,16 @@ h1,
   inset: 2rem 9% 1rem;
   border: 2px dashed var(--mapa-tinta);
   border-radius: 40% 10% 30% 5%;
-  opacity: .15;
+  opacity: 0.15;
   pointer-events: none;
 }
 .perfil-alejandro .mapa-abierto .mapa-camino,
 .perfil-daniela .mapa-abierto .mapa-camino,
 .perfil-sol .mapa-abierto .mapa-camino,
 .perfil-lucas .mapa-abierto .mapa-camino,
-.perfil-juanpablo .mapa-abierto .mapa-camino { opacity: .65; }
+.perfil-juanpablo .mapa-abierto .mapa-camino {
+  opacity: 0.65;
+}
 .perfil-alejandro .mapa-lugar,
 .perfil-daniela .mapa-lugar,
 .perfil-sol .mapa-lugar,
@@ -911,7 +997,7 @@ h1,
   align-self: start;
   min-width: 0;
   text-align: center;
-  padding: .75rem;
+  padding: 0.75rem;
   background: var(--mapa-papel);
   border: 1px solid #583b2950;
 }
@@ -919,12 +1005,16 @@ h1,
 .perfil-daniela .mapa-lugar:nth-of-type(2),
 .perfil-sol .mapa-lugar:nth-of-type(2),
 .perfil-lucas .mapa-lugar:nth-of-type(2),
-.perfil-juanpablo .mapa-lugar:nth-of-type(2) { margin-top: 5rem; }
+.perfil-juanpablo .mapa-lugar:nth-of-type(2) {
+  margin-top: 5rem;
+}
 .perfil-alejandro .mapa-lugar:nth-of-type(3),
 .perfil-daniela .mapa-lugar:nth-of-type(3),
 .perfil-sol .mapa-lugar:nth-of-type(3),
 .perfil-lucas .mapa-lugar:nth-of-type(3),
-.perfil-juanpablo .mapa-lugar:nth-of-type(3) { margin-top: 2rem; }
+.perfil-juanpablo .mapa-lugar:nth-of-type(3) {
+  margin-top: 2rem;
+}
 .perfil-alejandro .mapa-edificio,
 .perfil-daniela .mapa-edificio,
 .perfil-sol .mapa-edificio,
@@ -948,25 +1038,30 @@ h1,
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border: 3px double var(--mapa-tinta);
-  filter: sepia(.35);
+  filter: sepia(0.35);
   margin-bottom: 1rem;
 }
 .perfil-alejandro #discos .mapa-portada,
 .perfil-daniela #discos .mapa-portada,
 .perfil-sol #discos .mapa-portada,
 .perfil-lucas #discos .mapa-portada,
-.perfil-juanpablo #discos .mapa-portada { aspect-ratio: 1; }
+.perfil-juanpablo #discos .mapa-portada {
+  aspect-ratio: 1;
+}
 .perfil-alejandro .mapa-lugar h3,
 .perfil-daniela .mapa-lugar h3,
 .perfil-sol .mapa-lugar h3,
 .perfil-lucas .mapa-lugar h3,
-.perfil-juanpablo .mapa-lugar h3 { font-size: 1rem; overflow-wrap: anywhere; }
+.perfil-juanpablo .mapa-lugar h3 {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
 .perfil-alejandro .mapa-boton,
 .perfil-daniela .mapa-boton,
 .perfil-sol .mapa-boton,
 .perfil-lucas .mapa-boton,
 .perfil-juanpablo .mapa-boton {
-  padding: .65rem .85rem;
+  padding: 0.65rem 0.85rem;
   border: 1px solid var(--mapa-tinta);
   color: var(--mapa-tinta);
   background: #fff4d970;
@@ -977,7 +1072,9 @@ h1,
 .perfil-daniela .mapa-boton:hover,
 .perfil-sol .mapa-boton:hover,
 .perfil-lucas .mapa-boton:hover,
-.perfil-juanpablo .mapa-boton:hover { background: #fff4d9; }
+.perfil-juanpablo .mapa-boton:hover {
+  background: #fff4d9;
+}
 .perfil-alejandro .mapa-favoritos :focus-visible,
 .perfil-daniela .mapa-favoritos :focus-visible,
 .perfil-sol .mapa-favoritos :focus-visible,
@@ -990,7 +1087,9 @@ h1,
 .perfil-daniela .mapa-seleccionado,
 .perfil-sol .mapa-seleccionado,
 .perfil-lucas .mapa-seleccionado,
-.perfil-juanpablo .mapa-seleccionado { box-shadow: 0 0 0 2px var(--mapa-tinta); }
+.perfil-juanpablo .mapa-seleccionado {
+  box-shadow: 0 0 0 2px var(--mapa-tinta);
+}
 .perfil-alejandro .mapa-huellas,
 .perfil-daniela .mapa-huellas,
 .perfil-sol .mapa-huellas,
@@ -1010,7 +1109,9 @@ h1,
 .perfil-daniela .mapa-seleccionado .mapa-huellas,
 .perfil-sol .mapa-seleccionado .mapa-huellas,
 .perfil-lucas .mapa-seleccionado .mapa-huellas,
-.perfil-juanpablo .mapa-seleccionado .mapa-huellas { opacity: .8; }
+.perfil-juanpablo .mapa-seleccionado .mapa-huellas {
+  opacity: 0.8;
+}
 .perfil-alejandro .mapa-ficha,
 .perfil-alejandro .mapa-invitacion,
 .perfil-daniela .mapa-ficha,
@@ -1031,81 +1132,121 @@ h1,
 .perfil-daniela .mapa-ficha h3,
 .perfil-sol .mapa-ficha h3,
 .perfil-lucas .mapa-ficha h3,
-.perfil-juanpablo .mapa-ficha h3 { scroll-margin-top: 12rem; font-size: 1.3rem; }
+.perfil-juanpablo .mapa-ficha h3 {
+  scroll-margin-top: 12rem;
+  font-size: 1.3rem;
+}
 .perfil-alejandro .mapa-ficha dd,
 .perfil-daniela .mapa-ficha dd,
 .perfil-sol .mapa-ficha dd,
 .perfil-lucas .mapa-ficha dd,
-.perfil-juanpablo .mapa-ficha dd { margin-bottom: .75rem; }
+.perfil-juanpablo .mapa-ficha dd {
+  margin-bottom: 0.75rem;
+}
 .perfil-alejandro .mapa-pie,
 .perfil-daniela .mapa-pie,
 .perfil-sol .mapa-pie,
 .perfil-lucas .mapa-pie,
-.perfil-juanpablo .mapa-pie { text-align: center; margin-top: 2rem; }
+.perfil-juanpablo .mapa-pie {
+  text-align: center;
+  margin-top: 2rem;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .perfil-alejandro .mapa-camino,
   .perfil-daniela .mapa-camino,
   .perfil-sol .mapa-camino,
   .perfil-lucas .mapa-camino,
-  .perfil-juanpablo .mapa-camino { transition: opacity .6s; }
+  .perfil-juanpablo .mapa-camino {
+    transition: opacity 0.6s;
+  }
   .perfil-alejandro .mapa-abierto .mapa-camino,
   .perfil-daniela .mapa-abierto .mapa-camino,
   .perfil-sol .mapa-abierto .mapa-camino,
   .perfil-lucas .mapa-abierto .mapa-camino,
-  .perfil-juanpablo .mapa-abierto .mapa-camino { animation: mapa-desplegar .7s ease-out; }
+  .perfil-juanpablo .mapa-abierto .mapa-camino {
+    animation: mapa-desplegar 0.7s ease-out;
+  }
   .perfil-alejandro .mapa-huellas,
   .perfil-daniela .mapa-huellas,
   .perfil-sol .mapa-huellas,
   .perfil-lucas .mapa-huellas,
-  .perfil-juanpablo .mapa-huellas { transition: opacity .3s; }
+  .perfil-juanpablo .mapa-huellas {
+    transition: opacity 0.3s;
+  }
   .perfil-alejandro .mapa-seleccionado .mapa-huellas span,
   .perfil-daniela .mapa-seleccionado .mapa-huellas span,
   .perfil-sol .mapa-seleccionado .mapa-huellas span,
   .perfil-lucas .mapa-seleccionado .mapa-huellas span,
-  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span { animation: mapa-paso .8s both; }
+  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span {
+    animation: mapa-paso 0.8s both;
+  }
   .perfil-alejandro .mapa-seleccionado .mapa-huellas span:nth-child(2),
   .perfil-daniela .mapa-seleccionado .mapa-huellas span:nth-child(2),
   .perfil-sol .mapa-seleccionado .mapa-huellas span:nth-child(2),
   .perfil-lucas .mapa-seleccionado .mapa-huellas span:nth-child(2),
-  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span:nth-child(2) { animation-delay: .25s; }
+  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span:nth-child(2) {
+    animation-delay: 0.25s;
+  }
   .perfil-alejandro .mapa-seleccionado .mapa-huellas span:nth-child(3),
   .perfil-daniela .mapa-seleccionado .mapa-huellas span:nth-child(3),
   .perfil-sol .mapa-seleccionado .mapa-huellas span:nth-child(3),
   .perfil-lucas .mapa-seleccionado .mapa-huellas span:nth-child(3),
-  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span:nth-child(3) { animation-delay: .5s; }
+  .perfil-juanpablo .mapa-seleccionado .mapa-huellas span:nth-child(3) {
+    animation-delay: 0.5s;
+  }
 }
 @keyframes mapa-paso {
-  from { opacity: 0; transform: translateX(-12px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @keyframes mapa-desplegar {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0); }
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
 }
 @media (max-width: 991.98px) {
   .perfil-alejandro .mapa-distribucion,
   .perfil-daniela .mapa-distribucion,
   .perfil-sol .mapa-distribucion,
   .perfil-lucas .mapa-distribucion,
-  .perfil-juanpablo .mapa-distribucion { grid-template-columns: 1fr; }
+  .perfil-juanpablo .mapa-distribucion {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 575.98px) {
   .perfil-alejandro .mapa-plano,
   .perfil-daniela .mapa-plano,
   .perfil-sol .mapa-plano,
   .perfil-lucas .mapa-plano,
-  .perfil-juanpablo .mapa-plano { grid-template-columns: 1fr; gap: 3rem; }
+  .perfil-juanpablo .mapa-plano {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
   .perfil-alejandro .mapa-lugar:nth-of-type(n),
   .perfil-daniela .mapa-lugar:nth-of-type(n),
   .perfil-sol .mapa-lugar:nth-of-type(n),
   .perfil-lucas .mapa-lugar:nth-of-type(n),
-  .perfil-juanpablo .mapa-lugar:nth-of-type(n) { margin-top: 0; }
+  .perfil-juanpablo .mapa-lugar:nth-of-type(n) {
+    margin-top: 0;
+  }
   .perfil-alejandro .mapa-portada,
   .perfil-daniela .mapa-portada,
   .perfil-sol .mapa-portada,
   .perfil-lucas .mapa-portada,
-  .perfil-juanpablo .mapa-portada { max-height: 240px; object-fit: contain; }
+  .perfil-juanpablo .mapa-portada {
+    max-height: 240px;
+    object-fit: contain;
+  }
 }
 
 /* ---------- PERFIL EDITORIAL ---------- */
@@ -1180,7 +1321,12 @@ h1,
 .perfil-lucas .perfil-editorial::after,
 .perfil-juanpablo .perfil-editorial::after {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--editorial-borde), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--editorial-borde),
+    transparent
+  );
 }
 .perfil-alejandro .habilidades-composicion,
 .perfil-daniela .habilidades-composicion,
@@ -1198,7 +1344,7 @@ h1,
 .perfil-lucas .habilidades-composicion .perfil-imagen-seccion,
 .perfil-juanpablo .habilidades-composicion .perfil-imagen-seccion {
   aspect-ratio: 4 / 3;
-  filter: saturate(.65);
+  filter: saturate(0.65);
 }
 .perfil-alejandro .habilidades-lista,
 .perfil-daniela .habilidades-lista,
@@ -1243,7 +1389,10 @@ h1,
   .perfil-daniela .habilidades-composicion,
   .perfil-sol .habilidades-composicion,
   .perfil-lucas .habilidades-composicion,
-  .perfil-juanpablo .habilidades-composicion { grid-template-columns: 1fr; gap: 1.5rem; }
+  .perfil-juanpablo .habilidades-composicion {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* ---------- PERFIL: estructura general ---------- */
@@ -1355,8 +1504,14 @@ h1,
   object-fit: cover;
   border: 12px double #73562f;
   border-radius: 50% 50% 6px 6px / 37.5% 37.5% 6px 6px;
-  padding: clamp(.6rem, 2vw, 1rem);
-  background: linear-gradient(135deg, #fff4df, #b49460 40%, #f4e2b8 65%, #85643c);
+  padding: clamp(0.6rem, 2vw, 1rem);
+  background: linear-gradient(
+    135deg,
+    #fff4df,
+    #b49460 40%,
+    #f4e2b8 65%,
+    #85643c
+  );
   box-shadow:
     inset 0 0 0 2px #f8e7c0,
     inset 0 0 0 5px #73562f,
@@ -1467,7 +1622,9 @@ h1,
   background: var(--gryffindor1);
   border: 2px solid var(--gryffindor2);
   box-shadow: 0 10px 22px rgba(116, 0, 1, 0.18);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .perfil-alejandro .perfil-tarjeta:hover,

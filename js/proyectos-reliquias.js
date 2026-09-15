@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const seccion = document.querySelector(".perfil-alejandro #proyectos.reliquias");
+  const seccion = document.querySelector("#proyectos.reliquias");
   if (!seccion) return;
 
   const tarjetas = [...seccion.querySelectorAll("[data-reliquia]")];
@@ -14,7 +14,8 @@
   function cerrar(devolverFoco = true) {
     if (!activa) return;
     const boton = activa.querySelector("[aria-controls]");
-    seccion.querySelector("#" + boton.getAttribute("aria-controls")).hidden = true;
+    seccion.querySelector("#" + boton.getAttribute("aria-controls")).hidden =
+      true;
     boton.setAttribute("aria-expanded", "false");
     boton.textContent = "Revelar historia";
     activa.classList.remove("reliquia-activa");
@@ -24,7 +25,9 @@
 
   tarjetas.forEach((tarjeta) => {
     const boton = tarjeta.querySelector("[aria-controls]");
-    const historia = historias.find((item) => item.id === boton.getAttribute("aria-controls"));
+    const historia = historias.find(
+      (item) => item.id === boton.getAttribute("aria-controls"),
+    );
     historia.hidden = true;
     boton.hidden = false;
     boton.setAttribute("aria-expanded", "false");
@@ -45,11 +48,17 @@
       visitadas.add(tarjeta.dataset.reliquia);
       const completa = visitadas.size === tarjetas.length;
       final.hidden = !completa;
-      progreso.textContent = visitadas.size + " de " + tarjetas.length +
-        " historias exploradas." + (completa ? " La verdadera magia está en lo que creamos." : "");
+      progreso.textContent =
+        visitadas.size +
+        " de " +
+        tarjetas.length +
+        " historias exploradas." +
+        (completa ? " La verdadera magia está en lo que creamos." : "");
       historia.querySelector("h3").focus();
     });
-    historia.querySelector("[data-cerrar]").addEventListener("click", () => cerrar());
+    historia
+      .querySelector("[data-cerrar]")
+      .addEventListener("click", () => cerrar());
   });
 
   progreso.hidden = false;
