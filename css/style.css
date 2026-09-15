@@ -433,6 +433,59 @@ h1,
   margin-bottom: 0.5rem;
 }
 
+/* Reserva el alto de la sección: si el botón sale volando
+   (position: fixed) el resto de la página no se mueve */
+.seccion-always .container {
+  position: relative;
+  min-height: 4.5rem;
+}
+
+/* Mensaje de victoria: aparece donde estaba el botón, sin mover el resto */
+#resultado-duelo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#resultado-duelo .text-always-respuesta {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--hufflepuff1);
+  -webkit-text-stroke: 5px var(--hufflepuff2);
+  paint-order: stroke fill;
+  text-shadow: none !important;
+}
+
+#resultado-duelo .text-always-respuesta.activo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Duelo perdido: la varita queda fuera de juego y vuelve el cursor normal */
+body.duelo-perdido #cursor-wrapper {
+  display: none !important;
+}
+
+body.duelo-perdido * {
+  cursor: auto !important;
+}
+
+body.duelo-perdido a,
+body.duelo-perdido button,
+body.duelo-perdido [role="button"],
+body.duelo-perdido input {
+  cursor: pointer !important;
+}
+
+button#btn-hechizo:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
 button#btn-revelio-always,
 .btn-magico {
   background-color: var(--primary);
@@ -545,27 +598,6 @@ button#btn-revelio-always.oculto {
   display: none !important;
 }
 
-.perfil-alejandro #proyectos,
-.perfil-alejandro #proyectos *,
-.perfil-daniela #proyectos,
-.perfil-daniela #proyectos *,
-.perfil-sol #proyectos,
-.perfil-sol #proyectos *,
-.perfil-lucas #proyectos,
-.perfil-lucas #proyectos *,
-.perfil-juanpablo #proyectos,
-.perfil-juanpablo #proyectos * {
-  cursor: auto !important;
-}
-
-.perfil-alejandro #proyectos .reliquias-boton,
-.perfil-daniela #proyectos .reliquias-boton,
-.perfil-sol #proyectos .reliquias-boton,
-.perfil-lucas #proyectos .reliquias-boton,
-.perfil-juanpablo #proyectos .reliquias-boton {
-  cursor: pointer !important;
-}
-
 .perfil-alejandro #proyectos .reliquias-encabezado,
 .perfil-daniela #proyectos .reliquias-encabezado,
 .perfil-sol #proyectos .reliquias-encabezado,
@@ -640,10 +672,42 @@ button#btn-revelio-always.oculto {
 .perfil-juanpablo #proyectos .reliquias-ilustracion {
   display: block;
   width: 100%;
+  height: 240px;
   fill: var(--rel-tinta);
   color: var(--rel-oro);
   background: radial-gradient(ellipse, #faf0d7, #c8b38b);
   border-bottom: 1px solid #88632670;
+}
+
+.perfil-alejandro #proyectos .reliquias-proyecto-img,
+.perfil-daniela #proyectos .reliquias-proyecto-img,
+.perfil-sol #proyectos .reliquias-proyecto-img,
+.perfil-lucas #proyectos .reliquias-proyecto-img,
+.perfil-juanpablo #proyectos .reliquias-proyecto-img {
+  display: none;
+  width: 100%;
+  height: 240px;
+  box-sizing: border-box;
+  padding: 1rem;
+  object-fit: contain;
+  background: radial-gradient(ellipse, #faf0d7, #c8b38b);
+  border-bottom: 1px solid #88632670;
+}
+
+.perfil-alejandro #proyectos [data-explorada] .reliquias-ilustracion,
+.perfil-daniela #proyectos [data-explorada] .reliquias-ilustracion,
+.perfil-sol #proyectos [data-explorada] .reliquias-ilustracion,
+.perfil-lucas #proyectos [data-explorada] .reliquias-ilustracion,
+.perfil-juanpablo #proyectos [data-explorada] .reliquias-ilustracion {
+  display: none;
+}
+
+.perfil-alejandro #proyectos [data-explorada] .reliquias-proyecto-img,
+.perfil-daniela #proyectos [data-explorada] .reliquias-proyecto-img,
+.perfil-sol #proyectos [data-explorada] .reliquias-proyecto-img,
+.perfil-lucas #proyectos [data-explorada] .reliquias-proyecto-img,
+.perfil-juanpablo #proyectos [data-explorada] .reliquias-proyecto-img {
+  display: block;
 }
 
 .perfil-alejandro #proyectos .reliquias-cuerpo,
@@ -878,18 +942,6 @@ button#btn-revelio-always.oculto {
 .perfil-juanpablo .mapa-favoritos [hidden] {
   display: none !important;
 }
-.perfil-alejandro .mapa-favoritos,
-.perfil-alejandro .mapa-favoritos *,
-.perfil-daniela .mapa-favoritos,
-.perfil-daniela .mapa-favoritos *,
-.perfil-sol .mapa-favoritos,
-.perfil-sol .mapa-favoritos *,
-.perfil-lucas .mapa-favoritos,
-.perfil-lucas .mapa-favoritos *,
-.perfil-juanpablo .mapa-favoritos,
-.perfil-juanpablo .mapa-favoritos * {
-  cursor: auto !important;
-}
 .perfil-alejandro .mapa-favoritos h2,
 .perfil-alejandro .mapa-favoritos h3,
 .perfil-daniela .mapa-favoritos h2,
@@ -1066,7 +1118,6 @@ button#btn-revelio-always.oculto {
   color: var(--mapa-tinta);
   background: #fff4d970;
   font-weight: 600;
-  cursor: pointer !important;
 }
 .perfil-alejandro .mapa-boton:hover,
 .perfil-daniela .mapa-boton:hover,
