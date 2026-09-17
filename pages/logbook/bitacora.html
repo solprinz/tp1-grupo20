@@ -1,1 +1,198 @@
-<h1>Bitacora</h1>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Front End Wizards" />
+    <meta name="keywords" content="" />
+    <title>FRONT END WIZARDS</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="" />
+  </head>
+
+  <body>
+    <header class="sticky-top shadow-sm">
+      <!-- BANNER SUPERIOR -->
+      <div class="top-banner text-center py-3">
+        <h1 class="brand-title m-0">FRONT END WIZARDS</h1>
+      </div>
+
+      <!-- NAVBAR DE NAVEGACIÓN -->
+      <nav class="navbar navbar-expand-md navbar-custom py-2">
+        <div class="container">
+          <!-- BOTÓN HAMBURGUESA (MOBILE) -->
+          <button
+            class="navbar-toggler border-0 ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars icono-hamburguesa fs-3"></i>
+          </button>
+
+          <!-- LINKS DE NAVEGACIÓN -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-2 gap-lg-4 text-center">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="./pages/members/alejandro.html" class="nav-link">Alejandro</a>
+              </li>
+              <li class="nav-item">
+                <a href="./pages/members/daniela.html" class="nav-link">Daniela</a>
+              </li>
+              <li class="nav-item">
+                <a href="./pages/members/juanpablo.html" class="nav-link">Juan Pablo</a>
+              </li>
+              <li class="nav-item">
+                <a href="./pages/members/lucas.html" class="nav-link">Lucas</a>
+              </li>
+              <li class="nav-item">
+                <a href="./pages/members/sol.html" class="nav-link">Sol</a>
+              </li>
+              <li class="nav-item">
+                <a href="./pages/logbook/bitacora.html" class="nav-link">Bitácora</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="container hero">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <h1 class="title">BITÁCORA DE MAGIA</h1>
+            <p class="subtitle">
+              El diario donde registramos nuestro proceso, los encantamientos que fallaron, las decisiones del Wizengamot y cómo logramos que nuestra magia llegara a todo el mundo muggle.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container my-5" id="bitacora">
+        <div class="row justify-content-center g-4">
+          
+          <!-- Decisiones -->
+          <div class="col-12 col-md-10">
+            <div class="card card-gryffindor p-4">
+              <h2 class="brand-title fs-3 text-center mb-4">Decisiones del Wizengamot</h2>
+              <ul class="fs-5">
+                <li class="mb-2"><strong>Temática de Hogwarts:</strong> Elegimos ambientar el proyecto en el universo de Harry Potter. Optamos por usar avatares e ilustraciones temáticas en lugar de fotos personales muggles, para darle un toque más inmersivo.</li>
+                <li class="mb-2"><strong>Uso de Bootstrap:</strong> Decidimos utilizar Bootstrap como nuestro libro de hechizos principal para agilizar el diseño responsive, complementándolo con nuestro propio CSS mágico.</li>
+                <li class="mb-2"><strong>Estructura del Proyecto:</strong> Organizamos nuestros pergaminos (HTML) en carpetas por sección (<code>/pages/members/</code> y <code>/pages/logbook/</code>) para mantener el castillo ordenado.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dificultades -->
+          <div class="col-12 col-md-10">
+            <div class="card card-slytherin p-4">
+              <h2 class="brand-title fs-3 text-center mb-4">Dificultades y Maldiciones</h2>
+              <ul class="fs-5">
+                <li class="mb-2"><strong>Maldición de los Enlaces Rotos:</strong> Al separar los archivos en distintas subcarpetas, tuvimos que enfrentarnos al desafío de las rutas relativas. Algunos estilos e imágenes parecían haber sido afectados por un encantamiento desilusionador hasta que corregimos las rutas.</li>
+                <li class="mb-2"><strong>Duelos de Especificidad (CSS):</strong> En ocasiones, las clases de Bootstrap sobreescribían nuestros colores de las casas, obligándonos a lanzar encantamientos más fuertes (mayor especificidad) en nuestro <code>style.css</code>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cambios -->
+          <div class="col-12 col-md-10">
+            <div class="card card-ravenclaw p-4">
+              <h2 class="brand-title fs-3 text-center mb-4">Cambios y Transfiguraciones</h2>
+              <ul class="fs-5">
+                <li class="mb-2"><strong>Transfiguración del Diseño Inicial:</strong> Inicialmente pensamos en un diseño más sobrio, pero luego decidimos aplicar una paleta de colores oscura con detalles brillantes (dorados, verdes, azules) para simular la iluminación de Hogwarts.</li>
+                <li class="mb-2"><strong>Menú Navegable:</strong> Agregamos un menú adhesivo (sticky) para que los magos visitantes no se pierdan al explorar las distintas secciones del proyecto.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Publicación y Repositorio -->
+          <div class="col-12 col-md-10">
+            <div class="card card-hufflepuff p-4">
+              <h2 class="brand-title fs-3 text-center mb-4">Repositorio y Publicación (La Lechuza Mensajera)</h2>
+              <p class="fs-5 text-center">
+                Para proteger nuestro código de las artes oscuras, creamos un <strong>repositorio GitHub independiente</strong>. <br>
+                Finalmente, enviamos nuestro proyecto a través de la red flu usando <strong>Vercel</strong>, lo que nos permitió publicar nuestro sitio web para que cualquier mago o bruja pueda visitarlo desde cualquier rincón del mundo.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom py-4 border-top">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <div class="d-flex align-items-center gap-2">
+          <span class="brand-title fs-5 m-0">Front End Wizards</span>
+        </div>
+
+        <p class="m-0 text-center opacity-75">
+          © 2026 Todos los derechos reservados. Desarrollado con magia y código.
+        </p>
+
+        <div class="d-flex gap-3">
+          <a
+            href="https://github.com/solprinz/tp1-grupo20/"
+            target="_blank"
+            class="footer-link"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github fs-4"></i>
+          </a>
+          <a href="#top" class="footer-link" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up fs-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS DE BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS PROPIO -->
+    <script src="./js/main.js"></script>
+    <script src="./js/cursor.js"></script>
+  </body>
+</html>
