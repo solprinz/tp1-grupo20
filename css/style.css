@@ -533,12 +533,19 @@ button#btn-revelio-always.oculto {
   transform: scale(0.4) translateY(20px);
   filter: blur(6px) drop-shadow(0 0 0px rgba(130, 220, 255, 0));
   transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: none !important;
+  border: none !important;
 }
 
 .img-patronus-magico {
-  max-width: 360px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  max-width: 350px;
   width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .text-always-respuesta {
@@ -559,7 +566,7 @@ button#btn-revelio-always.oculto {
 .escena-always-container.activo .patronus-animado-wrapper {
   opacity: 1;
   transform: scale(1) translateY(0);
-  filter: blur(0px) drop-shadow(0 0 25px rgba(130, 220, 255, 0.95));
+  filter: drop-shadow(0 0 15px #82dcff);
 }
 
 .escena-always-container.activo .text-always-respuesta {
