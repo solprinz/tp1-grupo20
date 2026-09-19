@@ -190,6 +190,12 @@ body {
   box-sizing: border-box;
 }
 
+.row {
+  --bs-gutter-x: 1.5rem;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
 h1,
 .brand-title,
 .font-lumos {
@@ -228,6 +234,9 @@ h1,
   background-color: var(--gryffindor2) !important;
 }
 
+.bg-sol {
+  background-color: #ffedc5 !important;
+}
 .bg-gryffindor2 .nav-link {
   color: var(--gryffindor1) !important;
 }
