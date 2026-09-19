@@ -37,14 +37,21 @@
   </head>
 
   <body>
-    <header class="sticky-top shadow-sm">
+    <header class="sticky-top shadow-sm header-hallows">
       <!-- BANNER SUPERIOR -->
-      <div class="top-banner text-center py-3">
-        <h1 class="brand-title m-0">FRONT END WIZARDS</h1>
+      <div class="hallows-banner">
+        <div class="container">
+          <a class="hallows-marca" href="../../index.html" aria-label="Hallows Code — ir al inicio">
+            <img class="hallows-logo" src="../../img/alejandro-hallows-logo.png" alt="" width="776" height="779" />
+            <span class="hallows-textos">
+              <span class="hallows-titulo">Hallows Code</span>
+            </span>
+          </a>
+        </div>
       </div>
 
       <!-- NAVBAR DE NAVEGACIÓN -->
-      <nav class="navbar navbar-expand-md navbar-custom py-2">
+<nav class="navbar navbar-expand-lg hallows-nav py-2" aria-label="Navegación principal">
         <div class="container">
           <!-- BOTÓN HAMBURGUESA (MOBILE) -->
           <button
@@ -54,7 +61,7 @@
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="Abrir o cerrar navegación"
           >
             <i class="fa-solid fa-bars icono-hamburguesa fs-3"></i>
           </button>
@@ -66,33 +73,25 @@
           >
             <ul class="navbar-nav gap-2 gap-lg-4 text-center">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">Inicio</a>
+                <a href="../../index.html" class="nav-link">Inicio</a>
               </li>
               <li class="nav-item">
-                <a href="./pages/members/alejandro.html" class="nav-link"
-                  >Alejandro</a
-                >
+                <a href="../members/alejandro.html" class="nav-link">Alejandro</a>
               </li>
               <li class="nav-item">
-                <a href="./pages/members/daniela.html" class="nav-link"
-                  >Daniela</a
-                >
+                <a href="../members/daniela.html" class="nav-link">Daniela</a>
               </li>
               <li class="nav-item">
-                <a href="./pages/members/juanpablo.html" class="nav-link"
-                  >Juan Pablo</a
-                >
+                <a href="../members/juanpablo.html" class="nav-link">Juan Pablo</a>
               </li>
               <li class="nav-item">
-                <a href="./pages/members/lucas.html" class="nav-link">Lucas</a>
+                <a href="../members/lucas.html" class="nav-link">Lucas</a>
               </li>
               <li class="nav-item">
-                <a href="./pages/members/sol.html" class="nav-link">Sol</a>
+                <a href="../members/sol.html" class="nav-link">Sol</a>
               </li>
               <li class="nav-item">
-                <a href="./pages/logbook/bitacora.html" class="nav-link"
-                  >Bitácora</a
-                >
+                <a href="../logbook/bitacora.html" class="nav-link active" aria-current="page">Bitácora</a>
               </li>
             </ul>
           </div>

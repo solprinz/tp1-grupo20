@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const header = document.querySelector(".header-alejandro");
+  const header = document.querySelector(".header-hallows");
   if (!header) return;
 
   const movimientoReducido = window.matchMedia("(prefers-reduced-motion: reduce)");
