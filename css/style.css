@@ -1,3 +1,100 @@
+/* Marca personal: únicamente el encabezado de Alejandro. */
+.header-alejandro {
+  --hallows-oro: #d6b66d;
+  color: var(--hallows-oro);
+  background: #17130f;
+  border-bottom: 1px solid #9c793e;
+  transform: translateY(var(--header-desplazamiento, 0px));
+  opacity: var(--header-opacidad, 1);
+}
+.header-alejandro .hallows-banner {
+  padding: .4rem 0;
+  background:
+    radial-gradient(ellipse at center, #54342155, transparent 65%),
+    repeating-linear-gradient(110deg, #d6b66d04 0 1px, transparent 1px 7px),
+    #17130f;
+  box-shadow: inset 0 3px 0 #d6b66d12;
+}
+.header-alejandro .hallows-marca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.65rem, 1.5vw, 1.2rem);
+  width: fit-content;
+  max-width: 100%;
+  margin: auto;
+  text-decoration: none;
+}
+.header-alejandro .hallows-marca::before,
+.header-alejandro .hallows-marca::after {
+  content: "";
+  width: clamp(24px, 8vw, 110px);
+  height: 6px;
+  border-block: 1px solid #d6b66d65;
+  transform: skewX(-35deg);
+}
+.header-alejandro .hallows-logo {
+  display: block;
+  width: clamp(44px, 5vw, 58px);
+  height: auto;
+  flex-shrink: 0;
+}
+.header-alejandro .hallows-textos {
+  display: block;
+  min-width: 0;
+  text-align: center;
+}
+.header-alejandro .hallows-titulo {
+  display: block;
+  color: #e1bd69;
+  font-family: "Lumos", "Cinzel", Georgia, serif;
+  font-size: clamp(1.65rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: .065em;
+  -webkit-text-stroke: .45px currentColor;
+  text-shadow: 0 1px 0 #fbe7ac, 0 2px 0 #614318, 0 3px 10px #0008;
+}
+.header-alejandro .hallows-nav {
+  background: linear-gradient(90deg, #19130f, #302018, #19130f);
+  border-top: 1px solid #d6b66d40;
+}
+.header-alejandro .nav-link {
+  color: #ead6ae;
+  font-family: "Cinzel", serif;
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .4rem .65rem;
+  text-underline-offset: .3rem;
+  border-radius: 3px;
+}
+.header-alejandro .nav-link:hover,
+.header-alejandro .nav-link.active {
+  color: var(--hallows-oro);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.header-alejandro .nav-link.active {
+  background: linear-gradient(180deg, #d6b66d08, #d6b66d20);
+  box-shadow: inset 0 -1px 0 #d6b66d80;
+}
+.header-alejandro .navbar-toggler { color: var(--hallows-oro); }
+.header-alejandro a,
+.header-alejandro button,
+.header-alejandro a *,
+.header-alejandro button * { cursor: pointer !important; }
+.header-alejandro :focus-visible {
+  outline: 2px solid var(--hallows-oro);
+  outline-offset: 4px;
+}
+@media (max-width: 575.98px) {
+  .header-alejandro .hallows-banner { padding: .35rem 0; }
+  .header-alejandro .hallows-marca { gap: .65rem; }
+  .header-alejandro .hallows-logo { width: 40px; }
+  .header-alejandro .hallows-marca::before,
+  .header-alejandro .hallows-marca::after { display: none; }
+}
+
 /* PALETA DE COLORES */
 :root {
   --primary: #0d0d53;
