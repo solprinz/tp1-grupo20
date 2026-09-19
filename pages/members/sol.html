@@ -39,23 +39,38 @@
   <body class="gryffindor">
     <header class="sticky-top shadow-sm header-hallows">
       <!-- BANNER SUPERIOR -->
-      <div class="hallows-banner">
+      <div class="hallows-banner bg-gryffindor">
         <div class="container">
-          <a class="hallows-marca" href="../../index.html" aria-label="Hallows Code — ir al inicio">
-            <img class="hallows-logo" src="../../img/alejandro-hallows-logo.png" alt="" width="776" height="779" />
+          <a
+            class="hallows-marca"
+            href="../../index.html"
+            aria-label="Hallows Code — ir al inicio"
+          >
+            <img
+              class="hallows-logo"
+              src="../../img/alejandro-hallows-logo.png"
+              alt=""
+              width="776"
+              height="779"
+            />
             <span class="hallows-textos">
-              <span class="hallows-titulo">Hallows Code</span>
+              <span class="hallows-titulo gryffindor-secondary"
+                >Hallows Code</span
+              >
             </span>
           </a>
         </div>
       </div>
 
       <!-- NAVBAR DE NAVEGACIÓN -->
-<nav class="navbar navbar-expand-lg hallows-nav py-2" aria-label="Navegación principal">
-        <div class="container">
+      <nav
+        class="navbar navbar-expand-lg py-2 bg-gryffindor2"
+        aria-label="Navegación principal"
+      >
+        <div class="container bg-gryffindor2">
           <!-- BOTÓN HAMBURGUESA (MOBILE) -->
           <button
-            class="navbar-toggler border-0 ms-auto"
+            class="navbar-toggler border-0 ms-auto bg-gryffindor2"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -68,10 +83,10 @@
 
           <!-- LINKS DE NAVEGACIÓN -->
           <div
-            class="collapse navbar-collapse justify-content-center"
+            class="collapse navbar-collapse justify-content-center bg-gryffindor2"
             id="navbarNav"
           >
-            <ul class="navbar-nav gap-2 gap-lg-4 text-center">
+            <ul class="navbar-nav gap-2 gap-lg-4 text-center bg-gryffindor2">
               <li class="nav-item">
                 <a href="../../index.html" class="nav-link">Inicio</a>
               </li>
@@ -88,7 +103,9 @@
                 <a href="./lucas.html" class="nav-link">Lucas</a>
               </li>
               <li class="nav-item">
-                <a href="./sol.html" class="nav-link active" aria-current="page">Sol</a>
+                <a href="./sol.html" class="nav-link active" aria-current="page"
+                  >Sol</a
+                >
               </li>
               <li class="nav-item">
                 <a href="../logbook/bitacora.html" class="nav-link">Bitácora</a>
@@ -117,7 +134,9 @@
 
             <div class="col-12 col-md-7">
               <p class="perfil-intro mb-2">Perfil personal</p>
-              <h1 id="perfil-sol" class="title">Sol Prinzen</h1>
+              <h1 id="perfil-sol" class="title gryffindor-primary">
+                Sol Prinzen
+              </h1>
               <p class="subtitle">
                 Gryffindor | Diseñadora UI/UX, Cazadora de Quidditch y Guardiana
                 de Criaturas Mágicas.
@@ -183,7 +202,9 @@
         <div class="container">
           <div class="text-center mb-5">
             <p class="perfil-intro mb-2">Mi caja de herramientas</p>
-            <h2 id="titulo-habilidades" class="title">Habilidades</h2>
+            <h2 id="titulo-habilidades" class="title gryffindor-primary">
+              Habilidades
+            </h2>
           </div>
           <div class="habilidades-composicion">
             <img
@@ -222,7 +243,9 @@
         <div class="container">
           <header class="mapa-cabecera">
             <p class="mapa-leyenda">Cartografía de mis favoritos</p>
-            <h2 id="titulo-peliculas">Películas favoritas</h2>
+            <h2 id="titulo-peliculas" class="gryffindor-primary">
+              Películas favoritas
+            </h2>
             <p class="mapa-subtitulo">El callejón de las historias</p>
             <button
               type="button"
@@ -451,7 +474,9 @@
         <div class="container">
           <header class="mapa-cabecera">
             <p class="mapa-leyenda">Cartografía de mis favoritos</p>
-            <h2 id="titulo-discos">Canciones favoritos</h2>
+            <h2 id="titulo-discos" class="gryffindor-primary">
+              Canciones favoritas
+            </h2>
             <p class="mapa-subtitulo">El pasaje de las melodías</p>
             <button
               type="button"
@@ -669,16 +694,17 @@
       <script src="../../js/mapa-favoritos.js" defer></script>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer-custom py-4 border-top">
+    <footer class="footer-hallows py-4 border-top bg-gryffindor">
       <div
         class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
       >
         <div class="d-flex align-items-center gap-2">
-          <span class="brand-title fs-5 m-0">Front End Wizards</span>
+          <span class="hallows-titulo-footer font-lumos fs-4 m-0"
+            >Hallows Code</span
+          >
         </div>
 
-        <p class="m-0 text-center opacity-75">
+        <p class="m-0 text-center opacity-75 copyright-texto">
           © 2026 Todos los derechos reservados. Desarrollado con magia y código.
         </p>
 
@@ -686,12 +712,12 @@
           <a
             href="https://github.com/solprinz/tp1-grupo20/"
             target="_blank"
-            class="footer-link"
+            class="footer-link-hallows"
             aria-label="GitHub"
           >
             <i class="fa-brands fa-github fs-4"></i>
           </a>
-          <a href="#top" class="footer-link" aria-label="Volver arriba">
+          <a href="#top" class="footer-link-hallows" aria-label="Volver arriba">
             <i class="fa-solid fa-arrow-up fs-4"></i>
           </a>
         </div>

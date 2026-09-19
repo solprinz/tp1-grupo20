@@ -32,7 +32,7 @@
   opacity: var(--header-opacidad, 1);
 }
 .header-hallows .hallows-banner {
-  padding: .4rem 0;
+  padding: 0.4rem 0;
   background:
     radial-gradient(ellipse at center, #54342155, transparent 65%),
     repeating-linear-gradient(110deg, #d6b66d04 0 1px, transparent 1px 7px),
@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(.65rem, 1.5vw, 1.2rem);
+  gap: clamp(0.65rem, 1.5vw, 1.2rem);
   width: fit-content;
   max-width: 100%;
   margin: auto;
@@ -78,9 +78,12 @@
   font-size: clamp(1.65rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: .065em;
-  -webkit-text-stroke: .45px currentColor;
-  text-shadow: 0 1px 0 #fbe7ac, 0 2px 0 #614318, 0 3px 10px #0008;
+  letter-spacing: 0.065em;
+  -webkit-text-stroke: 0.45px currentColor;
+  text-shadow:
+    0 1px 0 #fbe7ac,
+    0 2px 0 #614318,
+    0 3px 10px #0008;
 }
 .header-hallows .hallows-nav {
   background: linear-gradient(90deg, #19130f, #302018, #19130f);
@@ -89,10 +92,10 @@
 .header-hallows .nav-link {
   color: #ead6ae;
   font-family: "Cinzel", serif;
-  font-size: .78rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  padding: .4rem .65rem;
-  text-underline-offset: .3rem;
+  padding: 0.4rem 0.65rem;
+  text-underline-offset: 0.3rem;
   border-radius: 3px;
 }
 .header-hallows .nav-link:hover,
@@ -105,26 +108,38 @@
   background: linear-gradient(180deg, #d6b66d08, #d6b66d20);
   box-shadow: inset 0 -1px 0 #d6b66d80;
 }
-.header-hallows .navbar-toggler { color: var(--hallows-oro); }
+.header-hallows .navbar-toggler {
+  color: var(--hallows-oro);
+}
 .header-hallows a,
 .header-hallows button,
 .header-hallows a *,
-.header-hallows button * { cursor: pointer !important; }
+.header-hallows button * {
+  cursor: pointer !important;
+}
 .header-hallows :focus-visible {
   outline: 2px solid var(--hallows-oro);
   outline-offset: 4px;
 }
 @media (max-width: 575.98px) {
-  .header-hallows .hallows-banner { padding: .35rem 0; }
-  .header-hallows .hallows-marca { gap: .65rem; }
-  .header-hallows .hallows-logo { width: 40px; }
+  .header-hallows .hallows-banner {
+    padding: 0.35rem 0;
+  }
+  .header-hallows .hallows-marca {
+    gap: 0.65rem;
+  }
+  .header-hallows .hallows-logo {
+    width: 40px;
+  }
   .header-hallows .hallows-marca::before,
-  .header-hallows .hallows-marca::after { display: none; }
+  .header-hallows .hallows-marca::after {
+    display: none;
+  }
 }
 
 body.gryffindor {
-  --primary: var(--gryffindor1);
-  --secondary: var(--gryffindor2);
+  --primary: var(--gryffindor1) !important;
+  --secondary: var(--gryffindor2) !important;
   --acento: var(--gryffindor3);
 }
 
@@ -181,15 +196,11 @@ h1,
   font-family: "Lumos", serif !important;
 }
 
-
 .brand-title {
   color: var(--secondary);
   letter-spacing: 2px;
   text-shadow: 0 0 10px var(--shadow);
 }
-
-
-
 
 .titulo-principal {
   color: var(--primary);
@@ -199,6 +210,33 @@ h1,
   color: var(--gray);
 }
 
+.gryffindor-primary {
+  color: var(--gryffindor1) !important;
+}
+
+.gryffindor-secondary {
+  color: var(--gryffindor2) !important;
+}
+
+.bg-gryffindor {
+  background-color: var(--gryffindor1) !important;
+  color: var(--gryffindor2) !important;
+}
+
+.bg-gryffindor2 {
+  color: var(--gryffindor1) !important;
+  background-color: var(--gryffindor2) !important;
+}
+
+.bg-gryffindor2 .nav-link {
+  color: var(--gryffindor1) !important;
+}
+
+.bg-gryffindor2 .nav-link:hover,
+.bg-gryffindor2 .nav-link.active {
+  color: var(--gryffindor1) !important;
+  font-weight: bold;
+}
 /* CURSOR */
 
 * {
@@ -467,26 +505,39 @@ h1,
   line-height: 1.6;
 }
 
-/* FOOTER */
-.footer-custom {
-  background-color: var(--primary);
-  color: var(--white);
-  border-top: 2px solid var(--secondary) !important;
+/* ---------- FOOTER ADAPTADO AL HEADER DE ---------- */
+.footer-hallows {
+  background-color: var(--hallows-bg, #1a110b);
+  border-top: 1px solid var(--hallows-border, #d4af37) !important;
+  color: var(--hallows-text, #faefd8);
   font-family: "Noto Sans", sans-serif;
   font-size: 0.95rem;
 }
 
-.footer-link {
-  color: var(--secondary);
+/* Título con tipografía del grupo */
+.hallows-titulo-footer {
+  font-family: "Lumos", serif !important;
+  color: var(--hallows-gold, #d4af37);
+  letter-spacing: 0.05em;
+}
+
+/* Enlaces e íconos */
+.footer-link-hallows {
+  color: var(--hallows-gold, #d4af37);
   transition:
     color 0.2s ease,
     transform 0.2s ease;
   display: inline-block;
+  text-decoration: none;
 }
 
-.footer-link:hover {
-  color: var(--acento);
+.footer-link-hallows:hover {
+  color: var(--hallows-hover, #ffffff);
   transform: translateY(-2px);
+}
+
+.copyright-texto {
+  color: var(--hallows-text-muted, #c8b38b);
 }
 
 /* ==========================================
