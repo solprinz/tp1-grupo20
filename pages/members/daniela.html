@@ -479,19 +479,11 @@
                   height="220"
                 />
                 <h3>Minutes to midnight</h3>
-                <button
-                  type="button"
-                  class="mapa-boton"
-                  data-visitar
-                  aria-expanded="true"
-                  aria-controls="ficha-discos-1"
-                  hidden
-                >
-                  Explorar el salón
-                </button>
-                <span class="mapa-huellas" aria-hidden="true"
-                  ><span>👣</span><span>👣</span><span>👣</span></span
-                >
+                 <button type="button" class="vitriola-play" data-disco="1" aria-haspopup="dialog">
+                  <i class="fa-brands fa-spotify" aria-hidden="true"></i> Escuchar
+                 </button>
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-discos-1" hidden>Explorar el salón</button>
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
               </article>
               <article class="mapa-lugar" data-lugar="2">
                 <svg
@@ -513,19 +505,11 @@
                   height="220"
                 />
                 <h3>Born to die</h3>
-                <button
-                  type="button"
-                  class="mapa-boton"
-                  data-visitar
-                  aria-expanded="true"
-                  aria-controls="ficha-discos-2"
-                  hidden
-                >
-                  Explorar la tienda de vinilos
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-discos-2" hidden>Explorar la tienda de vinilos</button>
+                <button type="button" class="vitriola-play" data-disco="2" aria-haspopup="dialog">
+                  <i class="fa-solid fa-play" aria-hidden="true"></i> Escuchar
                 </button>
-                <span class="mapa-huellas" aria-hidden="true"
-                  ><span>👣</span><span>👣</span><span>👣</span></span
-                >
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
               </article>
               <article class="mapa-lugar" data-lugar="3">
                 <svg
@@ -547,19 +531,11 @@
                   height="220"
                 />
                 <h3>Cry Baby</h3>
-                <button
-                  type="button"
-                  class="mapa-boton"
-                  data-visitar
-                  aria-expanded="true"
-                  aria-controls="ficha-discos-3"
-                  hidden
-                >
-                  Explorar el escenario
+                <button type="button" class="mapa-boton" data-visitar aria-expanded="true" aria-controls="ficha-discos-3" hidden>Explorar el escenario</button>
+                <button type="button" class="vitriola-play" data-disco="3" aria-haspopup="dialog">
+                  <i class="fa-solid fa-play" aria-hidden="true"></i> Escuchar
                 </button>
-                <span class="mapa-huellas" aria-hidden="true"
-                  ><span>👣</span><span>👣</span><span>👣</span></span
-                >
+                <span class="mapa-huellas" aria-hidden="true"><span>👣</span><span>👣</span><span>👣</span></span>
               </article>
             </div>
             <div class="mapa-fichas">
@@ -592,15 +568,10 @@
                 <p class="mapa-leyenda">La tienda de vinilos · Archivo 02</p>
                 <h3 tabindex="-1">Born to die</h3>
                 <dl>
-                  <dt>Artista</dt>
-                  <dd>Lana Del Rey</dd>
-                  <dt>Año</dt>
-                  <dd>2012</dd>
-                  <dt>Género</dt>
-                  <dd>Indie pop</dd>
-                  <dt>Canción destacada</dt>
-                  Dark paradise
-                  <dd></dd>
+                  <dt>Artista</dt><dd>Lana Del Rey</dd>
+                  <dt>Año</dt><dd>2012</dd>
+                  <dt>Género</dt><dd>Indie pop</dd>
+                  <dt>Canción destacada</dt><dd>Dark paradise</dd>
                 </dl>
                 <button
                   type="button"
@@ -643,6 +614,43 @@
               Travesura realizada
             </button>
           </footer>
+        </div>
+
+        <!-- 🎩 LA VITRIOLA (modal) -->
+        <div class="vitriola" id="vitriola" hidden aria-hidden="true">
+          <div class="vitriola-overlay" data-cerrar-vitriola></div>
+          <div class="vitriola-caja" role="dialog" aria-modal="true" aria-labelledby="vitriola-titulo" aria-describedby="vitriola-info">
+
+            <header class="vitriola-cabecera">
+              <h3 id="vitriola-titulo" class="vitriola-titulo">
+                <i class="fa-solid fa-record-vinyl" aria-hidden="true"></i> La vitriola
+              </h3>
+              <button type="button" class="vitriola-cerrar" data-cerrar-vitriola aria-label="Cerrar la vitriola">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+              </button>
+            </header>
+
+            <div class="vitriola-cuerpo">
+              <div class="vitriola-vinilo">
+                <img class="vitriola-portada" src="" alt="" />
+              </div>
+
+              <div class="vitriola-embed">
+                <!-- El JS inyecta el iframe (YouTube o Spotify) -->
+              </div>
+            </div>
+
+            <div class="vitriola-info" id="vitriola-info">
+              <h4 class="vitriola-cancion"></h4>
+              <p class="vitriola-artista"></p>
+              <p class="vitriola-anio"></p>
+            </div>
+
+            <footer class="vitriola-pie">
+              <button type="button" class="vitriola-boton" data-cerrar-vitriola>Cerrar</button>
+            </footer>
+
+          </div>
         </div>
       </section>
       <script src="../../js/mapa-favoritos.js" defer></script>
@@ -688,5 +696,6 @@
     <!-- JS PROPIO -->
     <script src="../../js/main.js"></script>
     <script src="../../js/cursor.js"></script>
+    <script src="../../js/vitriola.js" defer></script>
   </body>
 </html>

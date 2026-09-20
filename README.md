@@ -167,11 +167,35 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Múltiples instancias: se aplica a las secciones de películas y discos a la vez
 - Selectores basados en `data-*` para desacoplar del HTML
 
-![Captura del mapa de favoritos]
 ![Mapa de favoritos - estado inicial](./docs/capturas/perfil-daniela-1.png)
 
 ![Mapa de favoritos - ficha desplegada](./docs/capturas/perfil-daniela-2.png)
 
+---
+
+### Perfil Daniela (`daniela.html`) — `vitriola.js`
+
+**🎩 La Vitriola**: reproductor modal que permite escuchar las canciones destacadas de cada disco favorito usando **Spotify embed**. Se abre al hacer click en los botones "▶ Escuchar" de la sección de discos.
+
+**Funcionalidades principales:**
+- Apertura del modal con el disco seleccionado (Linkin Park, Lana Del Rey, Melanie Martinez)
+- Carga dinámica del reproductor de Spotify según el disco clickeado
+- Vinilo girando con la portada del disco (animación CSS)
+- Cierre con botón, "Cerrar", click en overlay o tecla `Escape`
+- **Trampa de foco** para navegación por teclado (accesibilidad)
+- Gestión de foco: devuelve el foco al botón que abrió el modal
+- Bloqueo de scroll del body cuando el modal está abierto
+- Atributos ARIA (`role="dialog"`, `aria-modal`, `aria-labelledby`, `aria-describedby`)
+
+**Estructura técnica:**
+- IIFE + `"use strict"` para encapsulamiento
+- Objeto `DISCOS` con la info de cada uno (canción, artista, año, portada, embed)
+- Creación dinámica del iframe según el tipo de embed
+- Uso de Font Awesome para el ícono de Spotify
+
+![Sección de discos con los botones "Escuchar"](./docs/capturas/perfil-daniela-4.png)
+
+![Modal "La Vitriola" con Spotify abierto](./docs/capturas/perfil-daniela-3.png)
 
 ### Perfil Alejandro (`alejandro.html`)
 - **[COMPLETAR]**

@@ -1953,3 +1953,281 @@ button#btn-revelio-always.oculto {
     border-left: 0;
   }
 }
+
+
+
+/* ============================================
+   🎩 LA VITRIOLA (modal reproductor Spotify)
+   ============================================ */
+
+.vitriola {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.vitriola[hidden] {
+  display: none;
+}
+
+.vitriola-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 83, 0.85);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+.vitriola-caja {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(180deg, #f4e9d0 0%, #e8d9b5 100%);
+  border: 3px solid var(--secondary);
+  border-radius: 12px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(214, 182, 109, 0.4);
+  padding: 1.5rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Cabecera */
+.vitriola-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid rgba(156, 121, 62, 0.3);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.vitriola-titulo {
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vitriola-titulo i {
+  color: #1db954; /* verde Spotify */
+}
+
+.vitriola-cerrar {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+
+.vitriola-cerrar:hover,
+.vitriola-cerrar:focus-visible {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: rotate(90deg);
+}
+
+/* Cuerpo: vinilo + embed */
+.vitriola-cuerpo {
+  display: grid;
+  grid-template-columns: minmax(140px, 180px) 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  .vitriola-cuerpo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+  }
+}
+
+/* Vinilo girando (más chico, decorativo) */
+.vitriola-vinilo {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 40%, #0d0d0d 70%, #1a1a1a 100%);
+  box-shadow: 
+    0 0 0 3px #0d0d0d,
+    0 0 0 5px #2a2a2a,
+    0 8px 20px rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.vitriola-vinilo::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent 3px,
+    rgba(255, 255, 255, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+.vitriola-portada {
+  width: 55%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--secondary);
+  box-shadow: 0 0 15px rgba(214, 182, 109, 0.4);
+  animation: vitriola-girar 8s linear infinite;
+}
+
+@keyframes vitriola-girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Embed (Spotify) */
+.vitriola-embed {
+  position: relative;
+  width: 100%;
+  min-height: 152px;
+}
+
+.vitriola-embed iframe {
+  width: 100%;
+  border-radius: 12px;
+  border: 0;
+  display: block;
+}
+
+/* Info */
+.vitriola-info {
+  text-align: center;
+  border-top: 1px dashed rgba(156, 121, 62, 0.4);
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.vitriola-cancion {
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 0.25rem;
+}
+
+.vitriola-artista,
+.vitriola-anio {
+  margin: 0;
+  color: #5a4a2a;
+  font-size: 0.95rem;
+}
+
+.vitriola-artista {
+  font-weight: 600;
+}
+
+/* Pie */
+.vitriola-pie {
+  display: flex;
+  justify-content: center;
+}
+
+.vitriola-boton {
+  background: var(--primary);
+  color: var(--secondary);
+  border: 2px solid var(--primary);
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vitriola-boton:hover,
+.vitriola-boton:focus-visible {
+  background: var(--secondary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón "Escuchar" en cada disco */
+.vitriola-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--secondary);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.vitriola-play:hover,
+.vitriola-play:focus-visible {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.vitriola-play i {
+  font-size: 0.75rem;
+}
+
+/* Bloquear scroll del body cuando el modal está abierto */
+body.vitriola-abierta {
+  overflow: hidden;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+  .vitriola-caja {
+    padding: 1rem;
+  }
+
+  .vitriola-titulo {
+    font-size: 1.15rem;
+  }
+
+  .vitriola-vinilo {
+    max-width: 140px;
+  }
+
+  .vitriola-cancion {
+    font-size: 1.05rem;
+  }
+}
