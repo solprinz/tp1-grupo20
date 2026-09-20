@@ -2240,3 +2240,197 @@ body.vitriola-abierta {
   color: var(--hufflepuff2) !important;
   text-shadow: none !important;
 }
+
+
+
+/* ============================================
+   🎩 QUIZ: ¿Qué casa de Hogwarts sos?
+   ============================================ */
+
+#quiz {
+  --quiz-papel: #f4e9d0;
+  --quiz-tinta: #392c22;
+  --quiz-borde: #96784c;
+}
+
+/* Contenedor principal del quiz */
+.quiz-contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--quiz-papel);
+  border: 3px double var(--quiz-borde);
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 24px rgba(57, 44, 34, 0.15),
+    inset 0 0 0 1px rgba(214, 182, 109, 0.3);
+  text-align: center;
+}
+
+/* Progreso (Pregunta 1 de 3) */
+.quiz-progreso {
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--quiz-borde);
+  margin-bottom: 0.75rem;
+}
+
+/* Pregunta */
+.quiz-pregunta {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--quiz-tinta);
+  margin-bottom: 2rem;
+}
+
+/*Quitar autoline del título cuando recibe foco (accesibilidad sin marco feo)*/
+.quiz-pregunta:focus-visible {
+  outline: none;
+}
+
+/* Contenedor de opciones */
+.quiz-opciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .quiz-opciones {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Botón de opción */
+.quiz-boton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #faf3e0;
+  border: 2px solid var(--quiz-borde);
+  border-radius: 8px;
+  color: var(--quiz-tinta);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.quiz-boton:hover,
+.quiz-boton:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(57, 44, 34, 0.25);
+  outline: none;
+}
+
+.quiz-boton:focus-visible {
+  outline: 3px solid var(--quiz-borde);
+  outline-offset: 3px;
+}
+
+/* Ícono/imagen del animal */
+.quiz-icono {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Hover por casa (colores temáticos) */
+.quiz-boton[data-casa="gryffindor"]:hover,
+.quiz-boton[data-casa="gryffindor"]:focus-visible {
+  background: linear-gradient(135deg, #740001, #d3a625);
+  color: #ffffff;
+  border-color: #740001;
+}
+
+.quiz-boton[data-casa="slytherin"]:hover,
+.quiz-boton[data-casa="slytherin"]:focus-visible {
+  background: linear-gradient(135deg, #1a472a, #aaaaaa);
+  color: #ffffff;
+  border-color: #1a472a;
+}
+
+.quiz-boton[data-casa="ravenclaw"]:hover,
+.quiz-boton[data-casa="ravenclaw"]:focus-visible {
+  background: linear-gradient(135deg, #0e1a40, #946b2d);
+  color: #ffffff;
+  border-color: #0e1a40;
+}
+
+.quiz-boton[data-casa="hufflepuff"]:hover,
+.quiz-boton[data-casa="hufflepuff"]:focus-visible {
+  background: linear-gradient(135deg, #ecb939, #372e29);
+  color: #ffffff;
+  border-color: #ecb939;
+}
+
+/* Resultado (oculto al principio) */
+.quiz-resultado {
+  padding: 1rem 0;
+}
+
+.quiz-resultado[hidden] {
+  display: none;
+}
+
+.quiz-casa-resultado {
+  font-family: "Cinzel", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: 0.05em;
+}
+
+.quiz-frase-resultado {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  color: var(--quiz-tinta);
+  margin-bottom: 1.5rem;
+}
+
+/* Colores del resultado según la casa */
+.quiz-casa-resultado[data-casa="gryffindor"] {
+  color: #740001;
+  text-shadow: 0 0 15px rgba(211, 166, 37, 0.5);
+}
+
+.quiz-casa-resultado[data-casa="slytherin"] {
+  color: #1a472a;
+  text-shadow: 0 0 15px rgba(170, 170, 170, 0.5);
+}
+
+.quiz-casa-resultado[data-casa="ravenclaw"] {
+  color: #0e1a40;
+  text-shadow: 0 0 15px rgba(148, 107, 45, 0.5);
+}
+
+.quiz-casa-resultado[data-casa="hufflepuff"] {
+  color: #372e29;
+  text-shadow: 0 0 15px rgba(236, 185, 57, 0.5);
+}
+
+/* Botón "Jugar de nuevo" */
+.quiz-reiniciar {
+  display: inline-flex;
+  justify-content: center;
+  background: var(--quiz-tinta);
+  color: #faf3e0;
+  border-color: var(--quiz-tinta);
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  width: auto;
+}
+
+.quiz-reiniciar:hover,
+.quiz-reiniciar:focus-visible {
+  background: #51412e;
+  color: #faf3e0;
+  border-color: #51412e;
+}

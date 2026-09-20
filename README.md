@@ -167,10 +167,6 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Múltiples instancias: se aplica a las secciones de películas y discos a la vez
 - Selectores basados en `data-*` para desacoplar del HTML
 
-![Mapa de favoritos - estado inicial](./docs/capturas/perfil-daniela-1.png)
-
-![Mapa de favoritos - ficha desplegada](./docs/capturas/perfil-daniela-2.png)
-
 ---
 
 ### Perfil Daniela (`daniela.html`) — `vitriola.js`
@@ -193,9 +189,39 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Creación dinámica del iframe según el tipo de embed
 - Uso de Font Awesome para el ícono de Spotify
 
-![Sección de discos con los botones "Escuchar"](./docs/capturas/perfil-daniela-4.png)
+![Modal "La Vitriola" con Spotify abierto](./docs/capturas/perfil-daniela-5.png)
 
-![Modal "La Vitriola" con Spotify abierto](./docs/capturas/perfil-daniela-3.png)
+![Sección de discos con los botones "Escuchar"](./docs/capturas/perfil-daniela-6.png)
+
+
+---
+
+### Perfil Daniela (`daniela.html`) — `quiz-casas.js`
+
+**🎩 El Sombrero Seleccionador**: quiz interactivo de 3 preguntas que determina a qué casa de Hogwarts pertenece el usuario. Se suman puntos según las respuestas y al final se muestra la casa ganadora con su color característico.
+
+**Funcionalidades principales:**
+- 3 preguntas con 4 opciones cada una (una por casa)
+- Suma de puntos según las respuestas
+- Cálculo de casa ganadora
+- Resultado con color según la casa (Gryffindor, Slytherin, Ravenclaw o Hufflepuff)
+- Botón "Jugar de nuevo" para reiniciar
+- Navegación por teclado y gestión de foco (accesibilidad)
+
+**Estructura técnica:**
+- IIFE + `"use strict"` para encapsulamiento
+- Objeto `RESULTADOS` con la info de cada casa
+- Estados: pregunta actual y puntajes
+- Uso de `hidden` para mostrar/ocultar preguntas
+- Imágenes generadas con IA para los íconos de cada casa
+
+![Quiz: Pregunta 1](./docs/capturas/perfil-daniela-1.png)
+
+![Quiz: Pregunta 2 con hover](./docs/capturas/perfil-daniela-2.png)
+
+![Quiz: Pregunta 3 con hover](./docs/capturas/perfil-daniela-3.png)
+
+![Quiz: Resultado con casa ganadora](./docs/capturas/perfil-daniela-4.png)
 
 ### Perfil Alejandro (`alejandro.html`)
 - **[COMPLETAR]**

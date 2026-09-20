@@ -211,7 +211,106 @@
           </div>
         </div>
       </section>
+              <section id="quiz" class="perfil-seccion container-fluid perfil-editorial">
+          <div class="container">
+            <div class="text-center mb-5">
+              <p class="perfil-intro mb-2">El Sombrero Seleccionador</p>
+              <h2 class="title">¿Qué casa de Hogwarts sos?</h2>
+            </div>
 
+            <div class="quiz-contenedor">
+
+              <!-- Pregunta 1 -->
+              <div class="quiz-pregunta-actual" data-pregunta="1">
+                <p class="quiz-progreso" role="status" aria-live="polite">
+                  Pregunta 1 de 3
+                </p>
+                <h3 class="quiz-pregunta">¿Qué valorás más en un amigo?</h3>
+                <div class="quiz-opciones">
+                  <button type="button" class="quiz-boton" data-casa="gryffindor">
+                    <img src="../../img/quiz/leon.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Valentía
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="slytherin">
+                    <img src="../../img/quiz/serpiente.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Ambición
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="ravenclaw">
+                    <img src="../../img/quiz/aguila.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Inteligencia
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="hufflepuff">
+                    <img src="../../img/quiz/tejon.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Lealtad
+                  </button>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 (oculta) -->
+              <div class="quiz-pregunta-actual" data-pregunta="2" hidden>
+                <p class="quiz-progreso" role="status" aria-live="polite">
+                  Pregunta 2 de 3
+                </p>
+                <h3 class="quiz-pregunta">¿Qué harías si ves una injusticia?</h3>
+                <div class="quiz-opciones">
+                  <button type="button" class="quiz-boton" data-casa="gryffindor">
+                    <img src="../../img/quiz/leon.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Enfrentarla de frente
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="slytherin">
+                    <img src="../../img/quiz/serpiente.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Buscar la forma de ganar
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="ravenclaw">
+                    <img src="../../img/quiz/aguila.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Analizar la situación
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="hufflepuff">
+                    <img src="../../img/quiz/tejon.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Ayudar a la víctima
+                  </button>
+                </div>
+              </div>
+
+              <!-- Pregunta 3 (oculta) -->
+              <div class="quiz-pregunta-actual" data-pregunta="3" hidden>
+                <p class="quiz-progreso" role="status" aria-live="polite">
+                  Pregunta 3 de 3
+                </p>
+                <h3 class="quiz-pregunta">¿Cuál es tu lugar favorito de Hogwarts?</h3>
+                <div class="quiz-opciones">
+                  <button type="button" class="quiz-boton" data-casa="gryffindor">
+                    <img src="../../img/quiz/leon.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    La sala común de Gryffindor
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="slytherin">
+                    <img src="../../img/quiz/serpiente.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Las mazmorras
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="ravenclaw">
+                    <img src="../../img/quiz/aguila.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    La biblioteca
+                  </button>
+                  <button type="button" class="quiz-boton" data-casa="hufflepuff">
+                    <img src="../../img/quiz/tejon.png" alt="" class="quiz-icono" aria-hidden="true" />
+                    Las cocinas
+                  </button>
+                </div>
+              </div>
+
+              <!-- Resultado (oculto al principio) -->
+              <div class="quiz-resultado" hidden>
+                <p class="quiz-progreso">El Sombrero ha decidido...</p>
+                <h3 class="quiz-casa-resultado"></h3>
+                <p class="quiz-frase-resultado"></p>
+                <button type="button" class="quiz-boton quiz-reiniciar">
+                  Jugar de nuevo
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </section>
       <section
         id="peliculas"
         class="perfil-seccion container-fluid mapa-favoritos"
@@ -697,5 +796,6 @@
     <script src="../../js/main.js"></script>
     <script src="../../js/cursor.js"></script>
     <script src="../../js/vitriola.js" defer></script>
+    <script src="../../js/quiz-casas.js" defer></script>
   </body>
 </html>
