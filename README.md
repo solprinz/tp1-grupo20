@@ -36,6 +36,8 @@ tp1-front/
 ├── README.md                       # Este archivo
 ├── css/
 │   └── style.css                   # Estilos globales
+├── docs/
+│   └── capturas/                   # Capturas para el README
 ├── fonts/
 │   └── LUMOS.TTF                   # Fuente temática
 ├── img/                            # Imágenes del proyecto
@@ -51,6 +53,11 @@ tp1-front/
 │   │   ├── lana-rey.jpg
 │   │   ├── melaniemartinez.jpg
 │   │   └── minutes-to-midnight-lp.jpg
+│   ├── quiz/                       # Íconos del quiz de casas
+│   │   ├── aguila.png
+│   │   ├── leon.png
+│   │   ├── serpiente.png
+│   │   └── tejon.png
 │   ├── lucas.jpg
 │   ├── lucas-cancion1.jfif
 │   ├── lucas-cancion2.jfif
@@ -77,18 +84,20 @@ tp1-front/
 │   ├── sol-pelicula3.png
 │   └── varita.svg
 ├── js/
-│   ├── cursor.js                   # [COMPLETAR descripción]
-│   ├── header-hallows.js           # [COMPLETAR descripción]
-│   ├── main.js                     # [COMPLETAR descripción]
-│   ├── mapa-favoritos.js           # [COMPLETAR descripción]
-│   └── proyectos-reliquias.js      # [COMPLETAR descripción]
+│   ├── cursor.js                   # Cursor personalizado (global)
+│   ├── header-hallows.js           # Header dinámico (global)
+│   ├── main.js                     # Funciones de portada (global)
+│   ├── mapa-favoritos.js           # Mapa interactivo (Daniela)
+│   ├── proyectos-reliquias.js      # Reliquias interactivas (Alejandro)
+│   ├── vitriola.js                 # Reproductor de discos (Daniela)
+│   └── quiz-casas.js               # Quiz de casas (Daniela)
 └── pages/
     ├── logbook/
     │   └── bitacora.html           # Bitácora del proceso
     └── members/
         ├── alejandro.html
         ├── daniela.html
-        ├── juanpablo.html          # (pendiente)
+        ├── juanpablo.html
         ├── lucas.html
         └── sol.html
 \`\`\`
@@ -243,23 +252,47 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 
 ## 🤖 Uso de IA
 
-[COMPLETAR: describir herramientas de IA usadas, modelos, plan (gratuito/pago), para qué se usaron (código, debugging, redacción, imágenes), y qué revisaron/adaptaron con criterio propio.]
+Durante el desarrollo del TP1 usamos herramientas de inteligencia artificial como **asistentes técnicos** en momentos puntuales. A continuación detallamos cómo las usamos y qué decisiones tomamos con criterio propio.
 
 ### Herramientas utilizadas
-| Herramienta | Modelo | Plan | Uso principal |
-|---|---|---|---|
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+| Herramienta | Modelo | Plan | Integrante | Uso principal |
+|---|---|---|---|---|
+| DeepSeek | V3 | Gratuito | Daniela | Consultas técnicas, debugging de JavaScript, revisión de código |
+| Gemini (Nano Banana) | Gemini 2.5 | Gratuito | Daniela | Generación de los íconos del quiz de casas |
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Alejandro | [COMPLETAR] |
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Lucas | [COMPLETAR] |
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Sol | [COMPLETAR] |
+
+> Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo**. Las herramientas de IA se usaron en su **plan gratuito**.
 
 ### Criterio de uso
-[COMPLETAR]
+
+La IA fue una **herramienta de apoyo** en momentos puntuales:
+- **Consultas técnicas:** entender errores de CSS (especificidad) y de JavaScript (manejo de eventos, accesibilidad).
+- **Revisión de código:** validar que las soluciones que ya habíamos pensado eran correctas.
+- **Generación de imágenes:** crear los íconos del quiz con prompts temáticos de Harry Potter.
+
+La IA nos permitió **resolver dudas puntuales** y **profundizar en los temas** que nos generaban dificultad. Las decisiones de diseño, la arquitectura del sitio, la selección de contenido y la integración final fueron **nuestras**.
 
 ### Imágenes y avatares
-[COMPLETAR: ¿se generaron con IA? ¿cuál fue el criterio de los prompts?]
+
+Los avatares e imágenes del proyecto combinan:
+- **Bancos de imágenes libres** (portadas de películas y discos)
+- **Generación con IA** (íconos del quiz de casas, generados con Gemini Nano Banana)
+- **Diseño propio** (logos y elementos del sitio)
+
+En todos los casos priorizamos la **estética temática de Harry Potter** y el **criterio de privacidad** (no usar fotos personales).
 
 ---
+
 
 ## 📈 Evolución
 
 Esta sección documentará las mejoras planificadas para los próximos trabajos prácticos:
 
-- [COMPLETAR: mejoras futuras]
+- **Accesibilidad:** ampliar la auditoría de accesibilidad a todo el sitio (roles ARIA, navegación por teclado, contraste).
+- **Nuevas funciones dinámicas:** sumar más interactividad con JavaScript en cada perfil.
+- **Optimización:** mejorar el rendimiento (compresión de imágenes, lazy loading, minificación de CSS y JS).
+- **Documentación:** mantener el README actualizado con cada nueva función y captura.
+- **Diseño:** explorar más componentes visuales temáticos (animaciones, transiciones).
