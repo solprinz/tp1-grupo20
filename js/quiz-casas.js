@@ -48,7 +48,7 @@
   };
 
   /* ---------- 4. FUNCIONES ---------- */
-  function mostrarPregunta(indice) {
+  function mostrarPregunta(indice, enfocar = true) {
     // Ocultar todas las preguntas
     preguntas.forEach((p) => {
       p.hidden = true;
@@ -59,10 +59,12 @@
       preguntas[indice].hidden = false;
 
       // Enfocar el título de la pregunta (accesibilidad sin "pegar" color)
-      const tituloPregunta = preguntas[indice].querySelector(".quiz-pregunta");
-      if (tituloPregunta) {
-        tituloPregunta.setAttribute("tabindex", "-1");
-        requestAnimationFrame(() => tituloPregunta.focus());
+      if (enfocar) {
+        const tituloPregunta = preguntas[indice].querySelector(".quiz-pregunta");
+        if (tituloPregunta) {
+          tituloPregunta.setAttribute("tabindex", "-1");
+          requestAnimationFrame(() => tituloPregunta.focus());
+        }
       }
     }
   }
@@ -150,6 +152,6 @@
   btnReiniciar.addEventListener("click", reiniciarQuiz);
 
   /* ---------- 6. INICIALIZACIÓN ---------- */
-  // Asegurarse de que la primera pregunta esté visible al cargar
-  mostrarPregunta(0);
+  // Asegurarse de que la primera pregunta esté visible al cargar sin hacer autofocus
+  mostrarPregunta(0, false);
 })();
