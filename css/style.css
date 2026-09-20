@@ -2231,3 +2231,11 @@ body.vitriola-abierta {
     font-size: 1.05rem;
   }
 }
+
+/* ============================================
+   🎨 Fix: contraste del título en card-hufflepuff
+   ============================================ */
+.card-hufflepuff .brand-title {
+  color: var(--hufflepuff2) !important;
+  text-shadow: none !important;
+}

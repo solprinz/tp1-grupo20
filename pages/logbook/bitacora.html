@@ -181,12 +181,29 @@
                   enfrentarnos al desafío de las rutas relativas. Algunos
                   estilos e imágenes parecían haber sido afectados por un
                   encantamiento desilusionador hasta que corregimos las rutas.
+                  <br />
+                  <em>Resolución:</em> Reorganizamos las imágenes en subcarpetas
+                  por integrante y aplicamos un
+                  <strong>contrahechizo masivo</strong> con el comando
+                  <code>sed</code> para actualizar todas las rutas relativas de
+                  una sola vez, verificando luego cada archivo con
+                  <code>grep</code> para asegurarnos de que no quedaran enlaces
+                  malditos.
                 </li>
                 <li class="mb-2">
                   <strong>Duelos de Especificidad (CSS):</strong> En ocasiones,
                   las clases de Bootstrap sobreescribían nuestros colores de las
                   casas, obligándonos a lanzar encantamientos más fuertes (mayor
                   especificidad) en nuestro <code>style.css</code>.
+                  <br />
+                  <em>Resolución:</em> Definimos
+                  <strong>variables CSS</strong> en <code>:root</code> para los
+                  colores de cada casa y las aplicamos con selectores más
+                  específicos (por ejemplo,
+                  <code>body.gryffindor .card</code> en lugar de solo
+                  <code>.card</code>). Así logramos que nuestros encantamientos
+                  tuvieran prioridad sobre los de Bootstrap sin necesidad de
+                  recurrir a <code>!important</code>.
                 </li>
               </ul>
             </div>
@@ -229,6 +246,41 @@
                 nuestro sitio web para que cualquier mago o bruja pueda
                 visitarlo desde cualquier rincón del mundo.
               </p>
+            </div>
+          </div>
+
+          <!-- Uso de IA -->
+          <div class="col-12 col-md-10">
+            <div class="card card-gryffindor p-4">
+              <h2 class="brand-title fs-3 text-center mb-4">
+                Pociones Asistidas por IA
+              </h2>
+              <p class="fs-5">
+                En nuestra cocina de pociones contamos con la ayuda de
+                asistentes mágicos de inteligencia artificial que nos
+                permitieron acelerar el aprendizaje y resolver dudas puntuales.
+                Los usamos como <strong>herramientas de apoyo</strong>, nunca
+                como sustituto de nuestra propia magia.
+              </p>
+              <ul class="fs-5">
+                <li class="mb-2">
+                  <strong>Debugging de encantamientos:</strong> Consultamos a la
+                  IA para entender errores de CSS (como los duelos de
+                  especificidad) y de JavaScript (como el manejo de eventos y
+                  accesibilidad).
+                </li>
+                <li class="mb-2">
+                  <strong>Redacción y estructura:</strong> La IA nos ayudó a
+                  organizar esta misma bitácora y a redactar el README del
+                  repositorio con un formato claro.
+                </li>
+                <li class="mb-2">
+                  <strong>Criterio propio:</strong> Todo el código, los textos y
+                  las decisiones de diseño fueron revisados, adaptados y
+                  probados por cada integrante antes de incorporarlos al
+                  proyecto. La autoría es 100% nuestra.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
