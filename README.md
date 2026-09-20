@@ -211,7 +211,7 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 ## 🚀 Publicación
 
 - **Repositorio GitHub:** https://github.com/solprinz/tp1-grupo20
-- **Vercel:** [COMPLETAR URL]
+- **Vercel:** https://tp1-grupo20.vercel.app/
 
 ---
 
