@@ -238,8 +238,23 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 ### Perfil Lucas (`lucas.html`)
 - **[COMPLETAR]**
 
-### Perfil Sol (`sol.html`)
-- **[COMPLETAR]**
+### Perfil Sol (`sol.html`) - Encantamiento "Always"
+
+**Encantamiento Revelio ("Always")**: interacción dinámica que revela el Patronus de Cierva y el icónico mensaje *"Always"* al presionar el botón de interacción en el perfil.
+
+![Encantamiento "Always" cerrado](./docs/capturas/perfil-sol-1.png)
+
+![Encantamiento "Always" abierto](./docs/capturas/perfil-sol-2.png)
+
+**Funcionalidades principales:**
+- Revelado interactivo de escena mediante el botón **" 🪄 Revelio"**.
+- Ocultamiento suave del botón activador y despliegue del Patronus animado.
+- Feedback visual temático y transición de estado inmediata.
+
+**Estructura técnica:**
+- Manejo de eventos con `addEventListener` en el `DOMContentLoaded`.
+- Control de estados mediante clases CSS (`.oculto` y `.activo`).
+- Script personalizado encapsulado para no interferir con las variables del resto de la entrega.
 
 ---
 
@@ -262,16 +277,16 @@ Durante el desarrollo del TP1 usamos herramientas de inteligencia artificial com
 | Gemini (Nano Banana) | Gemini 2.5 | Gratuito | Daniela | Generación de los íconos del quiz de casas |
 | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Alejandro | [COMPLETAR] |
 | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Lucas | [COMPLETAR] |
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Sol | [COMPLETAR] |
+| Gemini | 2.5 Flash | [COMPLETAR] | Sol | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
 
-> Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo**. Las herramientas de IA se usaron en su **plan gratuito**.
+> Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo** o **Coderhouse**. Las herramientas de IA se usaron en su **plan gratuito**.
 
 ### Criterio de uso
 
 La IA fue una **herramienta de apoyo** en momentos puntuales:
 - **Consultas técnicas:** entender errores de CSS (especificidad) y de JavaScript (manejo de eventos, accesibilidad).
 - **Revisión de código:** validar que las soluciones que ya habíamos pensado eran correctas.
-- **Generación de imágenes:** crear los íconos del quiz con prompts temáticos de Harry Potter.
+- **Generación de imágenes:** crear los íconos del quiz con prompts temáticos de Harry Potter y generar los avatares ilustrados de los integrantes manteniendo la estética del proyecto.
 
 La IA nos permitió **resolver dudas puntuales** y **profundizar en los temas** que nos generaban dificultad. Las decisiones de diseño, la arquitectura del sitio, la selección de contenido y la integración final fueron **nuestras**.
 
@@ -279,7 +294,7 @@ La IA nos permitió **resolver dudas puntuales** y **profundizar en los temas** 
 
 Los avatares e imágenes del proyecto combinan:
 - **Bancos de imágenes libres** (portadas de películas y discos)
-- **Generación con IA** (íconos del quiz de casas, generados con Gemini Nano Banana)
+- **Generación con IA** (íconos del quiz de casas y avatars personalizados generados con Gemini Nano Banana)
 - **Diseño propio** (logos y elementos del sitio)
 
 En todos los casos priorizamos la **estética temática de Harry Potter** y el **criterio de privacidad** (no usar fotos personales).
