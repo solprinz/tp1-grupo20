@@ -1955,8 +1955,6 @@ button#btn-revelio-always.oculto {
   }
 }
 
-
-
 /* ============================================
    🎩 LA VITRIOLA (modal reproductor Spotify)
    ============================================ */
@@ -1992,7 +1990,7 @@ button#btn-revelio-always.oculto {
   background: linear-gradient(180deg, #f4e9d0 0%, #e8d9b5 100%);
   border: 3px solid var(--secondary);
   border-radius: 12px;
-  box-shadow: 
+  box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.6),
     inset 0 0 0 1px rgba(214, 182, 109, 0.4);
   padding: 1.5rem;
@@ -2071,9 +2069,14 @@ button#btn-revelio-always.oculto {
   max-width: 180px;
   margin: 0 auto;
   border-radius: 50%;
-  background: 
-    radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 40%, #0d0d0d 70%, #1a1a1a 100%);
-  box-shadow: 
+  background: radial-gradient(
+    circle at center,
+    #2a2a2a 0%,
+    #1a1a1a 40%,
+    #0d0d0d 70%,
+    #1a1a1a 100%
+  );
+  box-shadow:
     0 0 0 3px #0d0d0d,
     0 0 0 5px #2a2a2a,
     0 8px 20px rgba(0, 0, 0, 0.5);
@@ -2107,8 +2110,12 @@ button#btn-revelio-always.oculto {
 }
 
 @keyframes vitriola-girar {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Embed (Spotify) */
@@ -2241,8 +2248,6 @@ body.vitriola-abierta {
   text-shadow: none !important;
 }
 
-
-
 /* ============================================
    🎩 QUIZ: ¿Qué casa de Hogwarts sos?
    ============================================ */
@@ -2261,7 +2266,7 @@ body.vitriola-abierta {
   background: var(--quiz-papel);
   border: 3px double var(--quiz-borde);
   border-radius: 12px;
-  box-shadow: 
+  box-shadow:
     0 8px 24px rgba(57, 44, 34, 0.15),
     inset 0 0 0 1px rgba(214, 182, 109, 0.3);
   text-align: center;
@@ -2433,4 +2438,110 @@ body.vitriola-abierta {
   background: #51412e;
   color: #faf3e0;
   border-color: #51412e;
+}
+
+/* ============================================
+   SELECCION DEL CAMPEON D ELAS CASAS
+   ============================================ */
+.seccion-copa-casas {
+  background: transparent !important;
+  border: none !important;
+}
+
+.casa-card {
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  transition: transform 0.2s ease;
+}
+
+.casa-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Colores individuales de cada casa usando tus variables */
+.casa-card h3 {
+  color: inherit !important;
+}
+
+.casa-gryffindor {
+  background-color: var(--gryffindor1);
+  color: var(--gryffindor2);
+  border-color: var(--gryffindor1);
+}
+.casa-slytherin {
+  color: var(--slytherin2);
+  background-color: var(--slytherin1);
+  border-color: var(--slytherin2);
+}
+.casa-ravenclaw {
+  color: var(--ravenclaw2);
+  background-color: var(--ravenclaw1);
+  border-color: var(--ravenclaw2);
+}
+.casa-hufflepuff {
+  color: var(--hufflepuff2);
+  background-color: var(--hufflepuff1);
+  border-color: var(--hufflepuff2);
+}
+
+.btn-gryffindor-puntos {
+  background-color: var(--gryffindor1);
+  color: var(--gryffindor2);
+  border: 1px solid var(--gryffindor2);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-gryffindor-puntos:hover {
+  background-color: var(--gryffindor2);
+  color: var(--gryffindor1,);
+  transform: translateY(-2px);
+}
+
+.caja-suceso {
+  background: rgba(201, 197, 197, 0.2);
+  border: 1px dashed var(--gryffindor2, #d3a625);
+}
+
+.cartel-campeon h3 {
+  color: inherit !important;
+}
+.cartel-campeon {
+  background-color: var(--gryffindor1) !important;
+  color: var(--gryffindor2) !important;
+  border: 2px solid var(--gryffindor2) !important;
+  box-shadow: 0 0 20px rgba(211, 166, 37, 0.5);
+}
+
+.pop-anim {
+  animation: popPuntos 0.3s ease-out;
+}
+
+@keyframes popPuntos {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#btn-reiniciar {
+  color: var(--gryffindor2);
+  border-color: var(--gryffindor2);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+#btn-reiniciar:hover {
+  color: var(--gryffindor2) !important;
+  background-color: var(--gryffindor1) !important;
+  border-color: var(--gryffindor1) !important;
+  opacity: 1 !important;
 }

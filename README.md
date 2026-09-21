@@ -1,6 +1,6 @@
 # 🪄 Hallows Code — TP1 Front End
 
-Proyecto web grupal desarrollado para el **Trabajo Práctico 1** de la materia *Desarrollo de Sistemas Web (Front End)* del IFTS 29, 2° cuatrimestre 2026.
+Proyecto web grupal desarrollado para el **Trabajo Práctico 1** de la materia _Desarrollo de Sistemas Web (Front End)_ del IFTS 29, 2° cuatrimestre 2026.
 
 Hallows Code es un sitio web con temática Harry Potter que presenta al equipo de desarrollo, sus perfiles individuales (con habilidades, películas y discos favoritos) y una bitácora del proceso de trabajo. Incluye interactividad con JavaScript en cada perfil.
 
@@ -8,12 +8,12 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 
 ## 👥 Integrantes
 
-| Nombre | GitHub | Perfil |
-|---|---|---|
-| Alejandro Ramos | [@AleR25](https://github.com/AleR25) | [alejandro.html](./pages/members/alejandro.html) |
-| Daniela Méndez | [@mendez-daniela](https://github.com/mendez-daniela) | [daniela.html](./pages/members/daniela.html) |
-| Lucas Sosa | [@Strashoy](https://github.com/Strashoy) | [lucas.html](./pages/members/lucas.html) |
-| Sol Prinzen | [@solprinz](https://github.com/solprinz) | [sol.html](./pages/members/sol.html) |
+| Nombre          | GitHub                                               | Perfil                                           |
+| --------------- | ---------------------------------------------------- | ------------------------------------------------ |
+| Alejandro Ramos | [@AleR25](https://github.com/AleR25)                 | [alejandro.html](./pages/members/alejandro.html) |
+| Daniela Méndez  | [@mendez-daniela](https://github.com/mendez-daniela) | [daniela.html](./pages/members/daniela.html)     |
+| Lucas Sosa      | [@Strashoy](https://github.com/Strashoy)             | [lucas.html](./pages/members/lucas.html)         |
+| Sol Prinzen     | [@solprinz](https://github.com/solprinz)             | [sol.html](./pages/members/sol.html)             |
 
 ---
 
@@ -32,74 +32,74 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 
 \`\`\`
 tp1-front/
-├── index.html                      # Portada principal
-├── README.md                       # Este archivo
+├── index.html # Portada principal
+├── README.md # Este archivo
 ├── css/
-│   └── style.css                   # Estilos globales
+│ └── style.css # Estilos globales
 ├── docs/
-│   └── capturas/                   # Capturas para el README
+│ └── capturas/ # Capturas para el README
 ├── fonts/
-│   └── LUMOS.TTF                   # Fuente temática
-├── img/                            # Imágenes del proyecto
-│   ├── alejandro.jpg
-│   ├── alejandro-hallows-logo.png  # Logo del equipo
-│   ├── alejandro-hallows-titulo.png
-│   ├── daniela/                    # Imágenes de Daniela
-│   │   ├── black-swan.jpg
-│   │   ├── coraline-pelicula.jpg
-│   │   ├── daniela-avatar.jpg
-│   │   ├── habilidades-daniela.jpg
-│   │   ├── heuh-pelicula.jpg
-│   │   ├── lana-rey.jpg
-│   │   ├── melaniemartinez.jpg
-│   │   └── minutes-to-midnight-lp.jpg
-│   ├── quiz/                       # Íconos del quiz de casas
-│   │   ├── aguila.png
-│   │   ├── leon.png
-│   │   ├── serpiente.png
-│   │   └── tejon.png
-│   ├── lucas.jpg
-│   ├── lucas-cancion1.jfif
-│   ├── lucas-cancion2.jfif
-│   ├── lucas-cancion3.jfif
-│   ├── lucas-pelicula1.jpg
-│   ├── lucas-pelicula2.jpg
-│   ├── lucas-pelicula3.jfif
-│   ├── lucas-proyecto1.png
-│   ├── lucas-proyecto2.png
-│   ├── lucas-proyecto3.png
-│   ├── patronus-ciervo.png
-│   ├── patronus-sol.png
-│   ├── perfil-discos.png
-│   ├── perfil-habilidades.png
-│   ├── perfil-peliculas.png
-│   ├── perfil-proyectos.png
-│   ├── sol.jpg
-│   ├── sol-cancion1.png
-│   ├── sol-cancion2.png
-│   ├── sol-cancion3.png
-│   ├── sol-habilidades.jpg
-│   ├── sol-pelicula1.png
-│   ├── sol-pelicula2.png
-│   ├── sol-pelicula3.png
-│   └── varita.svg
+│ └── LUMOS.TTF # Fuente temática
+├── img/ # Imágenes del proyecto
+│ ├── alejandro.jpg
+│ ├── alejandro-hallows-logo.png # Logo del equipo
+│ ├── alejandro-hallows-titulo.png
+│ ├── daniela/ # Imágenes de Daniela
+│ │ ├── black-swan.jpg
+│ │ ├── coraline-pelicula.jpg
+│ │ ├── daniela-avatar.jpg
+│ │ ├── habilidades-daniela.jpg
+│ │ ├── heuh-pelicula.jpg
+│ │ ├── lana-rey.jpg
+│ │ ├── melaniemartinez.jpg
+│ │ └── minutes-to-midnight-lp.jpg
+│ ├── quiz/ # Íconos del quiz de casas
+│ │ ├── aguila.png
+│ │ ├── leon.png
+│ │ ├── serpiente.png
+│ │ └── tejon.png
+│ ├── lucas.jpg
+│ ├── lucas-cancion1.jfif
+│ ├── lucas-cancion2.jfif
+│ ├── lucas-cancion3.jfif
+│ ├── lucas-pelicula1.jpg
+│ ├── lucas-pelicula2.jpg
+│ ├── lucas-pelicula3.jfif
+│ ├── lucas-proyecto1.png
+│ ├── lucas-proyecto2.png
+│ ├── lucas-proyecto3.png
+│ ├── patronus-ciervo.png
+│ ├── patronus-sol.png
+│ ├── perfil-discos.png
+│ ├── perfil-habilidades.png
+│ ├── perfil-peliculas.png
+│ ├── perfil-proyectos.png
+│ ├── sol.jpg
+│ ├── sol-cancion1.png
+│ ├── sol-cancion2.png
+│ ├── sol-cancion3.png
+│ ├── sol-habilidades.jpg
+│ ├── sol-pelicula1.png
+│ ├── sol-pelicula2.png
+│ ├── sol-pelicula3.png
+│ └── varita.svg
 ├── js/
-│   ├── cursor.js                   # Cursor personalizado (global)
-│   ├── header-hallows.js           # Header dinámico (global)
-│   ├── main.js                     # Funciones de portada (global)
-│   ├── mapa-favoritos.js           # Mapa interactivo (Daniela)
-│   ├── proyectos-reliquias.js      # Reliquias interactivas (Alejandro)
-│   ├── vitriola.js                 # Reproductor de discos (Daniela)
-│   └── quiz-casas.js               # Quiz de casas (Daniela)
+│ ├── cursor.js # Cursor personalizado (global)
+│ ├── header-hallows.js # Header dinámico (global)
+│ ├── main.js # Funciones de portada (global)
+│ ├── mapa-favoritos.js # Mapa interactivo (Daniela)
+│ ├── proyectos-reliquias.js # Reliquias interactivas (Alejandro)
+│ ├── vitriola.js # Reproductor de discos (Daniela)
+│ └── quiz-casas.js # Quiz de casas (Daniela)
 └── pages/
-    ├── logbook/
-    │   └── bitacora.html           # Bitácora del proceso
-    └── members/
-        ├── alejandro.html
-        ├── daniela.html
-        ├── juanpablo.html
-        ├── lucas.html
-        └── sol.html
+├── logbook/
+│ └── bitacora.html # Bitácora del proceso
+└── members/
+├── alejandro.html
+├── daniela.html
+├── juanpablo.html
+├── lucas.html
+└── sol.html
 \`\`\`
 
 ---
@@ -137,14 +137,17 @@ tp1-front/
 | Detalle oscuro | `#9c793e` | Bordes y acentos |
 
 ### Tipografías
+
 - **Cinzel** — títulos principales (estilo grabado medieval)
 - **Caveat** — subtítulos manuscritos
 - **Noto Sans** — cuerpo de texto (legibilidad)
 
 ### Iconografía
+
 - **Font Awesome 6.2** — íconos (redes, hamburguesa, flechas)
 
 ### Breakpoints
+
 - **400px** — mobile
 - **900px** — tablet
 - **1200px** — desktop
@@ -156,6 +159,7 @@ tp1-front/
 [COMPLETAR: cada integrante describe brevemente la función dinámica de su perfil + una captura de pantalla]
 
 ### Portada (`index.html`)
+
 - **[COMPLETAR]**
 
 ### Perfil Daniela (`daniela.html`) — `mapa-favoritos.js`
@@ -163,6 +167,7 @@ tp1-front/
 Mapa interactivo con temática Harry Potter que permite explorar las **películas** y **discos** favoritos. Cada favorito es un "lugar" en el plano mágico; al hacer click se abre una ficha con información detallada. Incluye navegación completa por teclado y mensajes de estado accesibles para lectores de pantalla.
 
 **Funcionalidades principales:**
+
 - Apertura y cierre del mapa ("Juro solemnemente…" / "Travesura realizada")
 - Selección de lugares individuales con ficha desplegable
 - Toggle: click en el mismo lugar cierra su ficha
@@ -172,6 +177,7 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Atributos ARIA completos (`aria-expanded`, `aria-controls`)
 
 **Estructura técnica:**
+
 - IIFE + `"use strict"` para encapsulamiento
 - Múltiples instancias: se aplica a las secciones de películas y discos a la vez
 - Selectores basados en `data-*` para desacoplar del HTML
@@ -183,6 +189,7 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 **🎩 La Vitriola**: reproductor modal que permite escuchar las canciones destacadas de cada disco favorito usando **Spotify embed**. Se abre al hacer click en los botones "▶ Escuchar" de la sección de discos.
 
 **Funcionalidades principales:**
+
 - Apertura del modal con el disco seleccionado (Linkin Park, Lana Del Rey, Melanie Martinez)
 - Carga dinámica del reproductor de Spotify según el disco clickeado
 - Vinilo girando con la portada del disco (animación CSS)
@@ -193,6 +200,7 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Atributos ARIA (`role="dialog"`, `aria-modal`, `aria-labelledby`, `aria-describedby`)
 
 **Estructura técnica:**
+
 - IIFE + `"use strict"` para encapsulamiento
 - Objeto `DISCOS` con la info de cada uno (canción, artista, año, portada, embed)
 - Creación dinámica del iframe según el tipo de embed
@@ -202,7 +210,6 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 
 ![Sección de discos con los botones "Escuchar"](./docs/capturas/perfil-daniela-6.png)
 
-
 ---
 
 ### Perfil Daniela (`daniela.html`) — `quiz-casas.js`
@@ -210,6 +217,7 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 **🎩 El Sombrero Seleccionador**: quiz interactivo de 3 preguntas que determina a qué casa de Hogwarts pertenece el usuario. Se suman puntos según las respuestas y al final se muestra la casa ganadora con su color característico.
 
 **Funcionalidades principales:**
+
 - 3 preguntas con 4 opciones cada una (una por casa)
 - Suma de puntos según las respuestas
 - Cálculo de casa ganadora
@@ -218,6 +226,7 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Navegación por teclado y gestión de foco (accesibilidad)
 
 **Estructura técnica:**
+
 - IIFE + `"use strict"` para encapsulamiento
 - Objeto `RESULTADOS` con la info de cada casa
 - Estados: pregunta actual y puntajes
@@ -233,28 +242,47 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 ![Quiz: Resultado con casa ganadora](./docs/capturas/perfil-daniela-4.png)
 
 ### Perfil Alejandro (`alejandro.html`)
+
 - **[COMPLETAR]**
 
 ### Perfil Lucas (`lucas.html`)
+
 - **[COMPLETAR]**
 
 ### Perfil Sol (`sol.html`) - Encantamiento "Always"
 
-**Encantamiento Revelio ("Always")**: interacción dinámica que revela el Patronus de Cierva y el icónico mensaje *"Always"* al presionar el botón de interacción en el perfil.
+**Encantamiento Revelio ("Always")**: interacción dinámica que revela el Patronus de Cierva y el icónico mensaje _"Always"_ al presionar el botón de interacción en el perfil.
 
 ![Encantamiento "Always" cerrado](./docs/capturas/perfil-sol-1.png)
 
 ![Encantamiento "Always" abierto](./docs/capturas/perfil-sol-2.png)
 
 **Funcionalidades principales:**
+
 - Revelado interactivo de escena mediante el botón **" 🪄 Revelio"**.
 - Ocultamiento suave del botón activador y despliegue del Patronus animado.
 - Feedback visual temático y transición de estado inmediata.
 
 **Estructura técnica:**
+
 - Manejo de eventos con `addEventListener` en el `DOMContentLoaded`.
 - Control de estados mediante clases CSS (`.oculto` y `.activo`).
 - Script personalizado encapsulado para no interferir con las variables del resto de la entrega.
+
+### Perfil Sol (`sol.html`) - La Copa De Las Casas"
+
+**Torneo de las Casas ("Favoritismo de Dumbledore")**: Dashboard interactivo que simula el marcador de puntos de Hogwarts con sucesos cómicos de la saga y persistencia de datos.
+
+**Funcionalidades principales:**
+-Generador de Sucesos: Botón interactivo que desencadena eventos narrativos asignando puntos a las distintas casas.
+-Marcador dinámico: Visualización en tiempo real con alumnos destacados por casa y animación visual (.pop-anim) al sumar puntos.
+-Persistencia con localStorage: Mantiene el estado de los contadores y el cartel de campeón incluso al recargar o reiniciar el navegador.
+-Restablecimiento del Torneo: Botón de reinicio que limpia el almacenamiento local y devuelve la interfaz a su estado inicial.
+
+**Estructura técnica:**
+-Manejo de estado global persistente mediante localStorage.setItem() y localStorage.getItem().
+-Manipulación modular del DOM con addEventListener centralizado en DOMContentLoaded.
+-Control de flujo condicional para la deshabilitación del botón y despliegue del cartel de victoria al alcanzar el umbral de puntos.
 
 ---
 
@@ -271,19 +299,20 @@ Durante el desarrollo del TP1 usamos herramientas de inteligencia artificial com
 
 ### Herramientas utilizadas
 
-| Herramienta | Modelo | Plan | Integrante | Uso principal |
-|---|---|---|---|---|
-| DeepSeek | V3 | Gratuito | Daniela | Consultas técnicas, debugging de JavaScript, revisión de código |
-| Gemini (Nano Banana) | Gemini 2.5 | Gratuito | Daniela | Generación de los íconos del quiz de casas |
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Alejandro | [COMPLETAR] |
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | Lucas | [COMPLETAR] |
-| Gemini | 2.5 Flash | [COMPLETAR] | Sol | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
+| Herramienta          | Modelo      | Plan        | Integrante | Uso principal                                                                      |
+| -------------------- | ----------- | ----------- | ---------- | ---------------------------------------------------------------------------------- |
+| DeepSeek             | V3          | Gratuito    | Daniela    | Consultas técnicas, debugging de JavaScript, revisión de código                    |
+| Gemini (Nano Banana) | Gemini 2.5  | Gratuito    | Daniela    | Generación de los íconos del quiz de casas                                         |
+| [COMPLETAR]          | [COMPLETAR] | [COMPLETAR] | Alejandro  | [COMPLETAR]                                                                        |
+| [COMPLETAR]          | [COMPLETAR] | [COMPLETAR] | Lucas      | [COMPLETAR]                                                                        |
+| Gemini               | 2.5 Flash   | [COMPLETAR] | Sol        | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
 
 > Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo** o **Coderhouse**. Las herramientas de IA se usaron en su **plan gratuito**.
 
 ### Criterio de uso
 
 La IA fue una **herramienta de apoyo** en momentos puntuales:
+
 - **Consultas técnicas:** entender errores de CSS (especificidad) y de JavaScript (manejo de eventos, accesibilidad).
 - **Revisión de código:** validar que las soluciones que ya habíamos pensado eran correctas.
 - **Generación de imágenes:** crear los íconos del quiz con prompts temáticos de Harry Potter y generar los avatares ilustrados de los integrantes manteniendo la estética del proyecto.
@@ -293,6 +322,7 @@ La IA nos permitió **resolver dudas puntuales** y **profundizar en los temas** 
 ### Imágenes y avatares
 
 Los avatares e imágenes del proyecto combinan:
+
 - **Bancos de imágenes libres** (portadas de películas y discos)
 - **Generación con IA** (íconos del quiz de casas y avatars personalizados generados con Gemini Nano Banana)
 - **Diseño propio** (logos y elementos del sitio)
@@ -300,7 +330,6 @@ Los avatares e imágenes del proyecto combinan:
 En todos los casos priorizamos la **estética temática de Harry Potter** y el **criterio de privacidad** (no usar fotos personales).
 
 ---
-
 
 ## 📈 Evolución
 
