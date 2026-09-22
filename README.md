@@ -24,7 +24,7 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 - **CSS3** — estilos personalizados, variables CSS y responsive
 - **JavaScript (vanilla)** — interactividad dinámica
 - **Bootstrap 5.3** — grilla, navbar y componentes responsive
-- **Google Fonts** — Cinzel, Caveat, Noto Sans y Lumos
+- **Google Fonts** — Cinzel, Caveat, Noto Sans.
 - **Font Awesome 6.2** — iconografía
 
 ---

@@ -1,7 +1,10 @@
+/* ==========================================================================
+   1. VARIABLES, FUENTES Y RESETS GLOBALES
+   ========================================================================== */
 /* PALETA DE COLORES */
 :root {
-  --primary: #0d0d53;
-  --secondary: #e1b258;
+  --primary: #1a110b;
+  --secondary: #d6b66d;
   --acento: #f4d081;
   --gray: #6c757d;
   --white: #ffffff;
@@ -21,6 +24,76 @@
   --hufflepuff2: #372e29;
   --hufflepuff3: #726255;
 }
+
+@font-face {
+  font-family: "Lumos";
+  src: url("../fonts/LUMOS.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: var(--lightgray);
+  color: var(--black);
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+h1,
+.brand-title,
+.font-lumos {
+  font-family: "Lumos", serif !important;
+}
+
+.brand-title {
+  color: var(--secondary);
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--shadow);
+}
+
+/* HERO */
+.hero {
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+.title {
+  color: var(--hallows-bg);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Lumos", serif !important;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. COMPONENTES COMPARTIDOS GLOBALES
+   ========================================================================== */
 
 /* Header oficial compartido: Hallows Code. */
 .header-hallows {
@@ -140,234 +213,42 @@
   }
 }
 
-body.gryffindor {
-  --primary: var(--gryffindor1) !important;
-  --secondary: var(--gryffindor2) !important;
-  --acento: var(--gryffindor3);
-}
-
-body.slytherin {
-  --primary: var(--slytherin1);
-  --secondary: var(--slytherin2);
-  --acento: var(--slytherin3);
-}
-
-body.ravenclaw {
-  --primary: var(--ravenclaw1);
-  --secondary: var(--ravenclaw2);
-  --acento: var(--ravenclaw3);
-}
-
-body.hufflepuff {
-  --primary: var(--hufflepuff1);
-  --secondary: var(--hufflepuff2);
-  --acento: var(--hufflepuff3);
-}
-
-@font-face {
-  font-family: "Lumos";
-  src: url("../fonts/LUMOS.TTF") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-body {
-  background-color: var(--lightgray);
-  color: var(--black);
+/* ---------- FOOTER COMPARTIDO ---------- */
+.footer-hallows {
+  background-color: var(--hallows-bg, #1a110b);
+  border-top: 1px solid var(--hallows-border, #d4af37) !important;
+  color: var(--hallows-text, #faefd8);
   font-family: "Noto Sans", sans-serif;
-  margin: 0;
+  font-size: 0.95rem;
 }
 
-html,
-body {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: clip;
-  position: relative;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.row {
-  --bs-gutter-x: 1.5rem;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-
-h1,
-.brand-title,
-.font-lumos {
+.hallows-titulo-footer {
   font-family: "Lumos", serif !important;
+  color: var(--hallows-gold, #d4af37);
+  letter-spacing: 0.05em;
 }
 
-.brand-title {
-  color: var(--secondary);
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px var(--shadow);
-}
-
-.titulo-principal {
-  color: var(--primary);
-}
-
-.subtitulo-principal {
-  color: var(--gray);
-}
-
-.gryffindor-primary {
-  color: var(--gryffindor1) !important;
-}
-
-.gryffindor-secondary {
-  color: var(--gryffindor2) !important;
-}
-
-.bg-gryffindor {
-  background-color: var(--gryffindor1) !important;
-  color: var(--gryffindor2) !important;
-}
-
-.bg-gryffindor2 {
-  color: var(--gryffindor1) !important;
-  background-color: var(--gryffindor2) !important;
-}
-
-.bg-sol {
-  background-color: #ffedc5 !important;
-}
-.bg-gryffindor2 .nav-link {
-  color: var(--gryffindor1) !important;
-}
-
-.bg-gryffindor2 .nav-link:hover,
-.bg-gryffindor2 .nav-link.active {
-  color: var(--gryffindor1) !important;
-  font-weight: bold;
-}
-
-.slytherin-primary {
-  color: var(--slytherin1) !important;
-}
-
-.slytherin-secondary {
-  color: var(--slytherin2) !important;
-}
-
-.bg-slytherin {
-  background-color: var(--slytherin1) !important;
-  color: var(--slytherin2) !important;
-}
-
-.bg-slytherin2 {
-  color: var(--slytherin1) !important;
-  background-color: var(--slytherin2) !important;
-}
-
-.bg-daniela,
-.bg-juanpablo {
-  background-color: #dcedc8 !important;
-}
-
-.bg-slytherin2 .nav-link {
-  color: var(--slytherin1) !important;
-}
-
-.bg-slytherin2 .nav-link:hover,
-.bg-slytherin2 .nav-link.active {
-  color: var(--slytherin1) !important;
-  font-weight: bold;
-}
-/* CURSOR */
-
-* {
-  cursor: none !important;
-}
-
-#cursor-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 45px;
-  height: 45px;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-#cursor-falso {
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/varita.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform-origin: top right;
-  transition: transform 0.05s linear;
-  position: relative;
-}
-
-#cursor-falso::after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 12px;
-  height: 12px;
-  background-color: white;
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(0);
-  box-shadow:
-    0 0 10px white,
-    0 0 20px rgba(255, 255, 255, 0.8);
+.footer-link-hallows {
+  color: var(--hallows-gold, #d4af37);
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-  pointer-events: none;
+    color 0.2s ease,
+    transform 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
-#cursor-falso.hover-punta::after {
-  opacity: 1;
-  animation:
-    entradaBrillo 0.3s ease-out forwards,
-    latidoConstante 0.8s ease-in-out 0.3s infinite alternate;
+.footer-link-hallows:hover {
+  color: var(--hallows-hover, #ffffff);
+  transform: translateY(-2px);
 }
 
-@keyframes entradaBrillo {
-  0% {
-    transform: scale(0);
-    box-shadow:
-      0 0 0 white,
-      0 0 0 rgba(255, 255, 255, 0);
-  }
-  100% {
-    transform: scale(1.5);
-    box-shadow:
-      0 0 15px white,
-      0 0 30px rgba(255, 255, 255, 1);
-  }
+.copyright-texto {
+  color: var(--hallows-text-muted, #c8b38b);
 }
 
-@keyframes latidoConstante {
-  0% {
-    transform: scale(1.5);
-    box-shadow:
-      0 0 15px white,
-      0 0 30px rgba(255, 255, 255, 1);
-  }
-  100% {
-    transform: scale(1.05);
-    box-shadow:
-      0 0 8px white,
-      0 0 15px rgba(255, 255, 255, 0.7);
-  }
-}
-
+/* ==========================================================================
+   3. PAGINA INDEX
+   ========================================================================== */
 /* CARDS INTEGRANTES */
 
 .card {
@@ -491,255 +372,8 @@ h1,
   border: 1px dashed var(--gray);
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 399.98px) {
-  .brand-title {
-    font-size: 1.4rem;
-  }
-  .col-tp {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 400px) and (max-width: 899.98px) {
-  .brand-title {
-    font-size: 2rem;
-  }
-  .col-tp {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 900px) and (max-width: 1199.98px) {
-  .brand-title {
-    font-size: 2.4rem;
-  }
-  .col-tp {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .brand-title {
-    font-size: 2.8rem;
-  }
-  .col-tp {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-}
-
-/* HERO */
-.hero {
-  padding: 2.5rem 1rem;
-  text-align: center;
-}
-.title {
-  color: var(--hallows-bg);
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-family: "Lumos", serif !important;
-}
-
-.subtitle {
-  font-size: 1.15rem;
-  color: var(--gray);
-  line-height: 1.6;
-}
-
-/* ---------- FOOTER ADAPTADO AL HEADER DE ---------- */
-.footer-hallows {
-  background-color: var(--hallows-bg, #1a110b);
-  border-top: 1px solid var(--hallows-border, #d4af37) !important;
-  color: var(--hallows-text, #faefd8);
-  font-family: "Noto Sans", sans-serif;
-  font-size: 0.95rem;
-}
-
-/* Título con tipografía del grupo */
-.hallows-titulo-footer {
-  font-family: "Lumos", serif !important;
-  color: var(--hallows-gold, #d4af37);
-  letter-spacing: 0.05em;
-}
-
-/* Enlaces e íconos */
-.footer-link-hallows {
-  color: var(--hallows-gold, #d4af37);
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.footer-link-hallows:hover {
-  color: var(--hallows-hover, #ffffff);
-  transform: translateY(-2px);
-}
-
-.copyright-texto {
-  color: var(--hallows-text-muted, #c8b38b);
-}
-
-/* ==========================================
-   ANIMACIÓN ALWAYS - SOL
-   ========================================== */
-
-.text-always-pregunta {
-  font-size: 3.5rem !important;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-/* Reserva el alto de la sección: si el botón sale volando
-   (position: fixed) el resto de la página no se mueve */
-.seccion-always .container {
-  position: relative;
-  min-height: 4.5rem;
-}
-
-/* Mensaje de victoria: aparece donde estaba el botón, sin mover el resto */
-#resultado-duelo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  pointer-events: none;
-  z-index: 5;
-}
-
-#resultado-duelo .text-always-respuesta {
-  font-size: 4.5rem;
-  line-height: 1;
-  color: var(--hufflepuff1);
-  -webkit-text-stroke: 5px var(--hufflepuff2);
-  paint-order: stroke fill;
-  text-shadow: none !important;
-}
-
-#resultado-duelo .text-always-respuesta.activo {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Duelo perdido: la varita queda fuera de juego y vuelve el cursor normal */
-body.duelo-perdido #cursor-wrapper {
-  display: none !important;
-}
-
-body.duelo-perdido * {
-  cursor: auto !important;
-}
-
-body.duelo-perdido a,
-body.duelo-perdido button,
-body.duelo-perdido [role="button"],
-body.duelo-perdido input {
-  cursor: pointer !important;
-}
-
-button#btn-hechizo:disabled {
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-button#btn-revelio-always,
-.btn-magico {
-  background-color: var(--primary);
-  color: var(--secondary);
-  border: 2px solid var(--secondary);
-  padding: 10px 24px;
-  font-family: "Lumos", serif;
-  font-size: 1.3rem;
-  cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button#btn-revelio-always:hover,
-.btn-magico:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
-  border-color: var(--primary);
-  box-shadow: 0 0 15px var(--secondary);
-}
-
-.btn-magico.oculto,
-button#btn-revelio-always.oculto {
-  display: none !important;
-}
-
-.escena-always-container {
-  display: none !important;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.escena-always-container.activo {
-  display: flex !important;
-}
-
-.patronus-animado-wrapper {
-  opacity: 0;
-  transform: scale(0.4) translateY(20px);
-  filter: blur(6px) drop-shadow(0 0 0px rgba(130, 220, 255, 0));
-  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  background: none !important;
-  border: none !important;
-}
-
-.img-patronus-magico {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.text-always-respuesta {
-  font-family: "Caveat", cursive;
-  font-size: 6.5rem;
-  color: var(--secondary);
-  margin: 0;
-  opacity: 0;
-  transform: translateY(15px);
-  transition:
-    opacity 1s ease,
-    transform 1s ease;
-  text-shadow:
-    0 0 15px rgba(130, 220, 255, 0.9),
-    0 0 30px rgba(255, 255, 255, 0.6) !important;
-}
-
-.escena-always-container.activo .patronus-animado-wrapper {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  filter: drop-shadow(0 0 15px #82dcff);
-}
-
-.escena-always-container.activo .text-always-respuesta {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.4s;
-}
-
 /* =========================================================
-   ESTILOS DE PERFIL
+   4. ESTILOS DE PERFIL
    Se aplican a CUALQUIER <main> que tenga una de estas clases:
    .perfil-alejandro, .perfil-daniela, .perfil-sol,
    .perfil-lucas, .perfil-juanpablo, .perfil-bitacora
@@ -1991,8 +1625,109 @@ button#btn-revelio-always.oculto {
   }
 }
 
+/* ==========================================================================
+   5. HEADERS Y FOOTERS PERSONALIZADOS SEGUN CASA
+   ========================================================================== */
+.gryffindor-primary {
+  color: var(--gryffindor1) !important;
+}
+
+.gryffindor-secondary {
+  color: var(--gryffindor2) !important;
+}
+
+.bg-gryffindor {
+  background-color: var(--gryffindor1) !important;
+  color: var(--gryffindor2) !important;
+}
+
+.bg-gryffindor2 {
+  color: var(--gryffindor1) !important;
+  background-color: var(--gryffindor2) !important;
+}
+
+.bg-sol {
+  background-color: #ffedc5 !important;
+}
+.bg-gryffindor2 .nav-link {
+  color: var(--gryffindor1) !important;
+}
+
+.bg-gryffindor2 .nav-link:hover,
+.bg-gryffindor2 .nav-link.active {
+  color: var(--gryffindor1) !important;
+  font-weight: bold;
+}
+
+.slytherin-primary {
+  color: var(--slytherin1) !important;
+}
+
+.slytherin-secondary {
+  color: var(--slytherin2) !important;
+}
+
+.bg-slytherin {
+  background-color: var(--slytherin1) !important;
+  color: var(--slytherin2) !important;
+}
+
+.bg-slytherin2 {
+  color: var(--slytherin1) !important;
+  background-color: var(--slytherin2) !important;
+}
+
+.bg-daniela,
+.bg-juanpablo {
+  background-color: #dcedc8 !important;
+}
+
+.bg-slytherin2 .nav-link {
+  color: var(--slytherin1) !important;
+}
+
+.bg-slytherin2 .nav-link:hover,
+.bg-slytherin2 .nav-link.active {
+  color: var(--slytherin1) !important;
+  font-weight: bold;
+}
+
+.hufflepuff-primary {
+  color: var(--hufflepuff1) !important;
+}
+
+.hufflepuff-secondary {
+  color: var(--hufflepuff2) !important;
+  text-shadow: none !important;
+}
+
+.bg-hufflepuff {
+  background-color: var(--hufflepuff1) !important;
+  color: var(--hufflepuff2) !important;
+}
+
+.bg-hufflepuff2 {
+  color: var(--hufflepuff1) !important;
+  background-color: var(--hufflepuff2) !important;
+}
+
+.bg-hufflepuff .nav-link {
+  color: var(--hufflepuff2) !important;
+}
+
+.bg-hufflepuff .nav-link:hover,
+.bg-hufflepuff .nav-link.active {
+  color: var(--hufflepuff2) !important;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   6. ANIMACIONES JAVASCRIPT
+   ========================================================================== */
+
 /* ============================================
-   🎩 LA VITRIOLA (modal reproductor Spotify)
+   🎩 LA VITRIOLA (modal reproductor Spotify) 
+Página Daniela
    ============================================ */
 
 .vitriola {
@@ -2276,9 +2011,7 @@ body.vitriola-abierta {
   }
 }
 
-/* ============================================
-   🎨 Fix: contraste del título en card-hufflepuff
-   ============================================ */
+🎨 Fix: contraste del título en card-hufflepuff
 .card-hufflepuff .brand-title {
   color: var(--hufflepuff2) !important;
   text-shadow: none !important;
@@ -2286,6 +2019,7 @@ body.vitriola-abierta {
 
 /* ============================================
    🎩 QUIZ: ¿Qué casa de Hogwarts sos?
+Página Daniela
    ============================================ */
 
 #quiz {
@@ -2476,8 +2210,159 @@ body.vitriola-abierta {
   border-color: #51412e;
 }
 
+/* ==========================================
+   ANIMACIÓN ALWAYS - DUELO DE VARITAS
+Páginas de Sol y Lucas
+   ========================================== */
+
+.text-always-pregunta {
+  font-size: 3.5rem !important;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.seccion-always .container {
+  position: relative;
+  min-height: 4.5rem;
+}
+
+#resultado-duelo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#resultado-duelo .text-always-respuesta {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--hufflepuff1);
+  -webkit-text-stroke: 5px var(--hufflepuff2);
+  paint-order: stroke fill;
+  text-shadow: none !important;
+}
+
+#resultado-duelo .text-always-respuesta.activo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Duelo perdido: la varita queda fuera de juego y vuelve el cursor normal */
+body.duelo-perdido #cursor-wrapper {
+  display: none !important;
+}
+
+body.duelo-perdido * {
+  cursor: auto !important;
+}
+
+body.duelo-perdido a,
+body.duelo-perdido button,
+body.duelo-perdido [role="button"],
+body.duelo-perdido input {
+  cursor: pointer !important;
+}
+
+button#btn-hechizo:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+button#btn-revelio-always,
+.btn-magico {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  padding: 10px 24px;
+  font-family: "Lumos", serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button#btn-revelio-always:hover,
+.btn-magico:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--secondary);
+}
+
+.btn-magico.oculto,
+button#btn-revelio-always.oculto {
+  display: none !important;
+}
+
+.escena-always-container {
+  display: none !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.escena-always-container.activo {
+  display: flex !important;
+}
+
+.patronus-animado-wrapper {
+  opacity: 0;
+  transform: scale(0.4) translateY(20px);
+  filter: blur(6px) drop-shadow(0 0 0px rgba(130, 220, 255, 0));
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: none !important;
+  border: none !important;
+}
+
+.img-patronus-magico {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-always-respuesta {
+  font-family: "Caveat", cursive;
+  font-size: 6.5rem;
+  color: var(--secondary);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(15px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+  text-shadow:
+    0 0 15px rgba(130, 220, 255, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.6) !important;
+}
+
+.escena-always-container.activo .patronus-animado-wrapper {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: drop-shadow(0 0 15px #82dcff);
+}
+
+.escena-always-container.activo .text-always-respuesta {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
 /* ============================================
    SELECCION DEL CAMPEON DE LAS CASAS
+Página Sol
    ============================================ */
 .seccion-copa-casas {
   background: transparent !important;
@@ -2495,7 +2380,6 @@ body.vitriola-abierta {
   transform: translateY(-3px);
 }
 
-/* Colores individuales de cada casa usando tus variables */
 .casa-card h3 {
   color: inherit !important;
 }
@@ -2582,35 +2466,10 @@ body.vitriola-abierta {
   opacity: 1 !important;
 }
 
-.hufflepuff-primary {
-  color: var(--hufflepuff1) !important;
-}
-
-.hufflepuff-secondary {
-  color: var(--hufflepuff2) !important;
-  text-shadow: none !important;
-}
-
-.bg-hufflepuff {
-  background-color: var(--hufflepuff1) !important;
-  color: var(--hufflepuff2) !important;
-}
-
-.bg-hufflepuff2 {
-  color: var(--hufflepuff1) !important;
-  background-color: var(--hufflepuff2) !important;
-}
-
-.bg-hufflepuff .nav-link {
-  color: var(--hufflepuff2) !important;
-}
-
-.bg-hufflepuff .nav-link:hover,
-.bg-hufflepuff .nav-link.active {
-  color: var(--hufflepuff2) !important;
-  font-weight: bold;
-}
-
+/* ============================================
+   ✨ Destello mágico Slytherin 
+Página Juan Pablo
+   ============================================ */
 /* Estilos propios de Juan Pablo */
 
 .perfil-juanpablo .perfil-seccion::after {
@@ -2664,7 +2523,6 @@ body.vitriola-abierta {
   font-weight: bold;
 }
 
-/* ✨ Destello mágico Slytherin */
 .destello {
   position: fixed;
   width: 20px;
@@ -2734,7 +2592,10 @@ body.vitriola-abierta {
   }
 }
 
-/* ---------- MODO OSCURO (NOX) ---------- */
+/* ============================================
+   🌙 Modo Oscuro (NOX)
+INDEX.HTML
+   ============================================ */
 body.modo-nox {
   background-color: #0e0a07 !important;
   color: #faefd8 !important;
@@ -2763,4 +2624,134 @@ body {
   transition:
     background-color 0.4s ease,
     color 0.4s ease;
+}
+
+/* ============================================
+   Cursor Varita - GLOBAL
+   ============================================ */
+/* CURSOR */
+
+* {
+  cursor: none !important;
+}
+
+#cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#cursor-falso {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/varita.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: top right;
+  transition: transform 0.05s linear;
+  position: relative;
+}
+
+#cursor-falso::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  box-shadow:
+    0 0 10px white,
+    0 0 20px rgba(255, 255, 255, 0.8);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+}
+
+#cursor-falso.hover-punta::after {
+  opacity: 1;
+  animation:
+    entradaBrillo 0.3s ease-out forwards,
+    latidoConstante 0.8s ease-in-out 0.3s infinite alternate;
+}
+
+@keyframes entradaBrillo {
+  0% {
+    transform: scale(0);
+    box-shadow:
+      0 0 0 white,
+      0 0 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1.5);
+    box-shadow:
+      0 0 15px white,
+      0 0 30px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes latidoConstante {
+  0% {
+    transform: scale(1.5);
+    box-shadow:
+      0 0 15px white,
+      0 0 30px rgba(255, 255, 255, 1);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 8px white,
+      0 0 15px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 399.98px) {
+  .brand-title {
+    font-size: 1.4rem;
+  }
+  .col-tp {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 899.98px) {
+  .brand-title {
+    font-size: 2rem;
+  }
+  .col-tp {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199.98px) {
+  .brand-title {
+    font-size: 2.4rem;
+  }
+  .col-tp {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .brand-title {
+    font-size: 2.8rem;
+  }
+  .col-tp {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
