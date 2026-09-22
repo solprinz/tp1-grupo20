@@ -177,7 +177,7 @@ Alternancia de tema: botón interactivo en la navegación para conmutar dinámic
 
 ---
 
-#### Mapa Mágico de Favoritos (`js/mapa-favoritos.js`)
+### Mapa Mágico de Favoritos (`js/mapa-favoritos.js`)
 Mapa interactivo temático de Harry Potter implementado en las páginas de los integrantes para explorar **películas** y **discos** favoritos. Cada elemento actúa como un "lugar" dentro del plano mágico que, al hacer clic, despliega una ficha con información detallada.
 
 **Funcionalidades principales:**
