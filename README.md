@@ -11,8 +11,7 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 | Nombre          | GitHub                                               | Perfil                                           |
 | --------------- | ---------------------------------------------------- | ------------------------------------------------ |
 | Alejandro Ramos | [@AleR25](https://github.com/AleR25)                 | [alejandro.html](./pages/members/alejandro.html) |
-| Daniela Méndez  | [@mendez-daniela](https://github.com/mendez-daniela) | 
-[daniela.html](./pages/members/daniela.html)     |
+| Daniela Méndez  | [@mendez-daniela](https://github.com/mendez-daniela) | [daniela.html](./pages/members/daniela.html)     |
 | Juan Pablo      | [@JPFinal](https://github.com/JPFinal)               | [juanpablo.html](./pages/members/juanpablo.html) |
 | Lucas Sosa      | [@Strashoy](https://github.com/Strashoy)             | [lucas.html](./pages/members/lucas.html)         |
 | Sol Prinzen     | [@solprinz](https://github.com/solprinz)             | [sol.html](./pages/members/sol.html)             |
@@ -25,7 +24,7 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 - **CSS3** — estilos personalizados, variables CSS y responsive
 - **JavaScript (vanilla)** — interactividad dinámica
 - **Bootstrap 5.3** — grilla, navbar y componentes responsive
-- **Google Fonts** — Cinzel, Caveat, Noto Sans
+- **Google Fonts** — Cinzel, Caveat, Noto Sans y Lumos
 - **Font Awesome 6.2** — iconografía
 
 ---
@@ -55,14 +54,14 @@ tp1-front/
 │ │ ├── lana-rey.jpg
 │ │ ├── melaniemartinez.jpg
 │ │ └── minutes-to-midnight-lp.jpg
-│ ├── juanpablo.jpg               # Avatar de Juan Pablo
-│ ├── juanpablo/                  # Portadas de Juan Pablo
-│ │   ├── avengers-infinity-war.jpg
-│ │   ├── comfort-musica-volar.jpg
-│ │   ├── fulanos-de-nadie.jpg
-│ │   ├── terminator.jpg
-│ │   ├── vivire-viajando.jpg
-│ │   └── warcraft.jpg
+│ ├── juanpablo.jpg # Avatar de Juan Pablo
+│ ├── juanpablo/ # Portadas de Juan Pablo
+│ │ ├── avengers-infinity-war.jpg
+│ │ ├── comfort-musica-volar.jpg
+│ │ ├── fulanos-de-nadie.jpg
+│ │ ├── terminator.jpg
+│ │ ├── vivire-viajando.jpg
+│ │ └── warcraft.jpg
 │ ├── quiz/ # Íconos del quiz de casas
 │ │ ├── aguila.png
 │ │ ├── leon.png
@@ -96,7 +95,7 @@ tp1-front/
 ├── js/
 │ ├── cursor.js # Cursor personalizado (global)
 │ ├── header-hallows.js # Header dinámico (global)
-│ ├── juan-efficiency.js          # Test de eficiencia Slytherin (Juan Pablo)
+│ ├── juan-efficiency.js # Test de eficiencia Slytherin (Juan Pablo)
 │ ├── main.js # Funciones de portada (global)
 │ ├── mapa-favoritos.js # Mapa interactivo (Daniela)
 │ ├── proyectos-reliquias.js # Reliquias interactivas (Alejandro)
@@ -152,6 +151,7 @@ tp1-front/
 - **Cinzel** — títulos principales (estilo grabado medieval)
 - **Caveat** — subtítulos manuscritos
 - **Noto Sans** — cuerpo de texto (legibilidad)
+- **Lumos** — tipografía temática para la identidad de marca (aplicada en el logo Hallows Code y detalles puntuales de títulos)
 
 ### Iconografía
 
@@ -169,7 +169,25 @@ tp1-front/
 
 [COMPLETAR: cada integrante describe brevemente la función dinámica de su perfil + una captura de pantalla]
 
-### Portada (`index.html`)
+### Portada (`index.html`) - Modo Oscuro "Lumos / Nox"
+
+**Encantamiento de Iluminación ("Lumos / Nox")**: interacción que permite alternar la interfaz de la página principal entre una estética diurna y una temática nocturna de Hogwarts.
+
+**Funcionalidades principales:**
+
+Alternancia de tema: botón interactivo en la navegación para conmutar dinámicamente entre el modo claro (Lumos) y el modo oscuro (Nox).
+
+- Persistencia de preferencia: uso de localStorage para recordar el modo seleccionado por el usuario en futuras visitas.
+
+- Transición suave: adaptación gradual de colores de fondo, tarjetas, textos y componentes de navegación.
+
+**Estructura técnica:**
+
+- Manipulación de clases dinámicas en el body (.modo-nox) mediante classList.toggle().
+
+- Almacenamiento y lectura del estado de la preferencia en localStorage.
+
+- Estilos encapsulados en style.css mediante variables y selectores específicos para mantener el contraste y la legibilidad.
 
 - **[COMPLETAR]**
 
@@ -261,17 +279,19 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 **🐍 Slytherin Efficiency Test**: juego interactivo de prueba de reflejos y velocidad de reacción ambientado en la casa de Slytherin. El usuario inicia el desafío, el botón entra en un período de espera aleatorio ("Esperá...") y, al activarse en verde Slytherin ("¡Ahora!"), mide con precisión de milisegundos (`performance.now()`) el tiempo de reacción del usuario.
 
 **Funcionalidades principales:**
+
 - Medición precisa de velocidad de reacción en milisegundos (`performance.now()`).
 - Respuestas temáticas dinámicas según el rendimiento:
-  - `< 250 ms`: *"Reflejos de basilisco. Eficiencia suprema."*
-  - `< 450 ms`: *"Rápido como una serpiente en las mazmorras."*
-  - `< 700 ms`: *"Buena reacción, digno de Slytherin."*
-  - `>= 700 ms`: *"Necesitás más práctica… la eficiencia requiere precisión."*
+  - `< 250 ms`: _"Reflejos de basilisco. Eficiencia suprema."_
+  - `< 450 ms`: _"Rápido como una serpiente en las mazmorras."_
+  - `< 700 ms`: _"Buena reacción, digno de Slytherin."_
+  - `>= 700 ms`: _"Necesitás más práctica… la eficiencia requiere precisión."_
 - Efecto visual de destello mágico (`crearDestello()`) en la posición del click (`position: fixed`).
 - Invocación animada de la serpiente de Slytherin con resplandor mágico debajo del resultado, coordinada mediante el evento `animationend` de CSS para una eliminación limpia en el DOM.
 - Integración de las secciones de **Películas** y **Discos** con el componente interactivo de mapas mágicos (`mapa-favoritos.js`).
 
 **Estructura técnica:**
+
 - Manejo de estados asíncronos (`esperando`, retardos dinámicos con `Math.random()`).
 - Sincronización precisa entre JavaScript y animaciones CSS (limpieza del DOM ligada a `animationend`).
 - Detección de coordenadas de pantalla mediante `getBoundingClientRect()`.
