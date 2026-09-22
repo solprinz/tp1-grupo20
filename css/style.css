@@ -2779,3 +2779,94 @@ body {
     max-width: 20%;
   }
 }
+
+/* Variante Azkaban: exclusiva de Alejandro; conserva los componentes compartidos. */
+.perfil-alejandro.tema-azkaban {
+  --prision-tinta: #dce3e3;
+  --prision-acento: #aebfb8;
+  --prision-panel: #1c2529;
+  --prision-borde: #697b80;
+  color: var(--prision-tinta);
+  background: #11181c;
+}
+.perfil-alejandro.tema-azkaban .perfil-editorial,
+.perfil-alejandro.tema-azkaban .mapa-favoritos,
+.perfil-alejandro.tema-azkaban #proyectos.reliquias {
+  --editorial-tinta: var(--prision-tinta);
+  --editorial-borde: var(--prision-borde);
+  --editorial-papel: var(--prision-panel);
+  --rel-tinta: var(--prision-tinta);
+  --rel-oro: var(--prision-acento);
+  --mapa-tinta: var(--prision-tinta);
+  --mapa-papel: var(--prision-panel);
+  color: var(--prision-tinta);
+  background:
+    radial-gradient(ellipse at 15% 0, #58727825, transparent 60%),
+    repeating-linear-gradient(0deg, transparent 0 119px, #00000020 120px 122px),
+    linear-gradient(110deg, #11181c, #202b30 50%, #11181c);
+}
+.perfil-alejandro.tema-azkaban .perfil-seccion::after {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--prision-borde), transparent);
+}
+.perfil-alejandro.tema-azkaban .perfil-foto {
+  border-color: #718084;
+  background: linear-gradient(135deg, #8a989b, #252f34 45%, #67777b 70%, #172025);
+  filter: grayscale(.85) contrast(1.12);
+  box-shadow: inset 0 0 0 2px #b3bcb9, inset 0 0 0 5px #273238, 0 10px 0 -2px #273238, 0 22px 35px #0009;
+}
+.perfil-alejandro.tema-azkaban .azkaban-placa {
+  position: relative;
+  width: fit-content;
+  max-width: 90%;
+  margin: -1rem auto 0;
+  padding: .8rem 1.4rem;
+  border: 3px double var(--prision-borde);
+  background: #141c20;
+  color: var(--prision-tinta);
+  font-family: "Cinzel", serif;
+  letter-spacing: .12em;
+  font-size: .8rem;
+  box-shadow: 0 8px 20px #0006;
+}
+.perfil-alejandro.tema-azkaban .azkaban-placa span {
+  font-family: "Caveat", cursive;
+  letter-spacing: .03em;
+  font-size: 1.3rem;
+}
+.perfil-alejandro.tema-azkaban .perfil-sobre,
+.perfil-alejandro.tema-azkaban .perfil-habilidad {
+  border-color: var(--prision-borde);
+  box-shadow: 0 8px 20px #0003;
+}
+.perfil-alejandro.tema-azkaban .habilidad-numero { color: var(--prision-acento); }
+.perfil-alejandro.tema-azkaban .perfil-imagen-seccion { filter: grayscale(.75) brightness(.85); }
+.perfil-alejandro.tema-azkaban #proyectos .reliquias-tarjeta,
+.perfil-alejandro.tema-azkaban #proyectos .reliquias-historia,
+.perfil-alejandro.tema-azkaban .mapa-ficha,
+.perfil-alejandro.tema-azkaban .mapa-invitacion {
+  background: var(--prision-panel);
+  border-color: var(--prision-borde);
+  box-shadow: 0 12px 24px #0004;
+}
+.perfil-alejandro.tema-azkaban #proyectos .reliquias-ilustracion {
+  background: radial-gradient(ellipse, #405058, #141c20);
+  border-color: var(--prision-borde);
+}
+.perfil-alejandro.tema-azkaban .mapa-lugar { border-color: var(--prision-borde); }
+.perfil-alejandro.tema-azkaban .mapa-portada { filter: saturate(.65); }
+.perfil-alejandro.tema-azkaban #proyectos .reliquias-boton,
+.perfil-alejandro.tema-azkaban .mapa-boton {
+  color: var(--prision-tinta);
+  background: #29383e;
+  border-color: var(--prision-borde);
+}
+.perfil-alejandro.tema-azkaban #proyectos .reliquias-boton:hover,
+.perfil-alejandro.tema-azkaban .mapa-boton:hover {
+  background: #3c5057;
+}
+.perfil-alejandro.tema-azkaban a { color: #b9dcd8; }
+.perfil-alejandro.tema-azkaban :focus-visible {
+  outline: 3px solid #cbe5e0;
+  outline-offset: 4px;
+}

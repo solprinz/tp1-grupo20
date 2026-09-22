@@ -281,7 +281,34 @@ Mapa interactivo temático de Harry Potter implementado en las páginas de los i
 
 ### Perfil Alejandro (`alejandro.html`)
 
-- **[COMPLETAR]**
+**⚡ El relato de las tres creaciones — `proyectos-reliquias.js`**: interacción que presenta los proyectos mediante las tres Reliquias de la Muerte (varita, piedra y capa). Cada tarjeta permite revelar una historia con detalles del proyecto, tecnologías utilizadas y aporte personal, dentro de un perfil ambientado como un expediente de Azkaban.
+
+**Funcionalidades principales:**
+
+- Apertura de historias con el botón **"Revelar historia"**, manteniendo una sola tarjeta abierta a la vez.
+- Cierre desde el mismo botón, mediante **"Cerrar historia"** o con la tecla `Escape`.
+- Resaltado de la tarjeta activa y marcado de las reliquias exploradas.
+- Contador de historias visitadas, sin sumar nuevamente las tarjetas ya exploradas.
+- Revelado del símbolo de las reliquias y del mensaje **"La verdadera magia está en lo que creamos."** al explorar los tres proyectos.
+- Gestión de foco: al abrir una historia, el foco pasa a su título; al cerrarla, vuelve al botón de la tarjeta.
+- Integración de películas y música con el componente compartido `mapa-favoritos.js`.
+
+**Estructura técnica:**
+
+- IIFE + `"use strict"` para encapsular la lógica.
+- Selección de tarjetas e historias mediante `data-reliquia`, `data-historia` y `aria-controls`.
+- Estado de tarjeta activa mediante `activa` y registro de visitas únicas con `Set`, conservado durante la visita sin persistencia en almacenamiento.
+- Manipulación del DOM mediante `hidden`, `classList`, `dataset` y `textContent`.
+- Actualización de `aria-expanded` y mensajes de progreso con `role="status"` y `aria-live="polite"`.
+- Contenido de las historias disponible en el HTML aunque JavaScript esté deshabilitado.
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
 
 ---
 
@@ -371,11 +398,11 @@ Durante el desarrollo del TP1 usamos herramientas de inteligencia artificial com
 | -------------------- | ----------- | ----------- | ---------- | ---------------------------------------------------------------------------------- |
 | DeepSeek             | V3          | Gratuito    | Daniela    | Consultas técnicas, debugging de JavaScript, revisión de código                    |
 | Gemini (Nano Banana) | Gemini 2.5  | Gratuito    | Daniela    | Generación de los íconos del quiz de casas                                         |
-| [COMPLETAR]          | [COMPLETAR] | [COMPLETAR] | Alejandro  | [COMPLETAR]                                                                        |
+| Codex                | GPT-6 Astra | Plus        | Alejandro  | Desarrollo e implementación de JavaScript manteniendo un diseño acorde a la tematica|
 | [COMPLETAR]          | [COMPLETAR] | [COMPLETAR] | Lucas      | [COMPLETAR]                                                                        |
 | Gemini               | 2.5 Flash   | [COMPLETAR] | Sol        | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
 
-> Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo** o **Coderhouse**. Las herramientas de IA se usaron en su **plan gratuito**.
+> Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo** o **Coderhouse**.
 
 ### Criterio de uso
 
