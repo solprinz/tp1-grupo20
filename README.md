@@ -200,7 +200,7 @@ Mapa interactivo temático de Harry Potter implementado en las páginas de los i
 
 ### Cursor Mágico Interactivo (`js/cursor.js`)
 
-**Cursor Mágico Interactivo**: Implementación global que reemplaza el puntero tradicional del navegador por una varita mágica con física de movimiento, efectos de brillo dinámicos y física de desarme en el minijuego de duelo.
+**Cursor Mágico Interactivo**: Implementación global que reemplaza el puntero tradicional del navegador por una varita mágica con física de movimiento, efectos de brillo dinámicos y física de desarme en el minijuego de duelo. Creador: Lucas Eliel Sosa.
 
 **Funcionalidades principales:**
 
@@ -338,7 +338,9 @@ Mapa interactivo temático de Harry Potter implementado en las páginas de los i
 
 ### Perfil Lucas (`lucas.html`)
 
-- **[COMPLETAR]**
+**Encantamiento Expelliarmus:** Interacción dinámica que genera un combate aleatorio donde puede salir volando el botón o la propia varita cursor.
+
+**Funcionalidades principales:** Creador del cursor mágico interactivo con forma de varita que reemplaza el cursor en toda la página y gana una nueva funcionalidad en mi página personal. En forma de juego y apuesta se alterna entre la victoria con palabras reafirmantes y la pérdida momentánea de la varita cursor en la derrota.
 
 ---
 
