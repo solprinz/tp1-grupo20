@@ -155,8 +155,6 @@ tp1-front/
 
 ## ⚡ Funciones JavaScript
 
-[COMPLETAR: cada integrante describe brevemente la función dinámica de su perfil + una captura de pantalla]
-
 ### Portada (`index.html`) - Modo Oscuro "Lumos / Nox"
 
 **Encantamiento de Iluminación ("Lumos / Nox")**: interacción que permite alternar la interfaz de la página principal entre una estética diurna y una temática nocturna de Hogwarts.
@@ -177,11 +175,10 @@ Alternancia de tema: botón interactivo en la navegación para conmutar dinámic
 
 - Estilos encapsulados en style.css mediante variables y selectores específicos para mantener el contraste y la legibilidad.
 
-- **[COMPLETAR]**
+---
 
-### Perfil Daniela (`daniela.html`) — `mapa-favoritos.js`
-
-Mapa interactivo con temática Harry Potter que permite explorar las **películas** y **discos** favoritos. Cada favorito es un "lugar" en el plano mágico; al hacer click se abre una ficha con información detallada. Incluye navegación completa por teclado y mensajes de estado accesibles para lectores de pantalla.
+#### Mapa Mágico de Favoritos (`js/mapa-favoritos.js`)
+Mapa interactivo temático de Harry Potter implementado en las páginas de los integrantes para explorar **películas** y **discos** favoritos. Cada elemento actúa como un "lugar" dentro del plano mágico que, al hacer clic, despliega una ficha con información detallada.
 
 **Funcionalidades principales:**
 
@@ -198,6 +195,28 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - IIFE + `"use strict"` para encapsulamiento
 - Múltiples instancias: se aplica a las secciones de películas y discos a la vez
 - Selectores basados en `data-*` para desacoplar del HTML
+
+---
+
+### Cursor Mágico Interactivo (`js/cursor.js`)
+
+**Cursor Mágico Interactivo**: Implementación global que reemplaza el puntero tradicional del navegador por una varita mágica con física de movimiento, efectos de brillo dinámicos y física de desarme en el minijuego de duelo.
+
+**Funcionalidades principales:**
+
+- **Inyección dinámica de interfaz:** Creación autónoma e inyección directa en el DOM (`cursor-wrapper` y `cursor-falso`) al cargar el documento.
+- **Seguimiento y física de rotación:** Cálculo de posición en tiempo real (`mousemove`) que ajusta la rotación dinámica de la varita según la coordenada horizontal de la pantalla.
+- **Feedback interactivo (Efecto Hover):** Detección automática sobre elementos cliqueables (`a`, `button`, `input`) para activar la punta brillante (`.hover-punta`).
+- **Mecánica de Duelo de Varitas (_Expelliarmus_):** Evento aleatorio (50/50) al presionar el botón de hechizo que determina si el usuario pierde la varita o si el botón sale volando por la pantalla.
+- **Física de desarmado y caída:** Secuencia de tirones erráticos con trayectorias aleatorias y caída libre acelerada hasta el borde inferior de la ventana (_piso_).
+- **Restablecimiento del cursor nativo:** Desactivación del cursor mágico (`duelo-perdido`) al perder el duelo para devolver los controles predeterminados del navegador.
+
+**Estructura técnica:**
+
+- Manipulación avanzada del DOM mediante `document.createElement()`, `appendChild()` y clases CSS dinámicas.
+- Manejo de listeners globales (`mousemove`, `mouseover`, `mouseout`) y delegación de eventos con `e.target.closest()`.
+- Lógica probabilística con `Math.random()` para la resolución del duelo y generación de coordenadas erráticas.
+- Temporizadores asincrónicos con `setInterval()` y `setTimeout()` para secuenciar las fases de animación física, impacto y caída.
 
 ---
 
@@ -258,9 +277,13 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 
 ![Quiz: Resultado con casa ganadora](./docs/capturas/perfil-daniela-4.png)
 
+---
+
 ### Perfil Alejandro (`alejandro.html`)
 
 - **[COMPLETAR]**
+
+---
 
 ### Perfil Juan Pablo (`juanpablo.html`) — `juan-efficiency.js`
 
@@ -284,9 +307,13 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Sincronización precisa entre JavaScript y animaciones CSS (limpieza del DOM ligada a `animationend`).
 - Detección de coordenadas de pantalla mediante `getBoundingClientRect()`.
 
+---
+
 ### Perfil Lucas (`lucas.html`)
 
 - **[COMPLETAR]**
+
+---
 
 ### Perfil Sol (`sol.html`) - Encantamiento "Always"
 
@@ -308,6 +335,8 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 - Control de estados mediante clases CSS (`.oculto` y `.activo`).
 - Script personalizado encapsulado para no interferir con las variables del resto de la entrega.
 
+---
+
 ### Perfil Sol (`sol.html`) - La Copa De Las Casas"
 
 **Torneo de las Casas ("Favoritismo de Dumbledore")**: Dashboard interactivo que simula el marcador de puntos de Hogwarts con sucesos cómicos de la saga y persistencia de datos.
@@ -322,26 +351,6 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 -Manejo de estado global persistente mediante localStorage.setItem() y localStorage.getItem().
 -Manipulación modular del DOM con addEventListener centralizado en DOMContentLoaded.
 -Control de flujo condicional para la deshabilitación del botón y despliegue del cartel de victoria al alcanzar el umbral de puntos.
-
-### Cursor Mágico Interactivo (`js/cursor.js`)
-
-**Cursor Mágico Interactivo**: Implementación global que reemplaza el puntero tradicional del navegador por una varita mágica con física de movimiento, efectos de brillo dinámicos y física de desarme en el minijuego de duelo.
-
-**Funcionalidades principales:**
-
-- **Inyección dinámica de interfaz:** Creación autónoma e inyección directa en el DOM (`cursor-wrapper` y `cursor-falso`) al cargar el documento.
-- **Seguimiento y física de rotación:** Cálculo de posición en tiempo real (`mousemove`) que ajusta la rotación dinámica de la varita según la coordenada horizontal de la pantalla.
-- **Feedback interactivo (Efecto Hover):** Detección automática sobre elementos cliqueables (`a`, `button`, `input`) para activar la punta brillante (`.hover-punta`).
-- **Mecánica de Duelo de Varitas (_Expelliarmus_):** Evento aleatorio (50/50) al presionar el botón de hechizo que determina si el usuario pierde la varita o si el botón sale volando por la pantalla.
-- **Física de desarmado y caída:** Secuencia de tirones erráticos con trayectorias aleatorias y caída libre acelerada hasta el borde inferior de la ventana (_piso_).
-- **Restablecimiento del cursor nativo:** Desactivación del cursor mágico (`duelo-perdido`) al perder el duelo para devolver los controles predeterminados del navegador.
-
-**Estructura técnica:**
-
-- Manipulación avanzada del DOM mediante `document.createElement()`, `appendChild()` y clases CSS dinámicas.
-- Manejo de listeners globales (`mousemove`, `mouseover`, `mouseout`) y delegación de eventos con `e.target.closest()`.
-- Lógica probabilística con `Math.random()` para la resolución del duelo y generación de coordenadas erráticas.
-- Temporizadores asincrónicos con `setInterval()` y `setTimeout()` para secuenciar las fases de animación física, impacto y caída.
 
 ---
 
