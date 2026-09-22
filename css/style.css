@@ -379,6 +379,25 @@ h1,
    .perfil-lucas, .perfil-juanpablo, .perfil-bitacora
    ========================================================= */
 
+/* Presentación de los SVG del perfil de Alejandro. */
+.perfil-alejandro .reliquia-halo,
+.perfil-alejandro .reliquia-horizonte {
+  fill: none;
+  stroke: currentColor;
+}
+.perfil-alejandro .reliquia-halo { opacity: .3; }
+.perfil-alejandro .reliquia-horizonte { opacity: .35; }
+.perfil-alejandro .reliquia-detalle {
+  fill: none;
+  stroke: #c5a567;
+  stroke-width: 2;
+}
+.perfil-alejandro .reliquia-detalle-varita { stroke-width: 3; }
+.perfil-alejandro #proyectos .reliquias-final svg {
+  width: 96px;
+  height: 96px;
+}
+
 /* ---------- PROYECTOS: relato de las tres reliquias ---------- */
 .perfil-alejandro #proyectos.reliquias,
 .perfil-daniela #proyectos.reliquias,
