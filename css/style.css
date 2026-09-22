@@ -28,6 +28,9 @@
   color: var(--hallows-oro);
   background: #17130f;
   border-bottom: 1px solid #9c793e;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
   transform: translateY(var(--header-desplazamiento, 0px));
   opacity: var(--header-opacidad, 1);
 }
@@ -180,7 +183,7 @@ html,
 body {
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden !important;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -265,7 +268,8 @@ h1,
   background-color: var(--slytherin2) !important;
 }
 
-.bg-daniela {
+.bg-daniela,
+.bg-juanpablo {
   background-color: #dcedc8 !important;
 }
 
@@ -2581,6 +2585,23 @@ body.vitriola-abierta {
 
 /* Estilos propios de Juan Pablo */
 
+.perfil-juanpablo .perfil-seccion::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--slytherin1),
+    transparent
+  );
+}
+
+.perfil-juanpablo .title,
+.perfil-juanpablo h3,
+.perfil-juanpablo .perfil-datos dt,
+.perfil-juanpablo .perfil-intro,
+.perfil-juanpablo .proyectos-lista li strong {
+  color: var(--slytherin1);
+}
+
 .perfil-juanpablo .favoritos-lista,
 .perfil-juanpablo .proyectos-lista {
   list-style: none;
@@ -2590,9 +2611,9 @@ body.vitriola-abierta {
 }
 
 .btn-magico-juanpablo {
-  background-color: var(--secondary);
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  background-color: var(--slytherin1);
+  color: var(--slytherin2);
+  border: 2px solid var(--slytherin2);
   padding: 10px 24px;
   font-family: "Cinzel", serif;
   font-size: 1.3rem;
@@ -2601,16 +2622,18 @@ body.vitriola-abierta {
 }
 
 .btn-magico-juanpablo:hover {
-  background-color: var(--primary);
-  color: var(--secondary);
-  box-shadow: 0 0 15px var(--secondary);
+  background-color: var(--slytherin2);
+  color: var(--slytherin1);
+  border-color: var(--slytherin1);
+  box-shadow: 0 0 15px var(--slytherin1);
 }
 
 .resultado-juanpablo {
   font-size: 1.8rem;
   font-family: "Caveat", cursive;
-  color: var(--secondary);
+  color: var(--slytherin1);
   min-height: 2.5rem;
+  font-weight: bold;
 }
 
 /* ✨ Destello mágico Slytherin */
