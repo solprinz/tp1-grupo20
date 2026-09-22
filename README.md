@@ -11,7 +11,9 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 | Nombre          | GitHub                                               | Perfil                                           |
 | --------------- | ---------------------------------------------------- | ------------------------------------------------ |
 | Alejandro Ramos | [@AleR25](https://github.com/AleR25)                 | [alejandro.html](./pages/members/alejandro.html) |
-| Daniela Méndez  | [@mendez-daniela](https://github.com/mendez-daniela) | [daniela.html](./pages/members/daniela.html)     |
+| Daniela Méndez  | [@mendez-daniela](https://github.com/mendez-daniela) | 
+[daniela.html](./pages/members/daniela.html)     |
+| Juan Pablo      | [@JPFinal](https://github.com/JPFinal)               | [juanpablo.html](./pages/members/juanpablo.html) |
 | Lucas Sosa      | [@Strashoy](https://github.com/Strashoy)             | [lucas.html](./pages/members/lucas.html)         |
 | Sol Prinzen     | [@solprinz](https://github.com/solprinz)             | [sol.html](./pages/members/sol.html)             |
 
@@ -53,6 +55,14 @@ tp1-front/
 │ │ ├── lana-rey.jpg
 │ │ ├── melaniemartinez.jpg
 │ │ └── minutes-to-midnight-lp.jpg
+│ ├── juanpablo.jpg               # Avatar de Juan Pablo
+│ ├── juanpablo/                  # Portadas de Juan Pablo
+│ │   ├── avengers-infinity-war.jpg
+│ │   ├── comfort-musica-volar.jpg
+│ │   ├── fulanos-de-nadie.jpg
+│ │   ├── terminator.jpg
+│ │   ├── vivire-viajando.jpg
+│ │   └── warcraft.jpg
 │ ├── quiz/ # Íconos del quiz de casas
 │ │ ├── aguila.png
 │ │ ├── leon.png
@@ -86,6 +96,7 @@ tp1-front/
 ├── js/
 │ ├── cursor.js # Cursor personalizado (global)
 │ ├── header-hallows.js # Header dinámico (global)
+│ ├── juan-efficiency.js          # Test de eficiencia Slytherin (Juan Pablo)
 │ ├── main.js # Funciones de portada (global)
 │ ├── mapa-favoritos.js # Mapa interactivo (Daniela)
 │ ├── proyectos-reliquias.js # Reliquias interactivas (Alejandro)
@@ -244,6 +255,26 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 ### Perfil Alejandro (`alejandro.html`)
 
 - **[COMPLETAR]**
+
+### Perfil Juan Pablo (`juanpablo.html`) — `juan-efficiency.js`
+
+**🐍 Slytherin Efficiency Test**: juego interactivo de prueba de reflejos y velocidad de reacción ambientado en la casa de Slytherin. El usuario inicia el desafío, el botón entra en un período de espera aleatorio ("Esperá...") y, al activarse en verde Slytherin ("¡Ahora!"), mide con precisión de milisegundos (`performance.now()`) el tiempo de reacción del usuario.
+
+**Funcionalidades principales:**
+- Medición precisa de velocidad de reacción en milisegundos (`performance.now()`).
+- Respuestas temáticas dinámicas según el rendimiento:
+  - `< 250 ms`: *"Reflejos de basilisco. Eficiencia suprema."*
+  - `< 450 ms`: *"Rápido como una serpiente en las mazmorras."*
+  - `< 700 ms`: *"Buena reacción, digno de Slytherin."*
+  - `>= 700 ms`: *"Necesitás más práctica… la eficiencia requiere precisión."*
+- Efecto visual de destello mágico (`crearDestello()`) en la posición del click (`position: fixed`).
+- Invocación animada de la serpiente de Slytherin con resplandor mágico debajo del resultado, coordinada mediante el evento `animationend` de CSS para una eliminación limpia en el DOM.
+- Integración de las secciones de **Películas** y **Discos** con el componente interactivo de mapas mágicos (`mapa-favoritos.js`).
+
+**Estructura técnica:**
+- Manejo de estados asíncronos (`esperando`, retardos dinámicos con `Math.random()`).
+- Sincronización precisa entre JavaScript y animaciones CSS (limpieza del DOM ligada a `animationend`).
+- Detección de coordenadas de pantalla mediante `getBoundingClientRect()`.
 
 ### Perfil Lucas (`lucas.html`)
 
