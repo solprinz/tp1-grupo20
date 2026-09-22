@@ -2545,3 +2545,32 @@ body.vitriola-abierta {
   border-color: var(--gryffindor1) !important;
   opacity: 1 !important;
 }
+
+.hufflepuff-primary {
+  color: var(--hufflepuff1) !important;
+}
+
+.hufflepuff-secondary {
+  color: var(--hufflepuff2) !important;
+  text-shadow: none !important;
+}
+
+.bg-hufflepuff {
+  background-color: var(--hufflepuff1) !important;
+  color: var(--hufflepuff2) !important;
+}
+
+.bg-hufflepuff2 {
+  color: var(--hufflepuff1) !important;
+  background-color: var(--hufflepuff2) !important;
+}
+
+.bg-hufflepuff .nav-link {
+  color: var(--hufflepuff2) !important;
+}
+
+.bg-hufflepuff .nav-link:hover,
+.bg-hufflepuff .nav-link.active {
+  color: var(--hufflepuff2) !important;
+  font-weight: bold;
+}
