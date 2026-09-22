@@ -2211,13 +2211,13 @@ Página Daniela
 }
 
 /* ==========================================
-   ANIMACIÓN ALWAYS - DUELO DE VARITAS
-Páginas de Sol y Lucas
+   ANIMACIÓN ALWAYS 
+   Página de Sol (Gryffindor)
    ========================================== */
 
 .text-always-pregunta {
-  font-size: 3.5rem !important;
-  color: var(--primary);
+  font-size: 3.8rem !important;
+  color: var(--gryffindor1);
   margin-bottom: 0.5rem;
 }
 
@@ -2226,56 +2226,12 @@ Páginas de Sol y Lucas
   min-height: 4.5rem;
 }
 
-#resultado-duelo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  pointer-events: none;
-  z-index: 5;
-}
+/* Botón de Sol */
 
-#resultado-duelo .text-always-respuesta {
-  font-size: 4.5rem;
-  line-height: 1;
-  color: var(--hufflepuff1);
-  -webkit-text-stroke: 5px var(--hufflepuff2);
-  paint-order: stroke fill;
-  text-shadow: none !important;
-}
-
-#resultado-duelo .text-always-respuesta.activo {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Duelo perdido: la varita queda fuera de juego y vuelve el cursor normal */
-body.duelo-perdido #cursor-wrapper {
-  display: none !important;
-}
-
-body.duelo-perdido * {
-  cursor: auto !important;
-}
-
-body.duelo-perdido a,
-body.duelo-perdido button,
-body.duelo-perdido [role="button"],
-body.duelo-perdido input {
-  cursor: pointer !important;
-}
-
-button#btn-hechizo:disabled {
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-button#btn-revelio-always,
-.btn-magico {
-  background-color: var(--primary);
-  color: var(--secondary);
-  border: 2px solid var(--secondary);
+.btn-revelio-always {
+  background-color: var(--gryffindor1);
+  color: var(--gryffindor2);
+  border: 2px solid var(--gryffindor2);
   padding: 10px 24px;
   font-family: "Lumos", serif;
   font-size: 1.3rem;
@@ -2288,16 +2244,14 @@ button#btn-revelio-always,
   justify-content: center;
 }
 
-button#btn-revelio-always:hover,
-.btn-magico:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
-  border-color: var(--primary);
-  box-shadow: 0 0 15px var(--secondary);
+.btn-revelio-always:hover {
+  background-color: var(--gryffindor2);
+  color: var(--gryffindor1);
+  border-color: var(--gryffindor1);
+  box-shadow: 0 0 15px var(--gryffindor2);
 }
 
-.btn-magico.oculto,
-button#btn-revelio-always.oculto {
+.btn-revelio-always.oculto {
   display: none !important;
 }
 
@@ -2336,7 +2290,7 @@ button#btn-revelio-always.oculto {
 .text-always-respuesta {
   font-family: "Caveat", cursive;
   font-size: 6.5rem;
-  color: var(--secondary);
+  color: var(--gryffindor2);
   margin: 0;
   opacity: 0;
   transform: translateY(15px);
@@ -2358,6 +2312,80 @@ button#btn-revelio-always.oculto {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.4s;
+}
+
+/* ==========================================
+   ANIMACIÓN DUELO DE VARITAS
+   Página de Lucas (Hufflepuff)
+   ========================================== */
+
+#resultado-duelo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+  z-index: 5;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--hufflepuff1);
+  -webkit-text-stroke: 5px var(--hufflepuff2);
+  paint-order: stroke fill;
+  text-shadow: none !important;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Duelo perdido: estado del cursor */
+body.duelo-perdido #cursor-wrapper {
+  display: none !important;
+}
+
+body.duelo-perdido * {
+  cursor: auto !important;
+}
+
+body.duelo-perdido a,
+body.duelo-perdido button,
+body.duelo-perdido [role="button"],
+body.duelo-perdido input {
+  cursor: pointer !important;
+}
+
+/* Botón de Lucas */
+#btn-hechizo,
+.btn-magico {
+  background-color: var(--hufflepuff1);
+  color: var(--hufflepuff2);
+  border: 2px solid var(--hufflepuff2);
+  padding: 10px 24px;
+  font-family: "Lumos", serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn-hechizo:hover,
+.btn-magico:hover {
+  background-color: var(--hufflepuff2);
+  color: var(--hufflepuff1);
+  border-color: var(--hufflepuff1);
+  box-shadow: 0 0 15px var(--hufflepuff2);
+}
+
+#btn-hechizo:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.btn-magico.oculto {
+  display: none !important;
 }
 
 /* ============================================
@@ -2601,7 +2629,6 @@ body.modo-nox {
   color: #faefd8 !important;
 }
 
-/* Ajustes de contenedores en Modo Nox */
 body.modo-nox .card,
 body.modo-nox .nota-hechizo {
   background-color: #17130f !important;
@@ -2619,7 +2646,6 @@ body.modo-nox .footer-hallows {
   background-color: #120e0a !important;
 }
 
-/* Transición suave al cambiar de modo */
 body {
   transition:
     background-color 0.4s ease,
@@ -2629,8 +2655,6 @@ body {
 /* ============================================
    Cursor Varita - GLOBAL
    ============================================ */
-/* CURSOR */
-
 * {
   cursor: none !important;
 }

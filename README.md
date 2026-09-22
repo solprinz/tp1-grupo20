@@ -118,18 +118,6 @@ tp1-front/
 
 ### Paleta de colores
 
-**Colores base**
-| Variable | Hex | Uso |
-|---|---|---|
-| `--primary` | `#0d0d53` | Azul noche principal |
-| `--secondary` | `#e1b258` | Dorado principal |
-| `--acento` | `#f4d081` | Dorado claro |
-| `--gray` | `#6c757d` | Gris neutro |
-| `--white` | `#ffffff` | Blanco |
-| `--black` | `#000000` | Negro |
-| `--lightgray` | `#e0e0e0` | Gris claro |
-| `--shadow` | `#e1b2584d` | Sombra dorada |
-
 **Colores por casa de Hogwarts**
 | Casa | Color 1 | Color 2 | Color 3 |
 |---|---|---|---|
@@ -334,6 +322,26 @@ Mapa interactivo con temática Harry Potter que permite explorar las **película
 -Manejo de estado global persistente mediante localStorage.setItem() y localStorage.getItem().
 -Manipulación modular del DOM con addEventListener centralizado en DOMContentLoaded.
 -Control de flujo condicional para la deshabilitación del botón y despliegue del cartel de victoria al alcanzar el umbral de puntos.
+
+### Cursor Mágico Interactivo (`js/cursor.js`)
+
+**Cursor Mágico Interactivo**: Implementación global que reemplaza el puntero tradicional del navegador por una varita mágica con física de movimiento, efectos de brillo dinámicos y física de desarme en el minijuego de duelo.
+
+**Funcionalidades principales:**
+
+- **Inyección dinámica de interfaz:** Creación autónoma e inyección directa en el DOM (`cursor-wrapper` y `cursor-falso`) al cargar el documento.
+- **Seguimiento y física de rotación:** Cálculo de posición en tiempo real (`mousemove`) que ajusta la rotación dinámica de la varita según la coordenada horizontal de la pantalla.
+- **Feedback interactivo (Efecto Hover):** Detección automática sobre elementos cliqueables (`a`, `button`, `input`) para activar la punta brillante (`.hover-punta`).
+- **Mecánica de Duelo de Varitas (_Expelliarmus_):** Evento aleatorio (50/50) al presionar el botón de hechizo que determina si el usuario pierde la varita o si el botón sale volando por la pantalla.
+- **Física de desarmado y caída:** Secuencia de tirones erráticos con trayectorias aleatorias y caída libre acelerada hasta el borde inferior de la ventana (_piso_).
+- **Restablecimiento del cursor nativo:** Desactivación del cursor mágico (`duelo-perdido`) al perder el duelo para devolver los controles predeterminados del navegador.
+
+**Estructura técnica:**
+
+- Manipulación avanzada del DOM mediante `document.createElement()`, `appendChild()` y clases CSS dinámicas.
+- Manejo de listeners globales (`mousemove`, `mouseover`, `mouseout`) y delegación de eventos con `e.target.closest()`.
+- Lógica probabilística con `Math.random()` para la resolución del duelo y generación de coordenadas erráticas.
+- Temporizadores asincrónicos con `setInterval()` y `setTimeout()` para secuenciar las fases de animación física, impacto y caída.
 
 ---
 
