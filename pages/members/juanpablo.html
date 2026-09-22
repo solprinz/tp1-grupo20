@@ -1,1 +1,676 @@
-<h1>JP</h1>
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Front End Wizards" />
+  <title>Juan Pablo — Front End Wizards</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../../css/style.css" />
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <!-- GOOGLE FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Noto+Sans:wght@100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="slytherin bg-juanpablo">
+  <header class="sticky-top shadow-sm header-hallows">
+    <div class="hallows-banner bg-slytherin">
+      <div class="container">
+        <a class="hallows-marca" href="../../index.html" aria-label="Hallows Code — ir al inicio">
+          <img class="hallows-logo" src="../../img/alejandro-hallows-logo.png" alt="Hallows Code Logo" width="776" height="779" />
+          <span class="hallows-textos">
+            <span class="hallows-titulo slytherin-secondary">Hallows Code</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg py-2 bg-slytherin2" aria-label="Navegación principal">
+      <div class="container bg-slytherin2">
+        <button class="navbar-toggler border-0 ms-auto bg-slytherin2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir o cerrar navegación">
+          <i class="fa-solid fa-bars icono-hamburguesa fs-3"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center bg-slytherin2" id="navbarNav">
+          <ul class="navbar-nav gap-2 gap-lg-4 text-center bg-slytherin2">
+            <li class="nav-item"><a href="../../index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="./alejandro.html" class="nav-link">Alejandro</a></li>
+            <li class="nav-item"><a href="./daniela.html" class="nav-link">Daniela</a></li>
+            <li class="nav-item"><a href="./juanpablo.html" class="nav-link active" aria-current="page">Juan Pablo</a></li>
+            <li class="nav-item"><a href="./lucas.html" class="nav-link">Lucas</a></li>
+            <li class="nav-item"><a href="./sol.html" class="nav-link">Sol</a></li>
+            <li class="nav-item"><a href="../logbook/bitacora.html" class="nav-link">Bitácora</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="perfil-juanpablo">
+
+    <!-- PERFIL -->
+    <section id="perfil" class="perfil-seccion container-fluid perfil-editorial bg-juanpablo" aria-labelledby="perfil-juanpablo">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+
+          <div class="col-12 col-md-5 text-center">
+            <img src="../../img/juanpablo/juanpablo_avatar.jpg" alt="Foto de Juan Pablo" class="perfil-foto" />
+          </div>
+
+          <div class="col-12 col-md-7">
+            <p class="perfil-intro mb-2">Perfil personal</p>
+            <h1 id="perfil-juanpablo" class="title slytherin-primary">Juan Pablo</h1>
+            <p class="subtitle">Erudito de Aritmancia y Lógica de JavaScript</p>
+
+            <dl class="perfil-datos row mt-4 mb-0 py-3 ps-3">
+              <dt class="col-sm-3">Ciudad</dt>
+              <dd class="col-sm-9">Paraná</dd>
+              <dt class="col-sm-3">Edad</dt>
+              <dd class="col-sm-9">38</dd>
+            </dl>
+
+            <article class="perfil-sobre mt-4">
+              <h2 class="h3">Sobre mí</h2>
+              <p class="mb-3">
+                Soy desarrollador orientado a la <strong>lógica, la eficiencia y la funcionalidad</strong>.
+                Me interesa cómo las pequeñas decisiones en el código pueden transformar por completo la experiencia de
+                un usuario y la calidad de un sistema.
+              </p>
+              <p class="mb-3">
+                Estudio <strong>Desarrollo de Software en el IFTS 29</strong> y trabajo en proyectos donde la
+                optimización, la automatización y la claridad estructural son fundamentales.
+              </p>
+              <p class="mb-0">
+                Mi enfoque combina <strong>pensamiento funcional</strong>, <strong>orden</strong>, <strong>QA
+                  automatizado</strong> y una búsqueda constante por la <strong>eficiencia real</strong>.
+              </p>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="perfil-seccion container-fluid perfil-editorial bg-juanpablo" aria-labelledby="titulo-habilidades">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="perfil-intro mb-2">Mi caja de herramientas</p>
+          <h2 id="titulo-habilidades" class="title slytherin-primary">Habilidades</h2>
+        </div>
+
+        <div class="habilidades-composicion">
+          <img src="../../img/perfil-habilidades.png" alt="Símbolos mágicos que representan habilidades"
+            class="perfil-imagen-seccion" />
+
+          <ul class="habilidades-lista">
+            <li class="perfil-habilidad"><span class="habilidad-numero">01</span>
+              <h3>Organización lógica</h3>
+            </li>
+            <li class="perfil-habilidad"><span class="habilidad-numero">02</span>
+              <h3>Eficiencia en procesos</h3>
+            </li>
+            <li class="perfil-habilidad"><span class="habilidad-numero">03</span>
+              <h3>Pensamiento funcional</h3>
+            </li>
+            <li class="perfil-habilidad"><span class="habilidad-numero">04</span>
+              <h3>Optimización de código</h3>
+            </li>
+            <li class="perfil-habilidad"><span class="habilidad-numero">05</span>
+              <h3>Automatización</h3>
+            </li>
+            <li class="perfil-habilidad"><span class="habilidad-numero">06</span>
+              <h3>Resolución de problemas</h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACCIÓN -->
+    <section id="interaccion" class="perfil-seccion container-fluid perfil-editorial bg-juanpablo">
+      <div class="container text-center">
+
+        <p class="perfil-intro mb-2">Interacción mágica</p>
+
+        <h2 class="title slytherin-primary">Slytherin Efficiency Test</h2>
+
+        <p class="subtitle mb-4">Poné a prueba tu eficiencia con un desafío rápido.</p>
+
+        <!-- BOTÓN -->
+        <button id="btn-efficiency" class="btn btn-magico-juanpablo">
+          <i class="fa-solid fa-wand-magic-sparkles me-2"></i> Iniciar prueba
+        </button>
+
+        <!-- RESULTADO -->
+        <p id="resultado-efficiency" class="resultado-juanpablo mt-4"></p>
+
+        <!-- ANCLA REAL PARA LA SERPIENTE -->
+        <div id="ancla-serpiente" style="position: relative; width: 100%; height: 120px;"></div>
+
+      </div>
+    </section>
+
+
+
+    <!-- PELÍCULAS -->
+    <section
+      id="peliculas"
+      class="perfil-seccion container-fluid mapa-favoritos bg-juanpablo"
+      aria-labelledby="titulo-peliculas"
+    >
+      <div class="container">
+        <header class="mapa-cabecera">
+          <p class="mapa-leyenda">Cartografía de mis favoritos</p>
+          <h2 id="titulo-peliculas" class="slytherin-primary">Películas favoritas</h2>
+          <p class="mapa-subtitulo">El callejón de las historias</p>
+          <button
+            type="button"
+            class="mapa-boton"
+            data-abrir-mapa
+            aria-controls="plano-peliculas"
+            aria-expanded="false"
+            hidden
+          >
+            Juro solemnemente…
+          </button>
+        </header>
+        <div class="mapa-distribucion">
+          <div class="mapa-plano" id="plano-peliculas">
+            <span class="mapa-brujula" aria-hidden="true">N<br />✧</span>
+            <div class="mapa-camino" aria-hidden="true"></div>
+
+            <article class="mapa-lugar" data-lugar="1">
+              <svg
+                class="mapa-edificio"
+                viewBox="0 0 160 64"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 60V25L80 4l60 21v35ZM35 25h90M40 32v22m25-22v22m30-22v22m25-22v22"
+                />
+              </svg>
+              <p class="mapa-leyenda">El cine</p>
+              <img
+                src="../../img/juanpablo/terminator.jpg"
+                alt="Póster de la película The Terminator"
+                class="mapa-portada"
+                loading="lazy"
+                width="320"
+                height="220"
+              />
+              <h3>The Terminator</h3>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-visitar
+                aria-expanded="true"
+                aria-controls="ficha-peliculas-1"
+                hidden
+              >
+                Explorar el cine
+              </button>
+              <span class="mapa-huellas" aria-hidden="true"
+                ><span>👣</span><span>👣</span><span>👣</span></span
+              >
+            </article>
+
+            <article class="mapa-lugar" data-lugar="2">
+              <svg
+                class="mapa-edificio"
+                viewBox="0 0 160 64"
+                aria-hidden="true"
+              >
+                <path
+                  d="M48 60V20L80 2l32 18v40ZM58 20h44M70 60V42h20v18M72 26h16v8H72Z"
+                />
+              </svg>
+              <p class="mapa-leyenda">La torre</p>
+              <img
+                src="../../img/juanpablo/warcraft.jpg"
+                alt="Póster de la película Warcraft: El origen"
+                class="mapa-portada"
+                loading="lazy"
+                width="320"
+                height="220"
+              />
+              <h3>Warcraft: El origen</h3>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-visitar
+                aria-expanded="true"
+                aria-controls="ficha-peliculas-2"
+                hidden
+              >
+                Explorar la torre
+              </button>
+              <span class="mapa-huellas" aria-hidden="true"
+                ><span>👣</span><span>👣</span><span>👣</span></span
+              >
+            </article>
+
+            <article class="mapa-lugar" data-lugar="3">
+              <svg
+                class="mapa-edificio"
+                viewBox="0 0 160 64"
+                aria-hidden="true"
+              >
+                <path
+                  d="M15 60V22h130v38ZM10 22 80 2l70 20M30 32h20v18H30Zm40 28V32h20v28m20-28h20v18h-20Z"
+                />
+              </svg>
+              <p class="mapa-leyenda">La biblioteca</p>
+              <img
+                src="../../img/juanpablo/avengers-infinity-war.jpg"
+                alt="Póster de la película Avengers: Infinity War"
+                class="mapa-portada"
+                loading="lazy"
+                width="320"
+                height="220"
+              />
+              <h3>Avengers: Infinity War</h3>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-visitar
+                aria-expanded="true"
+                aria-controls="ficha-peliculas-3"
+                hidden
+              >
+                Explorar la biblioteca
+              </button>
+              <span class="mapa-huellas" aria-hidden="true"
+                ><span>👣</span><span>👣</span><span>👣</span></span
+              >
+            </article>
+          </div>
+
+          <div class="mapa-fichas">
+            <p class="mapa-invitacion" hidden>
+              Elegí un lugar del mapa para descubrir su historia.
+            </p>
+            <article class="mapa-ficha" id="ficha-peliculas-1">
+              <p class="mapa-leyenda">El cine · Archivo 01</p>
+              <h3 tabindex="-1">The Terminator</h3>
+              <dl>
+                <dt>Director</dt>
+                <dd>James Cameron</dd>
+                <dt>Año</dt>
+                <dd>1984</dd>
+                <dt>Género</dt>
+                <dd>Ciencia ficción / Acción</dd>
+                <dt>Por qué me gusta</dt>
+                <dd>
+                  Un cyborg implacable enviado desde el futuro, tensión y suspenso constantes, y el inicio de una de las sagas de ciencia ficción y acción más influyentes de la historia. La combinación de narrativa cyberpunk y efectos prácticos la convierten en un clásico indiscutible.
+                </dd>
+              </dl>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-cerrar-ficha
+                hidden
+              >
+                Cerrar ficha
+              </button>
+            </article>
+
+            <article class="mapa-ficha" id="ficha-peliculas-2">
+              <p class="mapa-leyenda">La torre · Archivo 02</p>
+              <h3 tabindex="-1">Warcraft: El origen</h3>
+              <dl>
+                <dt>Director</dt>
+                <dd>Duncan Jones</dd>
+                <dt>Año</dt>
+                <dd>2016</dd>
+                <dt>Género</dt>
+                <dd>Fantasía / Acción / Aventura</dd>
+                <dt>Por qué me gusta</dt>
+                <dd>
+                  Trasladar el vasto universo de Azeroth a la gran pantalla fue un desafío titánico logrado con un despliegue visual asombroso. Lo mejor es que no cae en el cliché del bien contra el mal absoluto: muestra los dilemas, la lealtad y el honor tanto de la Horda orca como de la Alianza humana.
+                </dd>
+              </dl>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-cerrar-ficha
+                hidden
+              >
+                Cerrar ficha
+              </button>
+            </article>
+
+            <article class="mapa-ficha" id="ficha-peliculas-3">
+              <p class="mapa-leyenda">La biblioteca · Archivo 03</p>
+              <h3 tabindex="-1">Avengers: Infinity War</h3>
+              <dl>
+                <dt>Director</dt>
+                <dd>Anthony y Joe Russo</dd>
+                <dt>Año</dt>
+                <dd>2018</dd>
+                <dt>Género</dt>
+                <dd>Acción / Superhéroes / Ciencia ficción</dd>
+                <dt>Por qué me gusta</dt>
+                <dd>
+                  El punto culminante de diez años de historias interconectadas en el MCU. Destaca por darle a Thanos una presencia arrolladora y motivaciones contundentes, logrando equilibrar decenas de personajes con un ritmo vertiginoso y un final tan valiente como devastador.
+                </dd>
+              </dl>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-cerrar-ficha
+                hidden
+              >
+                Cerrar ficha
+              </button>
+            </article>
+          </div>
+        </div>
+
+        <footer class="mapa-pie">
+          <p role="status" class="mapa-estado" hidden>
+            El mapa espera tu primer recorrido.
+          </p>
+          <button type="button" class="mapa-boton" data-cerrar-mapa hidden>
+            Travesura realizada
+          </button>
+        </footer>
+      </div>
+    </section>
+
+    <!-- DISCOS -->
+    <section
+      id="discos"
+      class="perfil-seccion container-fluid mapa-favoritos bg-juanpablo"
+      aria-labelledby="titulo-discos"
+    >
+      <div class="container">
+        <header class="mapa-cabecera">
+          <p class="mapa-leyenda">Cartografía de mis favoritos</p>
+          <h2 id="titulo-discos" class="slytherin-primary">Discos favoritos</h2>
+          <p class="mapa-subtitulo">El pasaje de las melodías</p>
+          <button
+            type="button"
+            class="mapa-boton"
+            data-abrir-mapa
+            aria-controls="plano-discos"
+            aria-expanded="false"
+            hidden
+          >
+            Juro solemnemente…
+          </button>
+        </header>
+        <div class="mapa-distribucion">
+          <div class="mapa-plano" id="plano-discos">
+            <span class="mapa-brujula" aria-hidden="true">N<br />✧</span>
+            <div class="mapa-camino" aria-hidden="true"></div>
+
+            <article class="mapa-lugar" data-lugar="1">
+              <svg
+                class="mapa-edificio"
+                viewBox="0 0 160 64"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 60V25L80 4l60 21v35ZM35 25h90M40 32v22m25-22v22m30-22v22m25-22v22"
+                />
+              </svg>
+              <p class="mapa-leyenda">El salón</p>
+              <img
+                src="../../img/juanpablo/vivire-viajando.jpg"
+                alt="Portada del disco Viviré viajando de La Mancha de Rolando"
+                class="mapa-portada"
+                loading="lazy"
+                width="320"
+                height="220"
+              />
+              <h3>Viviré viajando</h3>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-visitar
+                aria-expanded="true"
+                aria-controls="ficha-discos-1"
+                hidden
+              >
+                Explorar el salón
+              </button>
+              <span class="mapa-huellas" aria-hidden="true"
+                ><span>👣</span><span>👣</span><span>👣</span></span
+              >
+            </article>
+
+            <article class="mapa-lugar" data-lugar="2">
+              <svg
+                class="mapa-edificio"
+                viewBox="0 0 160 64"
+                aria-hidden="true"
+              >
+                <path
+                  d="M48 60V20L80 2l32 18v40ZM58 20h44M70 60V42h20v18M72 26h16v8H72Z"
+                />
+              </svg>
+              <p class="mapa-leyenda">La tienda de vinilos</p>
+              <img
+                src="../../img/juanpablo/comfort-musica-volar.jpg"
+                alt="Portada del disco Comfort y música para volar de Soda Stereo"
+                class="mapa-portada"
+                loading="lazy"
+                width="320"
+                height="220"
+              />
+              <h3>Comfort y música para volar</h3>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-visitar
+                aria-expanded="true"
+                aria-controls="ficha-discos-2"
+                hidden
+              >
+                Explorar la tienda de vinilos
+              </button>
+              <span class="mapa-huellas" aria-hidden="true"
+                ><span>👣</span><span>👣</span><span>👣</span></span
+              >
+            </article>
+
+            <article class="mapa-lugar" data-lugar="3">
+              <svg
+                class="mapa-edificio"
+                viewBox="0 0 160 64"
+                aria-hidden="true"
+              >
+                <path
+                  d="M15 60V22h130v38ZM10 22 80 2l70 20M30 32h20v18H30Zm40 28V32h20v28m20-28h20v18h-20Z"
+                />
+              </svg>
+              <p class="mapa-leyenda">El escenario</p>
+              <img
+                src="../../img/juanpablo/fulanos-de-nadie.jpg"
+                alt="Portada del disco Fulanos de nadie de Los Caballeros de la Quema"
+                class="mapa-portada"
+                loading="lazy"
+                width="320"
+                height="220"
+              />
+              <h3>Fulanos de nadie</h3>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-visitar
+                aria-expanded="true"
+                aria-controls="ficha-discos-3"
+                hidden
+              >
+                Explorar el escenario
+              </button>
+              <span class="mapa-huellas" aria-hidden="true"
+                ><span>👣</span><span>👣</span><span>👣</span></span
+              >
+            </article>
+          </div>
+
+          <div class="mapa-fichas">
+            <p class="mapa-invitacion" hidden>
+              Elegí un lugar del mapa para descubrir su historia.
+            </p>
+            <article class="mapa-ficha" id="ficha-discos-1">
+              <p class="mapa-leyenda">El salón · Archivo 01</p>
+              <h3 tabindex="-1">Viviré viajando</h3>
+              <dl>
+                <dt>Artista</dt>
+                <dd>La Mancha de Rolando</dd>
+                <dt>Año</dt>
+                <dd>2008</dd>
+                <dt>Género</dt>
+                <dd>Rock argentino / Rock and roll</dd>
+                <dt>Canción destacada</dt>
+                <dd>Arde la ciudad / Viviré viajando</dd>
+                <dt>Por qué me gusta</dt>
+                <dd>
+                  Un álbum potente que recopila grandes éxitos en vivo y nuevas composiciones, reflejando el espíritu rutero, barrial y enérgico de la banda. Transmite esa adrenalina de subirse a la ruta con amigos y disfrutar del rock nacional en su estado más genuino.
+                </dd>
+              </dl>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-cerrar-ficha
+                hidden
+              >
+                Cerrar ficha
+              </button>
+            </article>
+
+            <article class="mapa-ficha" id="ficha-discos-2">
+              <p class="mapa-leyenda">La tienda de vinilos · Archivo 02</p>
+              <h3 tabindex="-1">Comfort y música para volar</h3>
+              <dl>
+                <dt>Artista</dt>
+                <dd>Soda Stereo</dd>
+                <dt>Año</dt>
+                <dd>1996</dd>
+                <dt>Género</dt>
+                <dd>Rock alternativo / Post-punk / Pop rock</dd>
+                <dt>Canción destacada</dt>
+                <dd>En la ciudad de la furia (con Andrea Echeverri)</dd>
+                <dt>Por qué me gusta</dt>
+                <dd>
+                  La legendaria sesión de MTV Unplugged grabada en Miami, donde rompieron las reglas del formato acústico con guitarras eléctricas y arreglos orquestales sublimes. La reinterpretación de "En la ciudad de la furia" y "Té para tres" representa una cumbre artística inolvidable en la historia del rock latinoamericano.
+                </dd>
+              </dl>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-cerrar-ficha
+                hidden
+              >
+                Cerrar ficha
+              </button>
+            </article>
+
+            <article class="mapa-ficha" id="ficha-discos-3">
+              <p class="mapa-leyenda">El escenario · Archivo 03</p>
+              <h3 tabindex="-1">Fulanos de nadie</h3>
+              <dl>
+                <dt>Artista</dt>
+                <dd>Los Caballeros de la Quema</dd>
+                <dt>Año</dt>
+                <dd>2000</dd>
+                <dt>Género</dt>
+                <dd>Rock alternativo / Rock barrial</dd>
+                <dt>Canción destacada</dt>
+                <dd>Fulanos de nadie / Sapo de otro pozo</dd>
+                <dt>Por qué me gusta</dt>
+                <dd>
+                  El último trabajo de estudio antes de su reencuentro, cargado de letras mordaces, poesía urbana y la voz inconfundible de Iván Noble. Retrata con precisión quirúrgica y nostalgia las vivencias de la calle, el desamor y la identidad suburbana de principios de los 2000.
+                </dd>
+              </dl>
+              <button
+                type="button"
+                class="mapa-boton"
+                data-cerrar-ficha
+                hidden
+              >
+                Cerrar ficha
+              </button>
+            </article>
+          </div>
+        </div>
+
+        <footer class="mapa-pie">
+          <p role="status" class="mapa-estado" hidden>
+            El mapa espera tu primer recorrido.
+          </p>
+          <button type="button" class="mapa-boton" data-cerrar-mapa hidden>
+            Travesura realizada
+          </button>
+        </footer>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="perfil-seccion container-fluid perfil-editorial bg-juanpablo">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="perfil-intro mb-2">Mi trabajo</p>
+          <h2 class="title slytherin-primary">Proyectos</h2>
+        </div>
+
+        <ul class="proyectos-lista">
+          <li><strong>PythonFS Nono Luigi</strong> — Fullstack Python (Codo a Codo)</li>
+          <li><strong>KipuBankV3</strong> — Desarrollo en Ethereum (Codo a Codo)</li>
+          <li><strong>QA Automatizado</strong> — Testing y generación de informes</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-hallows py-4 border-top bg-slytherin">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <span class="hallows-titulo-footer font-lumos fs-4 m-0 slytherin-secondary">Hallows Code</span>
+      <p class="m-0 text-center opacity-75 copyright-texto">© 2026 Todos los derechos reservados. Desarrollado con magia y código.</p>
+      <div class="d-flex gap-3">
+        <a href="https://github.com/JPFinal" target="_blank" class="footer-link-hallows" aria-label="GitHub">
+          <i class="fa-brands fa-github fs-4"></i>
+        </a>
+        <a href="#top" class="footer-link-hallows" aria-label="Volver arriba">
+          <i class="fa-solid fa-arrow-up fs-4"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS DE BOOTSTRAP -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- JS -->
+  <script src="../../js/main.js"></script>
+  <script src="../../js/cursor.js"></script>
+  <script src="../../js/juan-efficiency.js" defer></script>
+  <script src="../../js/mapa-favoritos.js" defer></script>
+
+
+
+</body>
+
+</html>
