@@ -246,6 +246,38 @@ h1,
   color: var(--gryffindor1) !important;
   font-weight: bold;
 }
+
+.slytherin-primary {
+  color: var(--slytherin1) !important;
+}
+
+.slytherin-secondary {
+  color: var(--slytherin2) !important;
+}
+
+.bg-slytherin {
+  background-color: var(--slytherin1) !important;
+  color: var(--slytherin2) !important;
+}
+
+.bg-slytherin2 {
+  color: var(--slytherin1) !important;
+  background-color: var(--slytherin2) !important;
+}
+
+.bg-daniela {
+  background-color: #dcedc8 !important;
+}
+
+.bg-slytherin2 .nav-link {
+  color: var(--slytherin1) !important;
+}
+
+.bg-slytherin2 .nav-link:hover,
+.bg-slytherin2 .nav-link.active {
+  color: var(--slytherin1) !important;
+  font-weight: bold;
+}
 /* CURSOR */
 
 * {
