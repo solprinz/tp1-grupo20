@@ -30,88 +30,100 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 ---
 
 ## 📁 Estructura del proyecto
-
-\`\`\`
-tp1-front/
-├── index.html # Portada principal
-├── README.md # Este archivo
+```
+tp1-grupo20/
+├── index.html                  # Portada principal
+├── README.md                   # Documentación del proyecto
 ├── css/
-│ └── style.css # Estilos globales
-├── docs/
-│ └── capturas/ # Capturas para el README
+│   └── style.css               # Estilos globales
+├── docs/capturas               # Capturas para el README
+│   ├── image-1.png
+│   ├── image-2.png
+│   ├── image-3.png
+│   ├── image.png
+│   ├── perfil-daniela-1.png
+│   ├── perfil-daniela-2.png
+│   ├── perfil-daniela-3.png
+│   ├── perfil-daniela-4.png
+│   ├── perfil-daniela-5.png
+│   ├── perfil-daniela-6.png
+│   ├── perfil-sol-1.png
+│   └── perfil-sol-2.png  
 ├── fonts/
-│ └── LUMOS.TTF # Fuente temática
-├── img/ # Imágenes del proyecto
-│ ├── alejandro.jpg
-│ ├── alejandro-hallows-logo.png # Logo del equipo
-│ ├── alejandro-hallows-titulo.png
-│ ├── daniela/ # Imágenes de Daniela
-│ │ ├── black-swan.jpg
-│ │ ├── coraline-pelicula.jpg
-│ │ ├── daniela-avatar.jpg
-│ │ ├── habilidades-daniela.jpg
-│ │ ├── heuh-pelicula.jpg
-│ │ ├── lana-rey.jpg
-│ │ ├── melaniemartinez.jpg
-│ │ └── minutes-to-midnight-lp.jpg
-│ ├── juanpablo.jpg # Avatar de Juan Pablo
-│ ├── juanpablo/ # Portadas de Juan Pablo
-│ │ ├── avengers-infinity-war.jpg
-│ │ ├── comfort-musica-volar.jpg
-│ │ ├── fulanos-de-nadie.jpg
-│ │ ├── terminator.jpg
-│ │ ├── vivire-viajando.jpg
-│ │ └── warcraft.jpg
-│ ├── quiz/ # Íconos del quiz de casas
-│ │ ├── aguila.png
-│ │ ├── leon.png
-│ │ ├── serpiente.png
-│ │ └── tejon.png
-│ ├── lucas.jpg
-│ ├── lucas-cancion1.jfif
-│ ├── lucas-cancion2.jfif
-│ ├── lucas-cancion3.jfif
-│ ├── lucas-pelicula1.jpg
-│ ├── lucas-pelicula2.jpg
-│ ├── lucas-pelicula3.jfif
-│ ├── lucas-proyecto1.png
-│ ├── lucas-proyecto2.png
-│ ├── lucas-proyecto3.png
-│ ├── patronus-ciervo.png
-│ ├── patronus-sol.png
-│ ├── perfil-discos.png
-│ ├── perfil-habilidades.png
-│ ├── perfil-peliculas.png
-│ ├── perfil-proyectos.png
-│ ├── sol.jpg
-│ ├── sol-cancion1.png
-│ ├── sol-cancion2.png
-│ ├── sol-cancion3.png
-│ ├── sol-habilidades.jpg
-│ ├── sol-pelicula1.png
-│ ├── sol-pelicula2.png
-│ ├── sol-pelicula3.png
-│ └── varita.svg
+│   └── LUMOS.TTF               # Fuente temática local
+├── img/                        # Imágenes del proyecto
+│   ├── daniela/
+│   │   ├── black-swan.jpg
+│   │   ├── coraline-pelicula.jpg
+│   │   ├── daniela-avatar.jpg
+│   │   ├── habilidades-daniela.jpg
+│   │   ├── heuh-pelicula.jpg
+│   │   ├── lana-rey.jpg
+│   │   ├── melaniemartinez.jpg
+│   │   └── minutes-to-midnight-lp.jpg
+│   ├── juanpablo/
+│   │   ├── avengers-infinity-war.jpg
+│   │   ├── comfort-musica-volar.jpg
+│   │   ├── fulanos-de-nadie.jpg
+│   │   ├── juanpablo_avatar.jpg
+│   │   ├── terminator.jpg
+│   │   ├── vivire-viajando.jpg
+│   │   └── warcraft.jpg
+│   ├── quiz/
+│   │   ├── aguila.png
+│   │   ├── leon.png
+│   │   ├── serpiente.png
+│   │   └── tejon.png
+│   ├── alejandro-hallows-logo.png
+│   ├── alejandro-hallows-titulo.png
+│   ├── alejandro.gif
+│   ├── alejandro.jpg
+│   ├── alejandro2.gif
+│   ├── lucas-cancion1.jfif
+│   ├── lucas-cancion2.jfif
+│   ├── lucas-cancion3.jfif
+│   ├── lucas-pelicula1.jpg
+│   ├── lucas-pelicula2.jpg
+│   ├── lucas-pelicula3.jfif
+│   ├── lucas-proyecto1.png
+│   ├── lucas-proyecto2.png
+│   ├── lucas-proyecto3.png
+│   ├── lucas.jpg
+│   ├── patronus-ciervo.png
+│   ├── perfil-discos.png
+│   ├── perfil-habilidades.png
+│   ├── perfil-peliculas.png
+│   ├── perfil-proyectos.png
+│   ├── sol-cancion1.png
+│   ├── sol-cancion2.png
+│   ├── sol-cancion3.png
+│   ├── sol-habilidades.jpg
+│   ├── sol-pelicula1.png
+│   ├── sol-pelicula2.png
+│   ├── sol-pelicula3.png
+│   ├── sol.jpg
+│   └── varita.svg
 ├── js/
-│ ├── cursor.js # Cursor personalizado (global)
-│ ├── header-hallows.js # Header dinámico (global)
-│ ├── juan-efficiency.js # Test de eficiencia Slytherin (Juan Pablo)
-│ ├── main.js # Funciones de portada (global)
-│ ├── mapa-favoritos.js # Mapa interactivo (Daniela)
-│ ├── proyectos-reliquias.js # Reliquias interactivas (Alejandro)
-│ ├── vitriola.js # Reproductor de discos (Daniela)
-│ └── quiz-casas.js # Quiz de casas (Daniela)
+│   ├── always.js               # Animación Always (Sol)
+│   ├── copa-casas.js           # Copa de las Casas (Sol)
+│   ├── cursor.js               # Cursor personalizado (global)
+│   ├── header-hallows.js       # Header dinámico (global)
+│   ├── juan-efficiency.js      # Test de eficiencia Slytherin (Juan Pablo)
+│   ├── mapa-favoritos.js       # Componente reutilizable
+│   ├── modo-oscuro.js          # Encantamiento Lumos/Nox (global)
+│   ├── proyectos-reliquias.js  # Reliquias interactivas (Alejandro)
+│   ├── vitriola.js             # Reproductor de discos (Daniela)
+│   └── quiz-casas.js           # Quiz de casas (Daniela)
 └── pages/
-├── logbook/
-│ └── bitacora.html # Bitácora del proceso
-└── members/
-├── alejandro.html
-├── daniela.html
-├── juanpablo.html
-├── lucas.html
-└── sol.html
-\`\`\`
-
+    ├── logbook/
+    │   └── bitacora.html       # Bitácora del proceso
+    └── members/
+        ├── alejandro.html
+        ├── daniela.html
+        ├── juanpablo.html
+        ├── lucas.html
+        └── sol.html
+```
 ---
 
 ## 🎨 Guía de estilos
@@ -302,13 +314,13 @@ Mapa interactivo temático de Harry Potter implementado en las páginas de los i
 - Actualización de `aria-expanded` y mensajes de progreso con `role="status"` y `aria-live="polite"`.
 - Contenido de las historias disponible en el HTML aunque JavaScript esté deshabilitado.
 
-![alt text](image.png)
+![alt text](./docs/capturas/image.png)
 
-![alt text](image-1.png)
+![alt text](./docs/capturas/image-1.png)
 
-![alt text](image-2.png)
+![alt text](./docs/capturas/image-2.png)
 
-![alt text](image-3.png)
+![alt text](./docs/capturas/image-3.png)
 
 ---
 
@@ -378,15 +390,15 @@ Mapa interactivo temático de Harry Potter implementado en las páginas de los i
 **Torneo de las Casas ("Favoritismo de Dumbledore")**: Dashboard interactivo que simula el marcador de puntos de Hogwarts con sucesos cómicos de la saga y persistencia de datos.
 
 **Funcionalidades principales:**
--Generador de Sucesos: Botón interactivo que desencadena eventos narrativos asignando puntos a las distintas casas.
--Marcador dinámico: Visualización en tiempo real con alumnos destacados por casa y animación visual (.pop-anim) al sumar puntos.
--Persistencia con localStorage: Mantiene el estado de los contadores y el cartel de campeón incluso al recargar o reiniciar el navegador.
--Restablecimiento del Torneo: Botón de reinicio que limpia el almacenamiento local y devuelve la interfaz a su estado inicial.
+- Generador de Sucesos: Botón interactivo que desencadena eventos narrativos asignando puntos a las distintas casas.
+- Marcador dinámico: Visualización en tiempo real con alumnos destacados por casa y animación visual (.pop-anim) al sumar puntos.
+- Persistencia con localStorage: Mantiene el estado de los contadores y el cartel de campeón incluso al recargar o reiniciar el navegador.
+- Restablecimiento del Torneo: Botón de reinicio que limpia el almacenamiento local y devuelve la interfaz a su estado inicial.
 
 **Estructura técnica:**
--Manejo de estado global persistente mediante localStorage.setItem() y localStorage.getItem().
--Manipulación modular del DOM con addEventListener centralizado en DOMContentLoaded.
--Control de flujo condicional para la deshabilitación del botón y despliegue del cartel de victoria al alcanzar el umbral de puntos.
+- Manejo de estado global persistente mediante localStorage.setItem() y localStorage.getItem().
+- Manipulación modular del DOM con addEventListener centralizado en DOMContentLoaded.
+- Control de flujo condicional para la deshabilitación del botón y despliegue del cartel de victoria al alcanzar el umbral de puntos.
 
 ---
 
