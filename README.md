@@ -401,7 +401,8 @@ Durante el desarrollo del TP1 usamos herramientas de inteligencia artificial com
 | DeepSeek             | V3          | Gratuito    | Daniela    | Consultas técnicas, debugging de JavaScript, revisión de código                    |
 | Gemini (Nano Banana) | Gemini 2.5  | Gratuito    | Daniela    | Generación de los íconos del quiz de casas                                         |
 | Codex                | GPT-6 Astra | Plus        | Alejandro  | Desarrollo e implementación de JavaScript manteniendo un diseño acorde a la tematica|
-| [COMPLETAR]          | [COMPLETAR] | [COMPLETAR] | Lucas      | [COMPLETAR]                                                                        |
+| Gemini	       | Gemini 3.1  | Pro	   | Lucas      | Desarrollo de animaciones en JavaScript para gestionar rotaciones                  |
+| Opencode	       | Big Pickle  | Gratuito	   | Lucas      | Solucionar errores en múltiples páginas a la vez después de implementaciones       |
 | Gemini               | 2.5 Flash   | [COMPLETAR] | Sol        | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
 
 > Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo** o **Coderhouse**.
