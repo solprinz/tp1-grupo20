@@ -348,9 +348,16 @@ Mapa interactivo temático de Harry Potter implementado en las páginas de los i
 
 **Encantamiento Revelio ("Always")**: interacción dinámica que revela el Patronus de Cierva y el icónico mensaje _"Always"_ al presionar el botón de interacción en el perfil.
 
-![Encantamiento "Always" cerrado](./docs/capturas/perfil-sol-1.png)
-
-![Encantamiento "Always" abierto](./docs/capturas/perfil-sol-2.png)
+<table>
+  <tr>
+    <td width="50%">
+      <img src="./docs/capturas/perfil-sol-1.png" alt="Encantamiento Always cerrado" width="100%">
+    </td>
+    <td width="50%">
+      <img src="./docs/capturas/perfil-sol-2.png" alt="Encantamiento Always abierto" width="100%">
+    </td>
+  </tr>
+</table>
 
 **Funcionalidades principales:**
 
@@ -403,7 +410,7 @@ Durante el desarrollo del TP1 usamos herramientas de inteligencia artificial com
 | Codex                | GPT-6 Astra | Plus        | Alejandro  | Desarrollo e implementación de JavaScript manteniendo un diseño acorde a la tematica|
 | Gemini	       | Gemini 3.1  | Pro	   | Lucas      | Desarrollo de animaciones en JavaScript para gestionar rotaciones                  |
 | Opencode	       | Big Pickle  | Gratuito	   | Lucas      | Solucionar errores en múltiples páginas a la vez después de implementaciones       |
-| Gemini               | 2.5 Flash   | [COMPLETAR] | Sol        | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
+| Gemini               | 2.5 Flash   | Plus | Sol        | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
 
 > Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo** o **Coderhouse**.
 
