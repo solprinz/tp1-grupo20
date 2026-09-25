@@ -367,6 +367,11 @@ h1,
   border-color: var(--hufflepuff2);
 }
 
+.card-hufflepuff .brand-title {
+  color: var(--hufflepuff2);
+  text-shadow: none;
+}
+
 .nota-hechizo {
   background-color: rgba(13, 13, 83, 0.05);
   border: 1px dashed var(--gray);
