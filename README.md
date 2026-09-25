@@ -30,6 +30,7 @@ Hallows Code es un sitio web con temática Harry Potter que presenta al equipo d
 ---
 
 ## 📁 Estructura del proyecto
+
 ```
 tp1-grupo20/
 ├── index.html                  # Portada principal
@@ -48,7 +49,7 @@ tp1-grupo20/
 │   ├── perfil-daniela-5.png
 │   ├── perfil-daniela-6.png
 │   ├── perfil-sol-1.png
-│   └── perfil-sol-2.png  
+│   └── perfil-sol-2.png
 ├── fonts/
 │   └── LUMOS.TTF               # Fuente temática local
 ├── img/                        # Imágenes del proyecto
@@ -124,6 +125,7 @@ tp1-grupo20/
         ├── lucas.html
         └── sol.html
 ```
+
 ---
 
 ## 🎨 Guía de estilos
@@ -189,7 +191,27 @@ Alternancia de tema: botón interactivo en la navegación para conmutar dinámic
 
 ---
 
+### Header Dinámico e Inteligente (`js/header-hallows.js`)
+
+**Header Dinámico Global**: Componente de navegación presente en todas las páginas que administra la visibilidad del encabezado principal (`.header-hallows`) para maximizar el área de lectura sin perder el acceso directo a ninguna sección.
+
+**Funcionalidades principales:**
+
+- **Navegación accesible constante:** Proporciona botones de acceso directo a la portada, perfiles individuales y bitácora, evitando la dependencia del botón "Atrás" del navegador.
+- **Ocultamiento inteligente por scroll:** Desplaza y desvanece suavemente el header al hacer scroll hacia abajo y lo recupera inmediatamente al scrollear hacia arriba.
+- **Retención por foco y navegación accesible:** Se fija de forma automática si el usuario navega mediante teclado (`Tab`) o si despliega el menú hamburguesa en dispositivos móviles.
+- **Respeto de preferencias de usuario:** Oculta las animaciones si se detecta la preferencia `prefers-reduced-motion: reduce` activa en el sistema.
+
+**Estructura técnica:**
+
+- Encapsulamiento con IIFE y `"use strict"` para prevenir colisiones globales.
+- Actualización de variables CSS dinámicas (`--header-desplazamiento` y `--header-opacidad`).
+- Optimización con `window.requestAnimationFrame()` y listeners de eventos pasivos (`passive: true`) para garantizar un scroll fluido a 60 FPS.
+
+---
+
 ### Mapa Mágico de Favoritos (`js/mapa-favoritos.js`)
+
 Mapa interactivo temático de Harry Potter implementado en las páginas de los integrantes para explorar **películas** y **discos** favoritos. Cada elemento actúa como un "lugar" dentro del plano mágico que, al hacer clic, despliega una ficha con información detallada.
 
 **Funcionalidades principales:**
@@ -390,12 +412,14 @@ Mapa interactivo temático de Harry Potter implementado en las páginas de los i
 **Torneo de las Casas ("Favoritismo de Dumbledore")**: Dashboard interactivo que simula el marcador de puntos de Hogwarts con sucesos cómicos de la saga y persistencia de datos.
 
 **Funcionalidades principales:**
+
 - Generador de Sucesos: Botón interactivo que desencadena eventos narrativos asignando puntos a las distintas casas.
 - Marcador dinámico: Visualización en tiempo real con alumnos destacados por casa y animación visual (.pop-anim) al sumar puntos.
 - Persistencia con localStorage: Mantiene el estado de los contadores y el cartel de campeón incluso al recargar o reiniciar el navegador.
 - Restablecimiento del Torneo: Botón de reinicio que limpia el almacenamiento local y devuelve la interfaz a su estado inicial.
 
 **Estructura técnica:**
+
 - Manejo de estado global persistente mediante localStorage.setItem() y localStorage.getItem().
 - Manipulación modular del DOM con addEventListener centralizado en DOMContentLoaded.
 - Control de flujo condicional para la deshabilitación del botón y despliegue del cartel de victoria al alcanzar el umbral de puntos.
@@ -415,14 +439,14 @@ Durante el desarrollo del TP1 usamos herramientas de inteligencia artificial com
 
 ### Herramientas utilizadas
 
-| Herramienta          | Modelo      | Plan        | Integrante | Uso principal                                                                      |
-| -------------------- | ----------- | ----------- | ---------- | ---------------------------------------------------------------------------------- |
-| DeepSeek             | V3          | Gratuito    | Daniela    | Consultas técnicas, debugging de JavaScript, revisión de código                    |
-| Gemini (Nano Banana) | Gemini 2.5  | Gratuito    | Daniela    | Generación de los íconos del quiz de casas                                         |
-| Codex                | GPT-6 Astra | Plus        | Alejandro  | Desarrollo e implementación de JavaScript manteniendo un diseño acorde a la tematica|
-| Gemini	       | Gemini 3.1  | Pro	   | Lucas      | Desarrollo de animaciones en JavaScript para gestionar rotaciones                  |
-| Opencode	       | Big Pickle  | Gratuito	   | Lucas      | Solucionar errores en múltiples páginas a la vez después de implementaciones       |
-| Gemini               | 2.5 Flash   | Plus | Sol        | Debugging de especificidad CSS, estandarización de footer y maquetación responsive |
+| Herramienta          | Modelo      | Plan     | Integrante | Uso principal                                                                        |
+| -------------------- | ----------- | -------- | ---------- | ------------------------------------------------------------------------------------ |
+| DeepSeek             | V3          | Gratuito | Daniela    | Consultas técnicas, debugging de JavaScript, revisión de código                      |
+| Gemini (Nano Banana) | Gemini 2.5  | Gratuito | Daniela    | Generación de los íconos del quiz de casas                                           |
+| Codex                | GPT-6 Astra | Plus     | Alejandro  | Desarrollo e implementación de JavaScript manteniendo un diseño acorde a la tematica |
+| Gemini               | Gemini 3.1  | Pro      | Lucas      | Desarrollo de animaciones en JavaScript para gestionar rotaciones                    |
+| Opencode             | Big Pickle  | Gratuito | Lucas      | Solucionar errores en múltiples páginas a la vez después de implementaciones         |
+| Gemini               | 2.5 Flash   | Plus     | Sol        | Debugging de especificidad CSS, estandarización de footer y maquetación responsive   |
 
 > Algunos integrantes contaban con **experiencia previa** en HTML, CSS y JavaScript, adquirida en cursos realizados en **Codo a Codo** o **Coderhouse**.
 
